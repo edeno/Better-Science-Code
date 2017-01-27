@@ -77,9 +77,34 @@ Exercise in how to manage complexity:
 * some of these will require more inertia (such as version control)
 
 # 1) Decompose programs into small, well-defined functions
-* Biggest mistake I see in other people’s code
-* try to keep functions to less than 60 lines
-* try to keep what the function does as simple as possible
+
+# Bad
+```python
+
+```
+
+# Better
+```python
+
+```
+
+# Side-by-Side
+```python
+
+```
+
+```python
+
+```
+
+<aside class="notes">
+Biggest mistake I see in other people’s code
+</aside>
+
+# 1) Decompose programs into small, well-defined functions
+
+* try to keep functions to less than 60 lines (small)
+* try to keep what the function does as simple as possible (well-defined)
     * functions should be “atomic"
     * a function should do one "thing"
 * think about if you came back to the function later, how long would it take you to understand what it does?
@@ -107,15 +132,54 @@ Exercise in how to manage complexity:
 > -- <cite>Donald Knuth</cite>
 
 # 2) Use good variable/function names to clarify what things do
-* People are told to use comments in their code
-* modern practice is to use commenting sparingly within the body of the code
-* you don’t need comments if the variable or function already tells you what it does
-* use the naming conventions of your language of choice (snake_case or camelCase) and be consistent
-* use comments to document what the functions does at the beginning of the function (will come back to this)
-* makes it easier to read
+
+# Bad
+```python
+
+```
+
+# Better
+```python
+
+```
+
+# Side-by-Side
+```python
+
+```
+
+```python
+
+```
+
+* People have been taught to use comments in their code
+* Modern practice is to use commenting sparingly within the body of the code
+* You don’t need comments if the variable or function already tells you what it does (self-documenting)
+* Use the naming conventions of your language of choice (snake_case or camelCase) and be consistent
+* Use comments to document what the functions does at the beginning of the function (will come back to this)
+* Makes it easier to read
 * When it is difficult to come up with a meaningful name for the function (It is probably doing too much)
 
 # 3) Document your functions
+
+# Bad
+```python
+
+```
+
+# Better
+```python
+
+```
+
+# Side-by-Side
+```python
+
+```
+
+```python
+
+```
 * easy thing: brief sentence describing the function without using the name of the function (this is the most important)
     * second line of defense in remembering what a function does
 * more complicated thing:
