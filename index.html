@@ -33,12 +33,317 @@
   <p class="author">Eric Denovellis</p>
 </section>
 
-<section class="slide level6">
-
+<section id="links" class="slide level1">
+<h1>Links</h1>
 <p>Presentation: <a href="http://edeno.github.io/Better-Science-Code" class="uri">http://edeno.github.io/Better-Science-Code</a></p>
 <p>Repository: <a href="https://github.com/edeno/Better-Science-Code" class="uri">https://github.com/edeno/Better-Science-Code</a></p>
 </section>
-<section><section id="why-should-you-care" class="titleslide slide level1"><h1>Why should you care</h1></section></section>
+<section id="why-should-you-care-about-producing-good-code" class="slide level1">
+<h1>Why should you care about producing good code</h1>
+</section>
+<section id="doing-good-science" class="slide level1">
+<h1>1) Doing good science!</h1>
+<p>We want code that works (it does what you say it does) and is reproducible (you can get to the same result every time):</p>
+<ul>
+<li>don’t want to have to retract papers because the code had bugs</li>
+<li>Good code reduces the chance of making mistakes</li>
+<li>Good code allows you to detect and fix mistakes quicker</li>
+</ul>
+<h2 id="its-too-easy-to-make-mistakes">It’s too easy to make mistakes</h2>
+<blockquote>
+<p>As the complexity of a software program increases, the likelihood of undiscovered bugs quickly reaches certainty” – <cite>Poldrack et al. 2017</cite></p>
+</blockquote>
+<p><strong>We are writing complex code</strong></p>
+<p>Reduce your anxiety about making mistakes</p>
+<h2 id="recent-examples">Recent Examples</h2>
+<ul>
+<li>recent example: in fMRI, a 15-year-old bug was discovered in the AFNI program 3dClustSim (and the older AlphaSim), which resulted in slightly inflated type I error rates
+<ul>
+<li>small error but it affected many studies</li>
+</ul></li>
+<li>another example: http://retractionwatch.com/2016/09/26/error-in-one-line-of-code-sinks-2016-seer-cancer-study/
+<ul>
+<li>https://www.oreilly.com/ideas/putting-the-science-back-in-data-science</li>
+</ul></li>
+</ul>
+</section>
+<section id="want-to-remember-what-the-code-does-months-later" class="slide level1">
+<h1>2) Want to remember what the code does months later</h1>
+<blockquote>
+<p>The single biggest reason you should write nice code is so that your future self can understand it. – <cite>Greg Wilson</cite></p>
+</blockquote>
+<blockquote>
+<p>“All code has at least one collaborator and that is future you.” – <cite>Hadley Wickham</cite></p>
+</blockquote>
+</section>
+<section id="want-to-be-able-to-share-it-with-other-people" class="slide level1">
+<h1>3) Want to be able to share it with other people</h1>
+<ul>
+<li>particularly important with statistical methods
+<ul>
+<li>what’s the point of coming up with a method if other people can’t easily use it or verify that it works</li>
+</ul></li>
+<li>increase the impact of your paper if other people can use your method</li>
+<li>if neuroscience is increasingly relying on larger teams of people working together, those teams need to be able to share code</li>
+</ul>
+<aside class="notes">
+Example: Michael Shadlen vs. Jonathan Pillow debate about the dynamics neurons during perceptual decision making tasks (Ramping diffusion to bound model vs. stepping model) * Pillow lab released several papers arguing for stepping model with code available on Github * Shadlen lab recently countered with a paper arguing against the stepping model using the Pillow lab code
+</aside>
+</section>
+<section id="avoid-introducing-new-errors" class="slide level1">
+<h1>4) Avoid introducing new errors</h1>
+<p>Don’t necessarily want to spend time reproducing old code</p>
+<p>Could introduce new or different errors</p>
+</section>
+<section id="can-serve-as-a-resume-for-future-employers" class="slide level1">
+<h1>5) Can serve as a resume for future employers</h1>
+</section>
+<section id="how-do-write-good-code" class="slide level1">
+<h1>How do write good code?</h1>
+<p>Exercise in how to manage complexity: * break problems down into smaller components * eliminate unnecessary dependencies * keep track of what you did (be organized)</p>
+</section>
+<section id="goals-want-to-form-good-habits" class="slide level1">
+<h1>Goals: Want to form good habits</h1>
+<ul>
+<li>don’t be overwhelmed and not do any of these things</li>
+<li>don’t beat yourself up if you don’t do all these things all the time</li>
+<li>just try to remember them and incorporate them gradually into your process</li>
+<li>it will slow your coding process initially, but you will gain precision, readability</li>
+<li>some of these will require more inertia (such as version control)</li>
+</ul>
+</section>
+<section id="decompose-programs-into-small-well-defined-functions" class="slide level1">
+<h1>1) Decompose programs into small, well-defined functions</h1>
+<ul>
+<li>Biggest mistake I see in other people’s code</li>
+<li>try to keep functions to less than 60 lines</li>
+<li>try to keep what the function does as simple as possible
+<ul>
+<li>functions should be “atomic”</li>
+<li>a function should do one “thing”</li>
+</ul></li>
+<li>think about if you came back to the function later, how long would it take you to understand what it does?
+<ul>
+<li>should be able to explain what it does in one sentence</li>
+</ul></li>
+<li>Be ruthless about eliminating duplication of code
+<ul>
+<li>turn duplicated code into functions</li>
+<li>that way fixing a bug in your function, fixes it for every time the function is used instead of every separate instance</li>
+</ul></li>
+</ul>
+</section>
+<section id="small-well-defined-functions-are-more-maintainable" class="slide level1">
+<h1>Small, well-defined functions are more maintainable</h1>
+<ul>
+<li>breaks hard problems down into smaller problems</li>
+<li>limits the scope of your code</li>
+<li>makes it easier to debug</li>
+<li>separation of concerns</li>
+</ul>
+</section>
+<section id="small-well-defined-functions-are-more-composable" class="slide level1">
+<h1>Small, well-defined functions are more composable</h1>
+<ul>
+<li>can reuse function in other programs</li>
+<li>can pass functions to other functions (function composition) and other functional programming techniques</li>
+<li>makes you more efficient because you don’t have to rewrite code</li>
+<li>makes you more precise because you can focus on fixing bugs for one function, not many similar functions</li>
+</ul>
+</section>
+<section id="small-well-defined-functions-are-more-readable" class="slide level1">
+<h1>Small, well-defined functions are more readable</h1>
+<ul>
+<li>encapsulate ideas in functions &gt; “Programs are meant to be read by humans and only incidentally for computers to execute” – <cite>Donald Knuth</cite></li>
+</ul>
+</section>
+<section id="use-good-variablefunction-names-to-clarify-what-things-do" class="slide level1">
+<h1>2) Use good variable/function names to clarify what things do</h1>
+<ul>
+<li>People are told to use comments in their code</li>
+<li>modern practice is to use commenting sparingly within the body of the code</li>
+<li>you don’t need comments if the variable or function already tells you what it does</li>
+<li>use the naming conventions of your language of choice (snake_case or camelCase) and be consistent</li>
+<li>use comments to document what the functions does at the beginning of the function (will come back to this)</li>
+<li>makes it easier to read</li>
+<li>When it is difficult to come up with a meaningful name for the function (It is probably doing too much)</li>
+</ul>
+</section>
+<section id="document-your-functions" class="slide level1">
+<h1>3) Document your functions</h1>
+<ul>
+<li>easy thing: brief sentence describing the function without using the name of the function (this is the most important)
+<ul>
+<li>second line of defense in remembering what a function does</li>
+</ul></li>
+<li>more complicated thing:
+<ul>
+<li>additional detail about what the function does or method it implements</li>
+<li>description of the parameters (type, shape)</li>
+<li>description of the outputs (type, shape)</li>
+<li>examples if you can</li>
+</ul></li>
+<li>The more important the function, the more it should be documented</li>
+<li>if using python, use the numpy format</li>
+<li>if using matlab, use the matlab format</li>
+<li>documentation often longer than the code itself</li>
+</ul>
+</section>
+<section id="test-your-code" class="slide level1">
+<h1>4) Test your code</h1>
+<ul>
+<li>make sure your code works like you think it does</li>
+<li>Think about how your code can fail</li>
+<li>small, well-defined, well-named functions are easy to test!</li>
+<li>unit tests
+<ul>
+<li>unit tests test a small component of your code (usually a small function) and makes sure it works like you think it works
+<ul>
+<li>isolate small components of program and make sure they are correct</li>
+<li>doesn’t ensure that combinations of these functions work (integration testing)</li>
+</ul></li>
+<li>unit tests prevent regression of your code
+<ul>
+<li>if you change your code, you want to know what still works and what has broken</li>
+</ul></li>
+<li>use unit tests to define the requirements of your code
+<ul>
+<li>ensure that your function is well-defined</li>
+<li>some people even write unit tests before writing a function</li>
+<li>also a form of documentation: examples for how you think your code should work</li>
+</ul></li>
+<li>you can use programs called “test runners” to run a group of unit tests automatically
+<ul>
+<li>matlab, python have built- in unit test programs
+<ul>
+<li>matlab: https://www.mathworks.com/help/matlab/matlab-unit-test-framework.html</li>
+<li>python: https://docs.python.org/3.4/library/unittest.html</li>
+<li>if you use python, pytest is a helpful extension: http://doc.pytest.org/en/latest/</li>
+<li>R: testthat package — works well with RStudio IDE</li>
+</ul></li>
+<li>there are also libraries available that will work with your version control system to run these tests everytime you commit a new piece of code (“continuous integration”)</li>
+</ul></li>
+<li>This all seems complicated but in the process of developing code, you should be writing tests to make sure it works. This process just formalizes the writing of tests and allows you to run them at a later time, ensuring peace of mind.</li>
+</ul></li>
+<li>yields more predictable code
+<ul>
+<li>in order to write a test, you have to know what the function does</li>
+<li>people can look at your tests to understand your code (form of documentation)</li>
+</ul></li>
+<li>if the number of test cases is uncomfortably large, start looking for smaller units to test.
+<ul>
+<li>your function is probably too complex</li>
+</ul></li>
+<li>After reproducing the bug, and before fixing it, you should write a test case that fails, thus illustrating the bug.</li>
+</ul>
+</section>
+<section id="use-version-control" class="slide level1">
+<h1>Use version control</h1>
+<ul>
+<li>what is version control?
+<ul>
+<li>tracks change in your code over time
+<ul>
+<li>dropbox is a form of this (but not very sophisticated)</li>
+<li>git is the most popular (some time is needed to learn this, but social/collaborative/popularity make it worth it)</li>
+</ul></li>
+<li>stores the whole history of your project
+<ul>
+<li>git helps you back up your work</li>
+<li>reduces code clutter
+<ul>
+<li>no more code_v1.m, code_v2.m</li>
+<li>which version of code was I using???</li>
+<li>which version of code worked???</li>
+<li>how is this different from other code I wrote???</li>
+</ul></li>
+</ul></li>
+<li>git lets you time travel
+<ul>
+<li>because you have snapshots of your code, you can go back to previous versions of your code</li>
+</ul></li>
+<li>experiment with different versions of code (branches)</li>
+<li>makes it easier to work with others
+<ul>
+<li>standardized way of not unintentionally overwriting each others code</li>
+<li>easy to share code (GitHub, Bitbucket, etc)</li>
+<li>makes it easier to document issues with code or data</li>
+</ul></li>
+</ul></li>
+<li>commit early and often
+<ul>
+<li>when you get a piece of code working, commit it (take a snapshot)</li>
+<li>Leave a short informative commit message (document what the commit is)</li>
+<li>don’t comment out code, just remove it, you can get back</li>
+<li>reduce your anxiety
+<ul>
+<li>want to be able to get back to code that works</li>
+</ul></li>
+</ul></li>
+<li>I personally use GitHub Desktop
+<ul>
+<li>easy to use user interface</li>
+</ul></li>
+</ul>
+</section>
+<section id="refactor-your-code" class="slide level1">
+<h1>Refactor your code</h1>
+<ul>
+<li>your code doesn’t have to be perfect the first time</li>
+<li>Just like in writing, your code will get better as you revise it. You wouldn’t expect a first draft to be perfect.</li>
+<li>each time you look at your code:
+<ul>
+<li>do my variable/function names make sense?</li>
+<li>do I know what this function is doing?</li>
+<li>can I turn things into functions?</li>
+<li>can I generalize this function?</li>
+</ul></li>
+<li>there is some tradeoff between tinkering with your code and getting things done</li>
+<li>also don’t throw everything out and re-write from scratch unless you can absolutely help it
+<ul>
+<li>“When you throw away code and start from scratch, you are throwing away all that knowledge. All those collected bug fixes.”</li>
+<li>if tempted by this tutorial to do this to your existing codebase, don’t</li>
+</ul></li>
+</ul>
+</section>
+<section id="always-search-for-well-maintained-software-libraries-that-do-what-you-need." class="slide level1">
+<h1>Always search for well-maintained software libraries that do what you need.</h1>
+</section>
+<section id="summary" class="slide level1">
+<h1>Summary:</h1>
+<ul>
+<li>Use good function and variable names</li>
+<li>Write small well-defined, well-named functions</li>
+<li>Document your functions</li>
+<li>Test your code</li>
+<li>Refactor your code</li>
+<li>Use version control</li>
+<li>Use linters to enforce coding standards</li>
+<li>Always search for well-maintained software libraries that do what you need.</li>
+</ul>
+</section>
+<section id="bonus-data-management" class="slide level1">
+<h1>Bonus: Data Management</h1>
+<ul>
+<li>Put different projects in different folders/repositories</li>
+<li>Use relative paths</li>
+<li>Separate the data from the code</li>
+<li>Processed Data should be separated from Raw Data to avoid accidentally changing the data
+<ul>
+<li>want your analysis to be reproducible</li>
+</ul></li>
+<li>Tidy Data:
+<ul>
+<li>Each variable forms a column.</li>
+<li>Each observation forms a row.</li>
+<li>Each type of observational unit forms a table</li>
+<li>flat is better than nested</li>
+</ul></li>
+<li>If original data is not in a good form, convert it to a good form (but don’t overwrite the original data)</li>
+<li>Don’t hand-edit data files.</li>
+<li>All aspects of data cleaning should be in scripts</li>
+</ul>
+</section>
     </div>
   </div>
 
