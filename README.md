@@ -11,3 +11,4 @@ A presentation on best coding/data management practices based on my own experien
 * [Munafò, M.R., Nosek, B.A., Bishop, D.V.M., Button, K.S., Chambers, C.D., Percie du Sert, N., Simonsohn, U., Wagenmakers, E.-J., Ware, J.J., and Ioannidis, J.P.A. (2017). A manifesto for reproducible science. Nature Human Behaviour 1, 21.
 ](http://dx.doi.org/10.1038/s41562-016-0021)
 * [How I learned to stop worrying and love the coming archivability crisis in scientific software - C. Titus Brown](http://ivory.idyll.org/blog/2017-pof-software-archivability.html)
+* [Git Introduction - Chris Markiewicz](https://github.com/bu-cnso/git-introduction)
