@@ -107,11 +107,14 @@ Biggest mistake I see in other people’s code
 * try to keep what the function does as simple as possible (well-defined)
     * functions should be “atomic"
     * a function should do one "thing"
-* think about if you came back to the function later, how long would it take you to understand what it does?
-    * should be able to explain what it does in one sentence
 * Be ruthless about eliminating duplication of code
     * turn duplicated code into functions
     * that way fixing a bug in your function, fixes it for every time the function is used instead of every separate instance
+
+<aside class="notes">
+Think about if you came back to the function later, how long would it take you to understand what it does?
+    * should be able to explain what it does in one sentence
+</aside>
 
 # Small, well-defined functions are more maintainable
 * breaks hard problems down into smaller problems
