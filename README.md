@@ -10,3 +10,4 @@ A presentation on best coding/data management practices based on my own experien
 * [Poldrack, R.A., Baker, C.I., Durnez, J., Gorgolewski, K.J., Matthews, P.M., Munafò, M.R., Nichols, T.E., Poline, J.-B., Vul, E., and Yarkoni, T. (2017). Scanning the horizon: towards transparent and reproducible neuroimaging research. Nature Reviews Neuroscience 18, 115–126.](http://dx.doi.org/10.1038/nrn.2016.167)
 * [Munafò, M.R., Nosek, B.A., Bishop, D.V.M., Button, K.S., Chambers, C.D., Percie du Sert, N., Simonsohn, U., Wagenmakers, E.-J., Ware, J.J., and Ioannidis, J.P.A. (2017). A manifesto for reproducible science. Nature Human Behaviour 1, 21.
 ](http://dx.doi.org/10.1038/s41562-016-0021)
+* [How I learned to stop worrying and love the coming archivability crisis in scientific software - C. Titus Brown](http://ivory.idyll.org/blog/2017-pof-software-archivability.html)
