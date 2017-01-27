@@ -10,6 +10,43 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
   <link rel="stylesheet" href="revealjs/css/reveal.css">
   <style type="text/css">code{white-space: pre;}</style>
+  <style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+  </style>
   <link rel="stylesheet" href="revealjs/css/theme/black.css" id="theme">
   <link rel="stylesheet" href="css/custom.css"/>
   <!-- Printing and PDF exports -->
@@ -43,18 +80,20 @@
 </section>
 <section id="doing-good-science" class="slide level1">
 <h1>1) Doing good science!</h1>
-<p>We want code that works (it does what you say it does) and is reproducible (you can get to the same result every time):</p>
+<p>We want code that works (<strong>it does what you say it does</strong>) and is reproducible (<strong>you can get to the same result every time using the same data and code</strong>):</p>
 <ul>
 <li>don’t want to have to retract papers because the code had bugs</li>
 <li>Good code reduces the chance of making mistakes</li>
 <li>Good code allows you to detect and fix mistakes quicker</li>
 </ul>
-<h2 id="its-too-easy-to-make-mistakes">It’s too easy to make mistakes</h2>
+</section>
+<section id="its-too-easy-to-make-mistakes" class="slide level1">
+<h1>It’s too easy to make mistakes</h1>
 <blockquote>
 <p>As the complexity of a software program increases, the likelihood of undiscovered bugs quickly reaches certainty” – <cite>Poldrack et al. 2017</cite></p>
 </blockquote>
 <p><strong>We are writing complex code</strong></p>
-<p>Reduce your anxiety about making mistakes</p>
+<p>Good code should reduce your anxiety about making mistakes</p>
 <h2 id="recent-examples">Recent Examples</h2>
 <ul>
 <li>recent example: in fMRI, a 15-year-old bug was discovered in the AFNI program 3dClustSim (and the older AlphaSim), which resulted in slightly inflated type I error rates
@@ -87,7 +126,10 @@
 <li>if neuroscience is increasingly relying on larger teams of people working together, those teams need to be able to share code</li>
 </ul>
 <aside class="notes">
-Example: Michael Shadlen vs. Jonathan Pillow debate about the dynamics neurons during perceptual decision making tasks (Ramping diffusion to bound model vs. stepping model) * Pillow lab released several papers arguing for stepping model with code available on Github * Shadlen lab recently countered with a paper arguing against the stepping model using the Pillow lab code
+<p>Example: Michael Shadlen vs. Jonathan Pillow debate about the dynamics neurons during perceptual decision making tasks (Ramping diffusion to bound model vs. stepping model)</p>
+<pre><code>* Pillow lab released several papers arguing for stepping model with code available on Github
+
+* Shadlen lab recently countered with a paper arguing against the stepping model using the Pillow lab code</code></pre>
 </aside>
 </section>
 <section id="avoid-introducing-new-errors" class="slide level1">
@@ -114,17 +156,31 @@ Example: Michael Shadlen vs. Jonathan Pillow debate about the dynamics neurons 
 </section>
 <section id="decompose-programs-into-small-well-defined-functions" class="slide level1">
 <h1>1) Decompose programs into small, well-defined functions</h1>
+</section>
+<section id="bad" class="slide level1">
+<h1>Bad</h1>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"></code></pre></div>
+</section>
+<section id="better" class="slide level1">
+<h1>Better</h1>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"></code></pre></div>
+</section>
+<section id="side-by-side" class="slide level1">
+<h1>Side-by-Side</h1>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"></code></pre></div>
+<aside class="notes">
+Biggest mistake I see in other people’s code
+</aside>
+</section>
+<section id="decompose-programs-into-small-well-defined-functions-1" class="slide level1">
+<h1>1) Decompose programs into small, well-defined functions</h1>
 <ul>
-<li>Biggest mistake I see in other people’s code</li>
-<li>try to keep functions to less than 60 lines</li>
-<li>try to keep what the function does as simple as possible
+<li>try to keep functions to less than 60 lines (small)</li>
+<li>try to keep what the function does as simple as possible (well-defined)
 <ul>
 <li>functions should be “atomic”</li>
 <li>a function should do one “thing”</li>
-</ul></li>
-<li>think about if you came back to the function later, how long would it take you to understand what it does?
-<ul>
-<li>should be able to explain what it does in one sentence</li>
 </ul></li>
 <li>Be ruthless about eliminating duplication of code
 <ul>
@@ -132,6 +188,9 @@ Example: Michael Shadlen vs. Jonathan Pillow debate about the dynamics neurons 
 <li>that way fixing a bug in your function, fixes it for every time the function is used instead of every separate instance</li>
 </ul></li>
 </ul>
+<aside class="notes">
+Think about if you came back to the function later, how long would it take you to understand what it does? * should be able to explain what it does in one sentence
+</aside>
 </section>
 <section id="small-well-defined-functions-are-more-maintainable" class="slide level1">
 <h1>Small, well-defined functions are more maintainable</h1>
@@ -162,18 +221,44 @@ Example: Michael Shadlen vs. Jonathan Pillow debate about the dynamics neurons 
 </section>
 <section id="use-good-variablefunction-names-to-clarify-what-things-do" class="slide level1">
 <h1>2) Use good variable/function names to clarify what things do</h1>
+</section>
+<section id="bad-1" class="slide level1">
+<h1>Bad</h1>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"></code></pre></div>
+</section>
+<section id="better-1" class="slide level1">
+<h1>Better</h1>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"></code></pre></div>
+</section>
+<section id="side-by-side-1" class="slide level1">
+<h1>Side-by-Side</h1>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"></code></pre></div>
 <ul>
-<li>People are told to use comments in their code</li>
-<li>modern practice is to use commenting sparingly within the body of the code</li>
-<li>you don’t need comments if the variable or function already tells you what it does</li>
-<li>use the naming conventions of your language of choice (snake_case or camelCase) and be consistent</li>
-<li>use comments to document what the functions does at the beginning of the function (will come back to this)</li>
-<li>makes it easier to read</li>
+<li>People have been taught to use comments in their code</li>
+<li>Modern practice is to use commenting sparingly within the body of the code</li>
+<li>You don’t need comments if the variable or function already tells you what it does (self-documenting)</li>
+<li>Use the naming conventions of your language of choice (snake_case or camelCase) and be consistent</li>
+<li>Use comments to document what the functions does at the beginning of the function (will come back to this)</li>
+<li>Makes it easier to read</li>
 <li>When it is difficult to come up with a meaningful name for the function (It is probably doing too much)</li>
 </ul>
 </section>
 <section id="document-your-functions" class="slide level1">
 <h1>3) Document your functions</h1>
+</section>
+<section id="bad-2" class="slide level1">
+<h1>Bad</h1>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"></code></pre></div>
+</section>
+<section id="better-2" class="slide level1">
+<h1>Better</h1>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"></code></pre></div>
+</section>
+<section id="side-by-side-2" class="slide level1">
+<h1>Side-by-Side</h1>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"></code></pre></div>
 <ul>
 <li>easy thing: brief sentence describing the function without using the name of the function (this is the most important)
 <ul>
