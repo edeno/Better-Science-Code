@@ -2,7 +2,7 @@
 % Eric Denovellis
 
 
-# Links
+------------------
 
 Presentation: [http://edeno.github.io/Better-Science-Code](http://edeno.github.io/Better-Science-Code)
 
