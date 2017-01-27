@@ -25,7 +25,7 @@ We want code that works (**it does what you say it does**) and is reproducible (
 
 **We are writing complex code**
 
-Reduce your anxiety about making mistakes
+Good code should reduce your anxiety about making mistakes
 
 ## Recent Examples
 * recent example: in fMRI, a 15-year-old bug was discovered in the AFNI program 3dClustSim (and the older AlphaSim), which resulted in slightly inflated type I error rates
