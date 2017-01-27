@@ -102,7 +102,9 @@ Exercise in how to manage complexity:
 
 # Small, well-defined functions are more readable
 * encapsulate ideas in functions
-> “Programs are meant to be read by humans and only incidentally for computers to execute” -- <cite>Donald Knuth</cite>
+
+> “Programs are meant to be read by humans and only incidentally for computers to execute”
+> -- <cite>Donald Knuth</cite>
 
 # 2) Use good variable/function names to clarify what things do
 * People are told to use comments in their code
