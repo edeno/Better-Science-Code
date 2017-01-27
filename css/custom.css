@@ -14,13 +14,6 @@
 }
 .reveal blockquote {
   width: 85%;
-  color: black;
-}
-.reveal #lupi blockquote {
-  background: none;
-  border: none;
-  box-shadow: none;
-  color: white;
 }
 .reveal a {
   color: orange;
