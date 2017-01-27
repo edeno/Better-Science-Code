@@ -1,3 +1,3 @@
 # manuscript
 
-Writing material goes here
+All writing material goes here
