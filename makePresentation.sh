@@ -8,4 +8,5 @@ pandoc src/presentation.md \
   --variable controls="false" \
   --variable history="true" \
   --smart \
+  --css "css/custom.css" \
 -o index.html
