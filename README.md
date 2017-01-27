@@ -1,5 +1,5 @@
 # Better-Science-Code
-A presentation based on various documents on the web and my own experiences of scientific computing and data analysis.
+A presentation on best coding/data management practices based on my own experiences of scientific computing and data analysis and recommendations from others.
 
 # Bibliography
 * [Wilson, G., Bryan, J., Cranston, K., Kitzes, J., Nederbragt, L., and Teal, T.K. (2016). Good Enough Practices in Scientific Computing. arXiv Preprint arXiv:1609.00037.
