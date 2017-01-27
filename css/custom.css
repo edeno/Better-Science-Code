@@ -1,0 +1,30 @@
+.reveal h1 {
+  font-size: 1.0em;
+  text-transform: none;
+}
+.reveal section img {
+  background:none;
+  border:none;
+  box-shadow:none;
+  max-height: 450px !important;
+}
+.reveal p, .reveal li {
+  font-size: 1em;
+  text-align: left;
+}
+.reveal blockquote {
+  width: 85%;
+  color: black;
+}
+.reveal #lupi blockquote {
+  background: none;
+  border: none;
+  box-shadow: none;
+  color: white;
+}
+.reveal a {
+  color: orange;
+}
+.reveal figcaption {
+  font-size: 0.5em;
+}
