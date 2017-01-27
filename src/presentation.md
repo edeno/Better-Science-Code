@@ -50,7 +50,9 @@ Reduce your anxiety about making mistakes
 
 <aside class="notes">
 Example: Michael Shadlen vs. Jonathan Pillow debate about the dynamics neurons during perceptual decision making tasks (Ramping diffusion to bound model vs. stepping model)
+
     * Pillow lab released several papers arguing for stepping model with code available on Github
+
     * Shadlen lab recently countered with a paper arguing against the stepping model using the Pillow lab code
 </aside>
 
@@ -70,6 +72,7 @@ Exercise in how to manage complexity:
 * keep track of what you did (be organized)
 
 # Goals: Want to form good habits
+
 * don’t be overwhelmed and not do any of these things
 * don’t beat yourself up if you don’t do all these things all the time
 * just try to remember them and incorporate them gradually into your process
@@ -117,12 +120,14 @@ Think about if you came back to the function later, how long would it take you t
 </aside>
 
 # Small, well-defined functions are more maintainable
+
 * breaks hard problems down into smaller problems
 * limits the scope of your code
 * makes it easier to debug
 * separation of concerns
 
 # Small, well-defined functions are more composable
+
 * can reuse function in other programs
 * can pass functions to other functions (function composition) and other functional programming techniques
 * makes you more efficient because you don’t have to rewrite code
