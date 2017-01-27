@@ -18,7 +18,7 @@ We want code that works (it does what you say it does) and is reproducible (you 
 * Good code reduces the chance of making mistakes
 * Good code allows you to detect and fix mistakes quicker
 
-## It’s too easy to make mistakes
+# It’s too easy to make mistakes
 
 > As the complexity of a software program increases, the likelihood of undiscovered bugs quickly reaches certainty”
 > -- <cite>Poldrack et al. 2017</cite>
