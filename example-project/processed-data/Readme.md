@@ -1,3 +1,3 @@
 # processed-data
 
-Any processed data goes here.
+Any processed/derived data goes here.
