@@ -9,4 +9,4 @@ pandoc src/presentation.md \
   --variable history="true" \
   --smart \
   --css "custom.css" \
--o public/index.html
+-o index.html
