@@ -67,6 +67,7 @@ Could introduce new or different errors
 # How do write good code?
 
 Exercise in how to manage complexity:
+
 * break problems down into smaller components
 * eliminate unnecessary dependencies
 * keep track of what you did (be organized)
