@@ -157,7 +157,7 @@ def bad_function():
 # Small, well-defined functions are more composable
 
 * can reuse function in other programs
-* can pass functions to other functions (function composition) and other functional programming techniques
+* can pass functions to other functions (function composition)
 * makes you more efficient because you don’t have to rewrite code
 * makes you more precise because you can focus on fixing bugs for one function, not many similar functions
 
