@@ -120,6 +120,18 @@ pure = as few implicit contexts and side-effects as possible.
 * that way fixing a bug in your function, fixes it for every time the function is used instead of every separate instance
 </aside>
 
+# Bad
+
+```python
+
+```
+
+# Better
+
+```python
+
+```
+
 # Small, well-defined functions are more maintainable
 
 * breaks hard problems down into smaller problems
