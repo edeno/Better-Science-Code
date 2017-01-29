@@ -372,13 +372,12 @@ Little tricky: still need to take time to vet the code to make sure it does what
 
 
 # Summary:
-* Use good function and variable names
 * Write small well-defined, well-named functions
+* Use good function and variable names
 * Document your functions
 * Test your code
 * Refactor your code
 * Use version control
-* Use linters to enforce coding standards
 * Always search for well-maintained software libraries that do what you need.
 
 # Bonus: Data Management
