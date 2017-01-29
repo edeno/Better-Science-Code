@@ -358,6 +358,18 @@ If you change your code, you want to know what still works and what has broken
 
 # Always search for well-maintained software libraries that do what you need.
 
+Don't rewrite functions that are already implemented as part of the core language.
+
+Use other software libraries if they are well-maintained
+
+<aside class="notes">
+Why:
+* because more users mean less bugs
+* better tested
+
+Little tricky: still need to take time to vet the code to make sure it does what you think it does
+<aside>
+
 
 # Summary:
 * Use good function and variable names
