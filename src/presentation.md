@@ -55,10 +55,6 @@ Example: Michael Shadlen vs. Jonathan Pillow debate about the dynamics neurons d
 
 # 4) Avoid introducing new errors
 
-Don’t necessarily want to spend time reproducing old code
-
-Could introduce new or different errors
-
 # 5) Can serve as a resume for future employers
 
 # How do write good code?
@@ -82,6 +78,10 @@ Exercise in how to manage complexity:
 
 # 1) Decompose programs into small, well-defined functions
 
+<aside class="notes">
+Biggest mistake I see in scientific code
+</aside>
+
 # Bad
 ```python
 
@@ -100,10 +100,6 @@ Exercise in how to manage complexity:
 ```python
 
 ```
-
-<aside class="notes">
-Biggest mistake I see in other people’s code
-</aside>
 
 # 1) Decompose programs into small, well-defined functions
 
