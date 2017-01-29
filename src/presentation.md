@@ -606,7 +606,7 @@ Little tricky: still need to take time to vet the code to make sure it does what
 <aside>
 
 
-# Summary:
+# Summary
 * Write small well-defined, well-named functions
 * Use good function and variable names
 * Document your functions
@@ -644,6 +644,7 @@ Processed Data should be separated from Raw Data to avoid accidentally changing 
 ------------------
 
 Tidy Data:
+
 * Each variable forms a column.
 * Each observation forms a row.
 * Each type of observational unit forms a table
