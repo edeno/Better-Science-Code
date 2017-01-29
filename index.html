@@ -380,9 +380,6 @@ encapsulate ideas in functions
     Q, R <span class="op">=</span> np.linalg.qr(design_matrix, mode<span class="op">=</span><span class="st">&#39;reduced&#39;</span>)
     <span class="cf">return</span> np.linalg.solve(R, np.dot(Q.T, response))</code></pre></div>
 </section>
-<section id="use-variablefunction-names-to-clarify-what-things-do" class="slide level1">
-<h1>2) Use variable/function names to clarify what things do</h1>
-</section>
 <section class="slide level1">
 
 <p>You don’t need comments if the variable or function already tells you what it does (self-documenting)</p>
@@ -412,21 +409,6 @@ encapsulate ideas in functions
 <p>(<code>elec_poten</code> vs. <code>electric_potential</code>)</p>
 </section>
 <section id="document-your-functions" class="slide level1">
-<h1>3) Document your functions</h1>
-</section>
-<section id="bad" class="slide level1">
-<h1>Bad</h1>
-<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"></code></pre></div>
-</section>
-<section id="better" class="slide level1">
-<h1>Better</h1>
-<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"></code></pre></div>
-</section>
-<section id="best" class="slide level1">
-<h1>Best</h1>
-<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"></code></pre></div>
-</section>
-<section id="document-your-functions-1" class="slide level1">
 <h1>3) Document your functions</h1>
 </section>
 <section class="slide level1">
@@ -496,8 +478,8 @@ encapsulate ideas in functions
 
 <p><strong>Small, well-defined, well-named functions are easy to test!</strong></p>
 </section>
-<section id="example" class="slide level1">
-<h1>Example</h1>
+<section class="slide level1">
+
 <div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="im">import</span> numpy <span class="im">as</span> np
 
 <span class="kw">def</span> zscore(x):
@@ -654,6 +636,9 @@ After reproducing the bug, and before fixing it, you should write a test case th
 </section>
 <section id="refactor-your-code" class="slide level1">
 <h1>Refactor your code</h1>
+</section>
+<section class="slide level1">
+
 <blockquote>
 <p>“Whenever I have to think to understand what the code is doing, I ask myself if I can refactor the code to make that understanding more immediately apparent.” – <cite>Martin Fowler, Refactoring: Improving the Design of Existing Code</cite></p>
 </blockquote>
@@ -683,7 +668,7 @@ Little tricky: still need to take time to vet the code to make sure it does what
 <aside>
 </section>
 <section id="summary" class="slide level1">
-<h1>Summary:</h1>
+<h1>Summary</h1>
 <ul>
 <li>Write small well-defined, well-named functions</li>
 <li>Use good function and variable names</li>
@@ -724,7 +709,13 @@ I think it is a mistake to think that only “programmers” working for compani
 </section>
 <section class="slide level1">
 
-<p>Tidy Data: * Each variable forms a column. * Each observation forms a row. * Each type of observational unit forms a table * flat is better than nested</p>
+<p>Tidy Data:</p>
+<ul>
+<li>Each variable forms a column.</li>
+<li>Each observation forms a row.</li>
+<li>Each type of observational unit forms a table</li>
+<li>flat is better than nested</li>
+</ul>
 </section>
 <section class="slide level1">
 
