@@ -167,6 +167,10 @@ def bad_function():
 > “Programs are meant to be read by humans and only incidentally for computers to execute”
 > -- <cite>Donald Knuth</cite>
 
+<aside class="notes">
+encapsulate ideas in functions
+</aside>
+
 # 2) Use good variable/function names to clarify what things do
 
 # Bad
