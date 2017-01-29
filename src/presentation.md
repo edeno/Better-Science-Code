@@ -391,6 +391,7 @@ def linear_regression(design_matrix, response):
 ------------------
 
 More complicated thing:
+
 * additional detail about what the function does or method it implements
 * description of the parameters (type, shape)
 * description of the outputs (type, shape)
