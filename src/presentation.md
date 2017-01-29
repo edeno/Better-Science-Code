@@ -219,12 +219,11 @@ encapsulate ideas in functions
 
 ```
 
-# Side-by-Side
+# Best
 ```python
 
 ```
 
-```python
 
 ```
 * easy thing: brief sentence describing the function without using the name of the function (this is the most important)
