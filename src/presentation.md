@@ -559,6 +559,8 @@ Commit early and often
 
 # Refactor your code
 
+------------------
+
 >“Whenever I have to think to understand what the code is doing, I ask myself if I can refactor the code to make that understanding more immediately apparent.”
 > -- <cite>Martin Fowler, Refactoring: Improving the Design of Existing Code</cite>
 
