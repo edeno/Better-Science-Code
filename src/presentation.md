@@ -151,7 +151,7 @@ def bad_function():
 
 * breaks hard problems down into smaller problems
 * limits the scope of your code
-* makes it easier to debug
+* makes it easier to debug or change
 * separation of concerns
 
 # Small, well-defined functions are more composable
