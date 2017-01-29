@@ -100,6 +100,25 @@ def bad_function():
 
 # Better
 ```python
+import numpy as np
+
+def better_function():
+    y, x1, x2 = load_data('/tmp/123.npy')
+    b1 = linear_regression(zscore(x1), y)
+    b2 = linear_regression(zscore(x2), y)
+    b = b1 - b2
+    np.save('ans.npy', b)
+
+def load_data(data_name):
+    X = np.load(data_name, mmap_mode='r')
+    return X[:, 0], X[:, 1], X[:, 2]
+
+def zscore(x):
+    return (x - x.mean()) / x.std()
+
+def linear_regression(design_matrix, response):
+    Q, R = np.linalg.qr(design_matrix, mode='reduced')
+    return np.linalg.solve(R, np.dot(Q.T, response))
 
 ```
 
