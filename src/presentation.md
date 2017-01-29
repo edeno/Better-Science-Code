@@ -335,6 +335,8 @@ If you change your code, you want to know what still works and what has broken
 
 # Refactor your code
 * your code doesn’t have to be perfect the first time
+>“Whenever I have to think to understand what the code is doing, I ask myself if I can refactor the code to make that understanding more immediately apparent.”
+> -- <cite>Martin Fowler, Refactoring: Improving the Design of Existing Code</cite>
 * Just like in writing, your code will get better as you revise it. You wouldn’t expect a first draft to be perfect.
 * each time you look at your code:
     * do my variable/function names make sense?
