@@ -84,8 +84,9 @@ Biggest mistake I see in scientific code
 
 ------------------
 ```python
+import numpy as np
+
 def bad_function():
-    import numpy as np
     X = np.load('/tmp/123.npy', mmap_mode='r')
     y, x1, x2 = X[:, 0], X[:, 1], X[:, 2]
     z1 = (x1 - x1.mean()) / x1.std()
