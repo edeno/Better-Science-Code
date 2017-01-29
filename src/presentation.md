@@ -416,7 +416,7 @@ Think about how your code can fail
 
 **Small, well-defined, well-named functions are easy to test!**
 
-# Example
+------------------
 
 ```python
 import numpy as np
