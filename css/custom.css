@@ -1,21 +1,6 @@
-.reveal h1 {
-}
-.reveal section img {
-  background:none;
-  border:none;
-  box-shadow:none;
-  max-height: 450px !important;
-}
-.reveal p, .reveal li {
-  font-size: 1em;
-  text-align: left;
-}
 .reveal blockquote {
   width: 85%;
 }
 .reveal a {
   color: orange;
-}
-.reveal figcaption {
-  font-size: 0.5em;
 }
