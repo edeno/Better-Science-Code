@@ -360,9 +360,12 @@ encapsulate ideas in functions
 <div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="im">import</span> numpy <span class="im">as</span> np
 
 <span class="kw">def</span> better_function():
-    response, design_matrix1, design_matrix2 <span class="op">=</span> load_data(<span class="st">&#39;/tmp/123.npy&#39;</span>)
-    coefficient1 <span class="op">=</span> linear_regression(zscore(design_matrix1), response)
-    coefficient2 <span class="op">=</span> linear_regression(zscore(design_matrix2), response)
+    response, design_matrix1, design_matrix2 <span class="op">=</span> load_data(
+        <span class="st">&#39;/tmp/123.npy&#39;</span>)
+    coefficient1 <span class="op">=</span> linear_regression(
+        zscore(design_matrix1), response)
+    coefficient2 <span class="op">=</span> linear_regression(
+        zscore(design_matrix2), response)
     coefficient_difference <span class="op">=</span> coefficient1 <span class="op">-</span> coefficient2
     np.save(<span class="st">&#39;ans.npy&#39;</span>, b)
 
@@ -400,11 +403,13 @@ encapsulate ideas in functions
 </section>
 <section class="slide level1">
 
-<p>Avoid using abbreviations that are not commonly used (<code>jmi</code> vs. <code>joint_mark_intensity</code>)</p>
+<p>Avoid using abbreviations that are not commonly used</p>
+<p>(<code>jmi</code> vs. <code>joint_mark_intensity</code>)</p>
 </section>
 <section class="slide level1">
 
-<p>Prefer whole words (<code>elec_poten</code> vs. <code>electric_potential</code>)</p>
+<p>Prefer whole words</p>
+<p>(<code>elec_poten</code> vs. <code>electric_potential</code>)</p>
 </section>
 <section id="document-your-functions" class="slide level1">
 <h1>3) Document your functions</h1>
@@ -461,7 +466,7 @@ encapsulate ideas in functions
 <section class="slide level1">
 
 <div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="kw">def</span> linear_regression(design_matrix, response):
-    <span class="co">&#39;&#39;&#39;Calculate a linear least-squares regression for two sets of measurements</span>
+    <span class="co">&#39;&#39;&#39;Calculate a linear least-squares regression for two  sets of measurements</span>
 
 <span class="co">    Parameters</span>
 <span class="co">    ----------</span>
