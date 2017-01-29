@@ -169,15 +169,46 @@ pure = as few implicit contexts and side-effects as possible.
 * that way fixing a bug in your function, fixes it for every time the function is used instead of every separate instance
 </aside>
 
-# Bad
+------------------
 
 ```python
+import numpy as np
 
+def bad_function():
+    X = np.load('/tmp/123.npy', mmap_mode='r')
+    y, x1, x2 = X[:, 0], X[:, 1], X[:, 2]
+    z1 = (x1 - x1.mean()) / x1.std()
+    Q1, R1 = np.linalg.qr(z1, mode='reduced')
+    b1 = np.linalg.solve(R1, np.dot(Q1.T, y1))
+    z2 = (x2 - x2.mean()) / x2.std()
+    Q2, R2 = np.linalg.qr(z1, mode='reduced')
+    b2 = np.linalg.solve(R2, np.dot(Q2.T, y2))
+    b = b1 - b2
+    np.save('ans.npy', b)
 ```
 
-# Better
+------------------
 
 ```python
+import numpy as np
+
+def better_function():
+    y, x1, x2 = load_data('/tmp/123.npy')
+    b1 = linear_regression(zscore(x1), y)
+    b2 = linear_regression(zscore(x2), y)
+    b = b1 - b2
+    np.save('ans.npy', b)
+
+def load_data(data_name):
+    X = np.load(data_name, mmap_mode='r')
+    return X[:, 0], X[:, 1], X[:, 2]
+
+def zscore(x):
+    return (x - x.mean()) / x.std()
+
+def linear_regression(design_matrix, response):
+    Q, R = np.linalg.qr(design_matrix, mode='reduced')
+    return np.linalg.solve(R, np.dot(Q.T, response))
 
 ```
 
@@ -210,22 +241,71 @@ encapsulate ideas in functions
 
 # 2) Use good variable/function names to clarify what things do
 
-# Bad
+------------------
+
 ```python
+import numpy as np
+
+def bad_function():
+    X = np.load('/tmp/123.npy', mmap_mode='r')
+    y, x1, x2 = X[:, 0], X[:, 1], X[:, 2]
+    z1 = (x1 - x1.mean()) / x1.std()
+    Q1, R1 = np.linalg.qr(z1, mode='reduced')
+    b1 = np.linalg.solve(R1, np.dot(Q1.T, y1))
+    z2 = (x2 - x2.mean()) / x2.std()
+    Q2, R2 = np.linalg.qr(z1, mode='reduced')
+    b2 = np.linalg.solve(R2, np.dot(Q2.T, y2))
+    b = b1 - b2
+    np.save('ans.npy', b)
+```
+
+------------------
+
+```python
+import numpy as np
+
+def better_function():
+    y, x1, x2 = load_data('/tmp/123.npy')
+    b1 = linear_regression(zscore(x1), y)
+    b2 = linear_regression(zscore(x2), y)
+    b = b1 - b2
+    np.save('ans.npy', b)
+
+def load_data(data_name):
+    X = np.load(data_name, mmap_mode='r')
+    return X[:, 0], X[:, 1], X[:, 2]
+
+def zscore(x):
+    return (x - x.mean()) / x.std()
+
+def linear_regression(design_matrix, response):
+    Q, R = np.linalg.qr(design_matrix, mode='reduced')
+    return np.linalg.solve(R, np.dot(Q.T, response))
 
 ```
 
-# Better
-```python
-
-```
-
-# Side-by-Side
-```python
-
-```
+------------------
 
 ```python
+import numpy as np
+
+def better_function():
+    response, design_matrix1, design_matrix2 = load_data('/tmp/123.npy')
+    coefficient1 = linear_regression(zscore(design_matrix1), response)
+    coefficient2 = linear_regression(zscore(design_matrix2), response)
+    coefficient_difference = coefficient1 - coefficient2
+    np.save('ans.npy', b)
+
+def load_data(data_name):
+    X = np.load(data_name, mmap_mode='r')
+    return X[:, 0], X[:, 1], X[:, 2]
+
+def zscore(x):
+    return (x - x.mean()) / x.std()
+
+def linear_regression(design_matrix, response):
+    Q, R = np.linalg.qr(design_matrix, mode='reduced')
+    return np.linalg.solve(R, np.dot(Q.T, response))
 
 ```
 
@@ -289,11 +369,44 @@ Easy thing: brief sentence describing the function without using the name of the
 
 ------------------
 
+```python
+def zscore(x):
+    '''Number of standard deviations from the mean'''
+    return (x - x.mean()) / x.std()
+
+def linear_regression(design_matrix, response):
+    '''Calculate a linear least-squares regression for two sets of measurements'''
+    Q, R = np.linalg.qr(design_matrix, mode='reduced')
+    return np.linalg.solve(R, np.dot(Q.T, response))
+```
+
+------------------
+
 More complicated thing:
 * additional detail about what the function does or method it implements
 * description of the parameters (type, shape)
 * description of the outputs (type, shape)
 * examples if you can
+
+------------------
+
+```python
+def linear_regression(design_matrix, response):
+    '''Calculate a linear least-squares regression for two sets of measurements
+
+    Parameters
+    ----------
+    design_matrix, response : array_like
+        Two sets of measurements. Both arrays should have the same length.
+
+    Returns
+    -------
+    coefficients : array_like
+
+    '''
+    Q, R = np.linalg.qr(design_matrix, mode='reduced')
+    return np.linalg.solve(R, np.dot(Q.T, response))
+```
 
 # 4) Test your code
 
@@ -312,7 +425,17 @@ Think about how your code can fail
 # Example
 
 ```python
+import numpy as np
 
+def zscore(x):
+    '''Number of standard deviations from the mean'''
+    return (x - x.mean()) / x.std()
+
+def test_zscore():
+    test_values = np.asarray([1, 3])
+    expected_values = np.asarray([-1, 1])
+
+    assert np.allclose(zscore(test_values), expected_values)
 ```
 
 # Unit tests
