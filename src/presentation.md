@@ -195,6 +195,9 @@ encapsulate ideas in functions
 
 * You don’t need comments if the variable or function already tells you what it does (self-documenting)
 * Use the naming conventions of your language of choice (snake_case or camelCase) and be consistent
+* Avoid using abbreviations that are not commonly used (`jmi` vs. `joint_mark_intensity`)
+* Prefer whole words (`elec_poten` vs. `electric_potential`)
+
 <aside class="notes">
 * People have been taught to use comments in their code
 * Modern practice is to use commenting sparingly within the body of the code
