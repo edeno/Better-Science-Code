@@ -295,9 +295,12 @@ def linear_regression(design_matrix, response):
 import numpy as np
 
 def better_function():
-    response, design_matrix1, design_matrix2 = load_data('/tmp/123.npy')
-    coefficient1 = linear_regression(zscore(design_matrix1), response)
-    coefficient2 = linear_regression(zscore(design_matrix2), response)
+    response, design_matrix1, design_matrix2 = load_data(
+        '/tmp/123.npy')
+    coefficient1 = linear_regression(
+        zscore(design_matrix1), response)
+    coefficient2 = linear_regression(
+        zscore(design_matrix2), response)
     coefficient_difference = coefficient1 - coefficient2
     np.save('ans.npy', b)
 
