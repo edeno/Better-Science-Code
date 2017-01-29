@@ -22,6 +22,7 @@ We want code that works (**it does what you say it does**) and is reproducible (
 
 # It’s too easy to make mistakes
 
+------------------
 > As the complexity of a software program increases, the likelihood of undiscovered bugs quickly reaches certainty”
 > -- <cite>Poldrack et al. 2017</cite>
 
@@ -34,6 +35,7 @@ Good code should reduce your anxiety about making mistakes
 
 
 # 2) Want to remember what the code does months later
+------------------
 > The single biggest reason you should write nice code is so that your future self can understand it.
 > -- <cite>Greg Wilson</cite>
 
@@ -43,6 +45,7 @@ Good code should reduce your anxiety about making mistakes
 
 # 3) Want to be able to share it with other people
 
+------------------
 Particularly important with statistical methods development
 
 <aside class="notes">
@@ -61,6 +64,8 @@ Example: Michael Shadlen vs. Jonathan Pillow debate about the dynamics neurons d
 # 5) Can serve as a resume for future employers
 
 # How to write good code?
+
+------------------
 
 Exercise in how to manage complexity:
 
@@ -128,11 +133,10 @@ def linear_regression(design_matrix, response):
 
 # 1) Decompose programs into small, well-defined functions
 
-* try to keep functions to less than 60 lines (small)
-* try to keep what the function does as simple as possible (well-defined)
-    * functions should be "atomic" and "pure"
-* Be ruthless about eliminating duplication of code
-
+------------------
+Try to keep functions to less than 60 lines (small)
+------------------
+Try to keep what the function does as simple as possible (well-defined)
 <aside class="notes">
 atomic = a function should do one "thing"
 
@@ -140,7 +144,11 @@ Think about if you came back to the function later, how long would it take you t
     * should be able to explain what it does in one sentence
 
 pure = as few implicit contexts and side-effects as possible.
+</aside>
+------------------
+* Be ruthless about eliminating duplication of code
 
+<aside class="notes">
 * turn duplicated code into functions
 * that way fixing a bug in your function, fixes it for every time the function is used instead of every separate instance
 </aside>
@@ -158,21 +166,24 @@ pure = as few implicit contexts and side-effects as possible.
 ```
 
 # Small, well-defined functions are more maintainable
-
+<aside class="notes">
 * breaks hard problems down into smaller problems
 * limits the scope of your code
 * makes it easier to debug or change (with unit testing)
 * separation of concerns
+</aside>
 
 # Small, well-defined functions are more composable
-
+<aside class="notes">
 * can reuse function in other programs
 * can pass functions to other functions (function composition)
 * makes you more efficient because you don’t have to rewrite code
 * makes you more precise because you can focus on fixing bugs for one function, not many similar functions
+</aside>
 
 # Small, well-defined functions are more readable (if you give them good names)
 
+------------------
 > “Programs are meant to be read by humans and only incidentally for computers to execute”
 > -- <cite>Donald Knuth</cite>
 
@@ -203,10 +214,8 @@ encapsulate ideas in functions
 
 # 2) Use variable/function names to clarify what things do
 
-* You don’t need comments if the variable or function already tells you what it does (self-documenting)
-* Use the naming conventions of your language of choice (snake_case or camelCase) and be consistent
-* Avoid using abbreviations that are not commonly used (`jmi` vs. `joint_mark_intensity`)
-* Prefer whole words (`elec_poten` vs. `electric_potential`)
+------------------
+You don’t need comments if the variable or function already tells you what it does (self-documenting)
 
 <aside class="notes">
 * People have been taught to use comments in their code
@@ -216,6 +225,12 @@ encapsulate ideas in functions
 * Makes it easier to read
 * When it is difficult to come up with a meaningful name for the function (It is probably doing too much)
 </aside>
+------------------
+Use the naming conventions of your language of choice (snake_case or camelCase) and be consistent
+------------------
+Avoid using abbreviations that are not commonly used (`jmi` vs. `joint_mark_intensity`)
+------------------
+Prefer whole words (`elec_poten` vs. `electric_potential`)
 
 # 3) Document your functions
 
@@ -235,14 +250,8 @@ encapsulate ideas in functions
 ```
 
 # 3) Document your functions
-
-* easy thing: brief sentence describing the function without using the name of the function (**this is the most important**)
-
-* more complicated thing:
-    * additional detail about what the function does or method it implements
-    * description of the parameters (type, shape)
-    * description of the outputs (type, shape)
-    * examples if you can
+------------------
+Easy thing: brief sentence describing the function without using the name of the function (**this is the most important**)
 
 <aside class="notes">
 * second line of defense in remembering what a function does
@@ -251,10 +260,19 @@ encapsulate ideas in functions
 * if using matlab, use the matlab format
 * documentation often longer than the code itself
 </aside>
+------------------
+More complicated thing:
+* additional detail about what the function does or method it implements
+* description of the parameters (type, shape)
+* description of the outputs (type, shape)
+* examples if you can
 
 # 4) Test your code
-* make sure your code works like you think it does
-* Think about how your code can fail
+------------------
+Make sure your code works like you think it does
+------------------
+Think about how your code can fail
+------------------
 * **small, well-defined, well-named functions are easy to test!**
 
 # Example
@@ -264,39 +282,46 @@ encapsulate ideas in functions
 ```
 
 # Unit tests
-* unit tests test a small component of your code (usually a small function) and makes sure it works like you think it works
-    * isolate small components of program and make sure they are correct
-    * doesn’t ensure that combinations of these functions work (integration testing)
+------------------
+Unit tests test a small component of your code (usually a small function) and makes sure it works like you think it works
+<aside class="notes">
+* Isolate small components of program and make sure they are correct
+* doesn’t ensure that combinations of these functions work (integration testing)
+</aside>
 
 # Unit tests prevent regression of your code
+------------------
 If you change your code, you want to know what still works and what has broken
-
-# Example
-
-```python
-
-```
-
-# Use unit tests to define the requirements of your code
-* ensure that your function is well-defined
-* some people even write unit tests before writing a function (test-driven development)
-* also a form of documentation: examples for how you think your code should work
-* **functions should be simple to test**
-* if you find a bug, write a test
-
+------------------
+**Functions should be simple to test**
 <aside class="notes">
 * if the number of test cases is uncomfortably large, start looking for smaller units to test.
 * your function is probably too complex
 * After reproducing the bug, and before fixing it, you should write a test case that fails, thus illustrating the bug.
 </aside>
+------------------
+If you find a bug, write a test.
+<aside class="notes">
+After reproducing the bug, and before fixing it, you should write a test case that fails, thus illustrating the bug.
+</aside>
+
+# Use unit tests to define the requirements of your code
+<aside class="notes">
+* ensure that your function is well-defined
+* some people even write unit tests before writing a function (test-driven development)
+* also a form of documentation: examples for how you think your code should work
+</aside>
 
 # You can use programs called "test runners” to run a group of unit tests automatically
-* matlab, python have built- in unit test programs
-    * matlab: https://www.mathworks.com/help/matlab/matlab-unit-test-framework.html
-    * python: https://docs.python.org/3.4/library/unittest.html
-    * if you use python, pytest is a helpful extension: http://doc.pytest.org/en/latest/
-    * R: testthat package — works well with RStudio IDE
-* there are also libraries available that will work with your version control system to run these tests every time you commit a new piece of code (“continuous integration”)
+
+# matlab, python have built- in unit test programs
+* matlab: https://www.mathworks.com/help/matlab/matlab-unit-test-framework.html
+* python: https://docs.python.org/3.4/library/unittest.html
+* if you use python, pytest is a helpful extension: http://doc.pytest.org/en/latest/
+* R: testthat package — works well with RStudio IDE
+
+------------------
+There are also libraries available that will work with your version control system to run these tests every time you commit a new piece of code (`continuous integration`)
 
 <aside class="notes">
 * This all seems complicated but in the process of developing code, you should be writing tests to make sure it works. This process just formalizes the writing of tests and allows you to run them at a later time, ensuring peace of mind.
@@ -306,7 +331,8 @@ If you change your code, you want to know what still works and what has broken
 </aside>
 
 # Use version control
-# Sophisticated way to track change in your code over time
+------------------
+Sophisticated way to track change in your code over time
 
 <aside class="notes">
 * dropbox is a form of this (but not very sophisticated)
@@ -314,34 +340,41 @@ If you change your code, you want to know what still works and what has broken
 * snapshots of all the files in a folder (repository)
 * git is the most popular (some time is needed to learn this, but social/collaborative/popularity make it worth it)
 </aside>
-
-# Version control stores the whole history of your project
-# Helps you back up your work
-# Go back to previous versions of your code
-# Reduce code clutter and confusion
+------------------
+Version control stores the whole history of your project
+------------------
+Helps you back up your work
+------------------
+Go back to previous versions of your code
+------------------
+Reduce code clutter and confusion
+<aside class="notes">
 * no more code_v1.m, code_v2.m
 * which version of code was I using???
 * which version of code worked???
 * how is this different from other code I wrote???
-# Experiment with different versions of code (branches)
-# Makes it easier to work with others
+</aside>
+------------------
+Experiment with different versions of code (branches)
+------------------
+Makes it easier to work with others
 
 <aside class="notes">
-    * standardized way of not unintentionally overwriting each others code
-    * easy to share code (GitHub, Bitbucket, etc)
-    * makes it easier to document issues with code or data
+* standardized way of not unintentionally overwriting each others code
+* easy to share code (GitHub, Bitbucket, etc)
+* makes it easier to document issues with code or data
+* Use example from this presentation
 <aside>
 
-# Example from this presentation
-
-# Commit early and often
+------------------
+Commit early and often
+<aside class="notes">
 * when you get a piece of code working, commit it (take a snapshot)
 * Leave a short informative commit message (document what the commit is)
 * don’t comment out code, just remove it, you can get back
-* reduce your anxiety
-    * want to be able to get back to code that works
 * I personally use GitHub Desktop
     * easy to use user interface
+<aside>
 
 # Refactor your code
 >“Whenever I have to think to understand what the code is doing, I ask myself if I can refactor the code to make that understanding more immediately apparent.”
@@ -367,9 +400,9 @@ If you change your code, you want to know what still works and what has broken
 
 
 # Always search for well-maintained software libraries that do what you need.
-
+------------------
 Don't rewrite functions that are already implemented as part of the core language.
-
+------------------
 Use other software libraries if they are well-maintained
 
 <aside class="notes">
