@@ -317,8 +317,6 @@ def linear_regression(design_matrix, response):
 
 ```
 
-# 2) Use variable/function names to clarify what things do
-
 ------------------
 
 You don’t need comments if the variable or function already tells you what it does (self-documenting)
@@ -347,23 +345,6 @@ Avoid using abbreviations that are not commonly used
 Prefer whole words
 
 (`elec_poten` vs. `electric_potential`)
-
-# 3) Document your functions
-
-# Bad
-```python
-
-```
-
-# Better
-```python
-
-```
-
-# Best
-```python
-
-```
 
 # 3) Document your functions
 
