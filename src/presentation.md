@@ -161,8 +161,7 @@ def bad_function():
 * makes you more efficient because you don’t have to rewrite code
 * makes you more precise because you can focus on fixing bugs for one function, not many similar functions
 
-# Small, well-defined functions are more readable
-* encapsulate ideas in functions
+# Small, well-defined functions are more readable (if you give them good names)
 
 > “Programs are meant to be read by humans and only incidentally for computers to execute”
 > -- <cite>Donald Knuth</cite>
