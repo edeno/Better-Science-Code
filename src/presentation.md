@@ -224,19 +224,23 @@ encapsulate ideas in functions
 
 ```
 
+# 3) Document your functions
 
-```
-* easy thing: brief sentence describing the function without using the name of the function (this is the most important)
-    * second line of defense in remembering what a function does
+* easy thing: brief sentence describing the function without using the name of the function (**this is the most important**)
+
 * more complicated thing:
     * additional detail about what the function does or method it implements
     * description of the parameters (type, shape)
     * description of the outputs (type, shape)
     * examples if you can
+
+<aside class="notes">
+* second line of defense in remembering what a function does
 * The more important the function, the more it should be documented
 * if using python, use the numpy format
 * if using matlab, use the matlab format
 * documentation often longer than the code itself
+</aside>
 
 # 4) Test your code
 * make sure your code works like you think it does
