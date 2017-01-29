@@ -84,8 +84,13 @@ Exercise in how to manage complexity:
 
 # Goal: Want to form good habits
 
-* don’t be overwhelmed and not do any of these things
-* don’t beat yourself up if you don’t do all these things all the time
+------------------
+
+Don’t be overwhelmed and not do any of these things
+
+------------------
+
+Don’t beat yourself up if you don’t do all these things all the time
 
 <aside class="notes">
 * just try to remember them and incorporate them gradually into your process
