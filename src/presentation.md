@@ -296,30 +296,40 @@ If you change your code, you want to know what still works and what has broken
 </aside>
 
 # Use version control
-* what is version control?
-    * tracks change in your code over time
-        * dropbox is a form of this (but not very sophisticated)
-        * git is the most popular (some time is needed to learn this, but social/collaborative/popularity make it worth it)
-    * stores the whole history of your project
-        * git helps you back up your work
-        * reduces code clutter
-            * no more code_v1.m, code_v2.m
-            * which version of code was I using???
-            * which version of code worked???
-            * how is this different from other code I wrote???
-    * git lets you time travel
-        * because you have snapshots of your code, you can go back to previous versions of your code
-    * experiment with different versions of code (branches)
-    * makes it easier to work with others
-        * standardized way of not unintentionally overwriting each others code
-        * easy to share code (GitHub, Bitbucket, etc)
-        * makes it easier to document issues with code or data
-* commit early and often
-    * when you get a piece of code working, commit it (take a snapshot)
-    * Leave a short informative commit message (document what the commit is)
-    * don’t comment out code, just remove it, you can get back
-    * reduce your anxiety
-        * want to be able to get back to code that works
+# Sophisticated way to track change in your code over time
+
+<aside class="notes">
+* dropbox is a form of this (but not very sophisticated)
+* microsoft word is also a form of this (but not very sophisticated)
+* snapshots of all the files in a folder (repository)
+* git is the most popular (some time is needed to learn this, but social/collaborative/popularity make it worth it)
+</aside>
+
+# Version control stores the whole history of your project
+# Helps you back up your work
+# Go back to previous versions of your code
+# Reduce code clutter and confusion
+* no more code_v1.m, code_v2.m
+* which version of code was I using???
+* which version of code worked???
+* how is this different from other code I wrote???
+# Experiment with different versions of code (branches)
+# Makes it easier to work with others
+
+<aside class="notes">
+    * standardized way of not unintentionally overwriting each others code
+    * easy to share code (GitHub, Bitbucket, etc)
+    * makes it easier to document issues with code or data
+<aside>
+
+# Example from this presentation
+
+# Commit early and often
+* when you get a piece of code working, commit it (take a snapshot)
+* Leave a short informative commit message (document what the commit is)
+* don’t comment out code, just remove it, you can get back
+* reduce your anxiety
+    * want to be able to get back to code that works
 * I personally use GitHub Desktop
     * easy to use user interface
 
