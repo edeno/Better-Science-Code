@@ -69,7 +69,7 @@ Exercise in how to manage complexity:
 * eliminate unnecessary dependencies
 * keep track of what you did (be organized)
 
-# Goals: Want to form good habits
+# Goal: Want to form good habits
 
 * don’t be overwhelmed and not do any of these things
 * don’t beat yourself up if you don’t do all these things all the time
