@@ -60,7 +60,7 @@ Example: Michael Shadlen vs. Jonathan Pillow debate about the dynamics neurons d
 
 # 5) Can serve as a resume for future employers
 
-# How do write good code?
+# How to write good code?
 
 Exercise in how to manage complexity:
 
