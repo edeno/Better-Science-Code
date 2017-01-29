@@ -334,19 +334,26 @@ If you change your code, you want to know what still works and what has broken
     * easy to use user interface
 
 # Refactor your code
-* your code doesn’t have to be perfect the first time
 >“Whenever I have to think to understand what the code is doing, I ask myself if I can refactor the code to make that understanding more immediately apparent.”
 > -- <cite>Martin Fowler, Refactoring: Improving the Design of Existing Code</cite>
+
+<aside class="notes">
+* your code isn't going to be perfect the first time
 * Just like in writing, your code will get better as you revise it. You wouldn’t expect a first draft to be perfect.
+* Always leave the code in a better state than when you first found it.
+
 * each time you look at your code:
     * do my variable/function names make sense?
     * do I know what this function is doing?
     * can I turn things into functions?
     * can I generalize this function?
+
 * there is some tradeoff between tinkering with your code and getting things done
+
 * also don’t throw everything out and re-write from scratch unless you can absolutely help it
     * "When you throw away code and start from scratch, you are throwing away all that knowledge. All those collected bug fixes.”
-    * if tempted by this tutorial to do this to your existing codebase, don't
+* if tempted by this tutorial to do this to your existing codebase, don't
+<aside>
 
 
 # Always search for well-maintained software libraries that do what you need.
