@@ -39,17 +39,18 @@ Good code should reduce your anxiety about making mistakes
 
 
 # 3) Want to be able to share it with other people
-* particularly important with statistical methods
-    * what’s the point of coming up with a method if other people can’t easily use it or verify that it works
+
+Particularly important with statistical methods development
+
+<aside class="notes">
+
+* what’s the point of coming up with a method if other people can’t easily use it or verify that it works
 * increase the impact of your paper if other people can use your method
 * if neuroscience is increasingly relying on larger teams of people working together, those teams need to be able to share code
 
-<aside class="notes">
 Example: Michael Shadlen vs. Jonathan Pillow debate about the dynamics neurons during perceptual decision making tasks (Ramping diffusion to bound model vs. stepping model)
-
-    * Pillow lab released several papers arguing for stepping model with code available on Github
-
-    * Shadlen lab recently countered with a paper arguing against the stepping model using the Pillow lab code
+* Pillow lab released several papers arguing for stepping model with code available on Github
+* Shadlen lab recently countered with a paper arguing against the stepping model using the Pillow lab code
 </aside>
 
 # 4) Avoid introducing new errors
