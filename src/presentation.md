@@ -162,7 +162,7 @@ pure = as few implicit contexts and side-effects as possible.
 
 ------------------
 
-* Be ruthless about eliminating duplication of code
+Be ruthless about eliminating duplication of code
 
 <aside class="notes">
 * turn duplicated code into functions
