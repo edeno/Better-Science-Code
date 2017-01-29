@@ -25,7 +25,9 @@ We want code that works (**it does what you say it does**) and is reproducible (
 
 **We are writing complex code**
 
+<aside class="notes">
 Good code should reduce your anxiety about making mistakes
+</aside>
 
 
 # 2) Want to remember what the code does months later
