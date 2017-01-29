@@ -245,31 +245,55 @@ encapsulate ideas in functions
 # 4) Test your code
 * make sure your code works like you think it does
 * Think about how your code can fail
-* small, well-defined, well-named functions are easy to test!
-* unit tests
-    * unit tests test a small component of your code (usually a small function) and makes sure it works like you think it works
-        * isolate small components of program and make sure they are correct
-        * doesn’t ensure that combinations of these functions work (integration testing)
-    * unit tests prevent regression of your code
-        * if you change your code, you want to know what still works and what has broken
-    * use unit tests to define the requirements of your code
-        * ensure that your function is well-defined
-        * some people even write unit tests before writing a function
-        * also a form of documentation: examples for how you think your code should work
-    * you can use programs called "test runners” to run a group of unit tests automatically
-        * matlab, python have built- in unit test programs
-            * matlab: https://www.mathworks.com/help/matlab/matlab-unit-test-framework.html
-            * python: https://docs.python.org/3.4/library/unittest.html
-            * if you use python, pytest is a helpful extension: http://doc.pytest.org/en/latest/
-            * R: testthat package — works well with RStudio IDE
-        * there are also libraries available that will work with your version control system to run these tests everytime you commit a new piece of code (“continuous integration”)
-    * This all seems complicated but in the process of developing code, you should be writing tests to make sure it works. This process just formalizes the writing of tests and allows you to run them at a later time, ensuring peace of mind.
-* yields more predictable code
-    * in order to write a test, you have to know what the function does
-    * people can look at your tests to understand your code (form of documentation)
+* **small, well-defined, well-named functions are easy to test!**
+
+# Example
+
+```python
+
+```
+
+# Unit tests
+* unit tests test a small component of your code (usually a small function) and makes sure it works like you think it works
+    * isolate small components of program and make sure they are correct
+    * doesn’t ensure that combinations of these functions work (integration testing)
+
+# Unit tests prevent regression of your code
+If you change your code, you want to know what still works and what has broken
+
+# Example
+
+```python
+
+```
+
+# Use unit tests to define the requirements of your code
+* ensure that your function is well-defined
+* some people even write unit tests before writing a function (test-driven development)
+* also a form of documentation: examples for how you think your code should work
+* **functions should be simple to test**
+* if you find a bug, write a test
+
+<aside class="notes">
 * if the number of test cases is uncomfortably large, start looking for smaller units to test.
-    * your function is probably too complex
+* your function is probably too complex
 * After reproducing the bug, and before fixing it, you should write a test case that fails, thus illustrating the bug.
+</aside>
+
+# You can use programs called "test runners” to run a group of unit tests automatically
+* matlab, python have built- in unit test programs
+    * matlab: https://www.mathworks.com/help/matlab/matlab-unit-test-framework.html
+    * python: https://docs.python.org/3.4/library/unittest.html
+    * if you use python, pytest is a helpful extension: http://doc.pytest.org/en/latest/
+    * R: testthat package — works well with RStudio IDE
+* there are also libraries available that will work with your version control system to run these tests every time you commit a new piece of code (“continuous integration”)
+
+<aside class="notes">
+* This all seems complicated but in the process of developing code, you should be writing tests to make sure it works. This process just formalizes the writing of tests and allows you to run them at a later time, ensuring peace of mind.
+* yields more predictable code
+* in order to write a test, you have to know what the function does
+* people can look at your tests to understand your code (form of documentation)
+</aside>
 
 # Use version control
 * what is version control?
