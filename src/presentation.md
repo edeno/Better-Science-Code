@@ -82,7 +82,7 @@ Exercise in how to manage complexity:
 Biggest mistake I see in scientific code
 </aside>
 
-# Bad
+------------------
 ```python
 def bad_function():
     import numpy as np
@@ -98,7 +98,7 @@ def bad_function():
     np.save('ans.npy', b)
 ```
 
-# Better
+------------------
 ```python
 import numpy as np
 
