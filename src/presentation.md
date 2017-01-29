@@ -629,16 +629,37 @@ I think it is a mistake to think that only "programmers" working for companies n
 
 # Bonus: Data Management
 
-* Put different projects in different folders/repositories
-* Use relative paths
-* Separate the data from the code
-* Processed Data should be separated from Raw Data to avoid accidentally changing the data
-    * want your analysis to be reproducible
-* Tidy Data:
-    * Each variable forms a column.
-    * Each observation forms a row.
-    * Each type of observational unit forms a table
-    * flat is better than nested
-* If original data is not in a good form, convert it to a good form (but don’t overwrite the original data)
-* Don’t hand-edit data files.
-* All aspects of data cleaning should be in scripts
+------------------
+
+Put different projects in different folders/repositories
+
+------------------
+
+Use relative paths
+
+------------------
+
+Separate the data from the code
+
+------------------
+
+Processed Data should be separated from Raw Data to avoid accidentally changing the data
+
+------------------
+
+Tidy Data:
+* Each variable forms a column.
+* Each observation forms a row.
+* Each type of observational unit forms a table
+* flat is better than nested
+
+------------------
+
+If original data is not in a good form, convert it to a good form (but don’t overwrite the original data)
+
+------------------
+
+Don’t hand-edit data files.
+
+------------------
+All aspects of data cleaning should be in scripts
