@@ -156,10 +156,14 @@ Example: Michael Shadlen vs. Jonathan Pillow debate about the dynamics neurons 
 </section>
 <section id="goal-want-to-form-good-habits" class="slide level1">
 <h1>Goal: Want to form good habits</h1>
-<ul>
-<li>don’t be overwhelmed and not do any of these things</li>
-<li>don’t beat yourself up if you don’t do all these things all the time</li>
-</ul>
+</section>
+<section class="slide level1">
+
+<p>Don’t be overwhelmed and not do any of these things</p>
+</section>
+<section class="slide level1">
+
+<p>Don’t beat yourself up if you don’t do all these things all the time</p>
 <aside class="notes">
 <ul>
 <li>just try to remember them and incorporate them gradually into your process</li>
@@ -230,9 +234,7 @@ pure = as few implicit contexts and side-effects as possible.
 </section>
 <section class="slide level1">
 
-<ul>
-<li>Be ruthless about eliminating duplication of code</li>
-</ul>
+<p>Be ruthless about eliminating duplication of code</p>
 <aside class="notes">
 <ul>
 <li>turn duplicated code into functions</li>
@@ -240,13 +242,43 @@ pure = as few implicit contexts and side-effects as possible.
 </ul>
 </aside>
 </section>
-<section id="bad" class="slide level1">
-<h1>Bad</h1>
-<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"></code></pre></div>
+<section class="slide level1">
+
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="im">import</span> numpy <span class="im">as</span> np
+
+<span class="kw">def</span> bad_function():
+    X <span class="op">=</span> np.load(<span class="st">&#39;/tmp/123.npy&#39;</span>, mmap_mode<span class="op">=</span><span class="st">&#39;r&#39;</span>)
+    y, x1, x2 <span class="op">=</span> X[:, <span class="dv">0</span>], X[:, <span class="dv">1</span>], X[:, <span class="dv">2</span>]
+    z1 <span class="op">=</span> (x1 <span class="op">-</span> x1.mean()) <span class="op">/</span> x1.std()
+    Q1, R1 <span class="op">=</span> np.linalg.qr(z1, mode<span class="op">=</span><span class="st">&#39;reduced&#39;</span>)
+    b1 <span class="op">=</span> np.linalg.solve(R1, np.dot(Q1.T, y1))
+    z2 <span class="op">=</span> (x2 <span class="op">-</span> x2.mean()) <span class="op">/</span> x2.std()
+    Q2, R2 <span class="op">=</span> np.linalg.qr(z1, mode<span class="op">=</span><span class="st">&#39;reduced&#39;</span>)
+    b2 <span class="op">=</span> np.linalg.solve(R2, np.dot(Q2.T, y2))
+    b <span class="op">=</span> b1 <span class="op">-</span> b2
+    np.save(<span class="st">&#39;ans.npy&#39;</span>, b)</code></pre></div>
 </section>
-<section id="better" class="slide level1">
-<h1>Better</h1>
-<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"></code></pre></div>
+<section class="slide level1">
+
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="im">import</span> numpy <span class="im">as</span> np
+
+<span class="kw">def</span> better_function():
+    y, x1, x2 <span class="op">=</span> load_data(<span class="st">&#39;/tmp/123.npy&#39;</span>)
+    b1 <span class="op">=</span> linear_regression(zscore(x1), y)
+    b2 <span class="op">=</span> linear_regression(zscore(x2), y)
+    b <span class="op">=</span> b1 <span class="op">-</span> b2
+    np.save(<span class="st">&#39;ans.npy&#39;</span>, b)
+
+<span class="kw">def</span> load_data(data_name):
+    X <span class="op">=</span> np.load(data_name, mmap_mode<span class="op">=</span><span class="st">&#39;r&#39;</span>)
+    <span class="cf">return</span> X[:, <span class="dv">0</span>], X[:, <span class="dv">1</span>], X[:, <span class="dv">2</span>]
+
+<span class="kw">def</span> zscore(x):
+    <span class="cf">return</span> (x <span class="op">-</span> x.mean()) <span class="op">/</span> x.std()
+
+<span class="kw">def</span> linear_regression(design_matrix, response):
+    Q, R <span class="op">=</span> np.linalg.qr(design_matrix, mode<span class="op">=</span><span class="st">&#39;reduced&#39;</span>)
+    <span class="cf">return</span> np.linalg.solve(R, np.dot(Q.T, response))</code></pre></div>
 </section>
 <section id="small-well-defined-functions-are-more-maintainable" class="slide level1">
 <h1>Small, well-defined functions are more maintainable</h1>
@@ -285,18 +317,65 @@ encapsulate ideas in functions
 <section id="use-good-variablefunction-names-to-clarify-what-things-do" class="slide level1">
 <h1>2) Use good variable/function names to clarify what things do</h1>
 </section>
-<section id="bad-1" class="slide level1">
-<h1>Bad</h1>
-<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"></code></pre></div>
+<section class="slide level1">
+
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="im">import</span> numpy <span class="im">as</span> np
+
+<span class="kw">def</span> bad_function():
+    X <span class="op">=</span> np.load(<span class="st">&#39;/tmp/123.npy&#39;</span>, mmap_mode<span class="op">=</span><span class="st">&#39;r&#39;</span>)
+    y, x1, x2 <span class="op">=</span> X[:, <span class="dv">0</span>], X[:, <span class="dv">1</span>], X[:, <span class="dv">2</span>]
+    z1 <span class="op">=</span> (x1 <span class="op">-</span> x1.mean()) <span class="op">/</span> x1.std()
+    Q1, R1 <span class="op">=</span> np.linalg.qr(z1, mode<span class="op">=</span><span class="st">&#39;reduced&#39;</span>)
+    b1 <span class="op">=</span> np.linalg.solve(R1, np.dot(Q1.T, y1))
+    z2 <span class="op">=</span> (x2 <span class="op">-</span> x2.mean()) <span class="op">/</span> x2.std()
+    Q2, R2 <span class="op">=</span> np.linalg.qr(z1, mode<span class="op">=</span><span class="st">&#39;reduced&#39;</span>)
+    b2 <span class="op">=</span> np.linalg.solve(R2, np.dot(Q2.T, y2))
+    b <span class="op">=</span> b1 <span class="op">-</span> b2
+    np.save(<span class="st">&#39;ans.npy&#39;</span>, b)</code></pre></div>
 </section>
-<section id="better-1" class="slide level1">
-<h1>Better</h1>
-<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"></code></pre></div>
+<section class="slide level1">
+
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="im">import</span> numpy <span class="im">as</span> np
+
+<span class="kw">def</span> better_function():
+    y, x1, x2 <span class="op">=</span> load_data(<span class="st">&#39;/tmp/123.npy&#39;</span>)
+    b1 <span class="op">=</span> linear_regression(zscore(x1), y)
+    b2 <span class="op">=</span> linear_regression(zscore(x2), y)
+    b <span class="op">=</span> b1 <span class="op">-</span> b2
+    np.save(<span class="st">&#39;ans.npy&#39;</span>, b)
+
+<span class="kw">def</span> load_data(data_name):
+    X <span class="op">=</span> np.load(data_name, mmap_mode<span class="op">=</span><span class="st">&#39;r&#39;</span>)
+    <span class="cf">return</span> X[:, <span class="dv">0</span>], X[:, <span class="dv">1</span>], X[:, <span class="dv">2</span>]
+
+<span class="kw">def</span> zscore(x):
+    <span class="cf">return</span> (x <span class="op">-</span> x.mean()) <span class="op">/</span> x.std()
+
+<span class="kw">def</span> linear_regression(design_matrix, response):
+    Q, R <span class="op">=</span> np.linalg.qr(design_matrix, mode<span class="op">=</span><span class="st">&#39;reduced&#39;</span>)
+    <span class="cf">return</span> np.linalg.solve(R, np.dot(Q.T, response))</code></pre></div>
 </section>
-<section id="side-by-side" class="slide level1">
-<h1>Side-by-Side</h1>
-<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"></code></pre></div>
-<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"></code></pre></div>
+<section class="slide level1">
+
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="im">import</span> numpy <span class="im">as</span> np
+
+<span class="kw">def</span> better_function():
+    response, design_matrix1, design_matrix2 <span class="op">=</span> load_data(<span class="st">&#39;/tmp/123.npy&#39;</span>)
+    coefficient1 <span class="op">=</span> linear_regression(zscore(design_matrix1), response)
+    coefficient2 <span class="op">=</span> linear_regression(zscore(design_matrix2), response)
+    coefficient_difference <span class="op">=</span> coefficient1 <span class="op">-</span> coefficient2
+    np.save(<span class="st">&#39;ans.npy&#39;</span>, b)
+
+<span class="kw">def</span> load_data(data_name):
+    X <span class="op">=</span> np.load(data_name, mmap_mode<span class="op">=</span><span class="st">&#39;r&#39;</span>)
+    <span class="cf">return</span> X[:, <span class="dv">0</span>], X[:, <span class="dv">1</span>], X[:, <span class="dv">2</span>]
+
+<span class="kw">def</span> zscore(x):
+    <span class="cf">return</span> (x <span class="op">-</span> x.mean()) <span class="op">/</span> x.std()
+
+<span class="kw">def</span> linear_regression(design_matrix, response):
+    Q, R <span class="op">=</span> np.linalg.qr(design_matrix, mode<span class="op">=</span><span class="st">&#39;reduced&#39;</span>)
+    <span class="cf">return</span> np.linalg.solve(R, np.dot(Q.T, response))</code></pre></div>
 </section>
 <section id="use-variablefunction-names-to-clarify-what-things-do" class="slide level1">
 <h1>2) Use variable/function names to clarify what things do</h1>
@@ -330,11 +409,11 @@ encapsulate ideas in functions
 <section id="document-your-functions" class="slide level1">
 <h1>3) Document your functions</h1>
 </section>
-<section id="bad-2" class="slide level1">
+<section id="bad" class="slide level1">
 <h1>Bad</h1>
 <div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"></code></pre></div>
 </section>
-<section id="better-2" class="slide level1">
+<section id="better" class="slide level1">
 <h1>Better</h1>
 <div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"></code></pre></div>
 </section>
@@ -360,7 +439,36 @@ encapsulate ideas in functions
 </section>
 <section class="slide level1">
 
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="kw">def</span> zscore(x):
+    <span class="co">&#39;&#39;&#39;Number of standard deviations from the mean&#39;&#39;&#39;</span>
+    <span class="cf">return</span> (x <span class="op">-</span> x.mean()) <span class="op">/</span> x.std()
+
+<span class="kw">def</span> linear_regression(design_matrix, response):
+    <span class="co">&#39;&#39;&#39;Calculate a linear least-squares regression for two sets of measurements&#39;&#39;&#39;</span>
+    Q, R <span class="op">=</span> np.linalg.qr(design_matrix, mode<span class="op">=</span><span class="st">&#39;reduced&#39;</span>)
+    <span class="cf">return</span> np.linalg.solve(R, np.dot(Q.T, response))</code></pre></div>
+</section>
+<section class="slide level1">
+
 <p>More complicated thing: * additional detail about what the function does or method it implements * description of the parameters (type, shape) * description of the outputs (type, shape) * examples if you can</p>
+</section>
+<section class="slide level1">
+
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="kw">def</span> linear_regression(design_matrix, response):
+    <span class="co">&#39;&#39;&#39;Calculate a linear least-squares regression for two sets of measurements</span>
+
+<span class="co">    Parameters</span>
+<span class="co">    ----------</span>
+<span class="co">    design_matrix, response : array_like</span>
+<span class="co">        Two sets of measurements. Both arrays should have the same length.</span>
+
+<span class="co">    Returns</span>
+<span class="co">    -------</span>
+<span class="co">    coefficients : array_like</span>
+
+<span class="co">    &#39;&#39;&#39;</span>
+    Q, R <span class="op">=</span> np.linalg.qr(design_matrix, mode<span class="op">=</span><span class="st">&#39;reduced&#39;</span>)
+    <span class="cf">return</span> np.linalg.solve(R, np.dot(Q.T, response))</code></pre></div>
 </section>
 <section id="test-your-code" class="slide level1">
 <h1>4) Test your code</h1>
@@ -379,7 +487,17 @@ encapsulate ideas in functions
 </section>
 <section id="example" class="slide level1">
 <h1>Example</h1>
-<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="im">import</span> numpy <span class="im">as</span> np
+
+<span class="kw">def</span> zscore(x):
+    <span class="co">&#39;&#39;&#39;Number of standard deviations from the mean&#39;&#39;&#39;</span>
+    <span class="cf">return</span> (x <span class="op">-</span> x.mean()) <span class="op">/</span> x.std()
+
+<span class="kw">def</span> test_zscore():
+    test_values <span class="op">=</span> np.asarray([<span class="dv">1</span>, <span class="dv">3</span>])
+    expected_values <span class="op">=</span> np.asarray([<span class="op">-</span><span class="dv">1</span>, <span class="dv">1</span>])
+
+    <span class="cf">assert</span> np.allclose(zscore(test_values), expected_values)</code></pre></div>
 </section>
 <section id="unit-tests" class="slide level1">
 <h1>Unit tests</h1>
@@ -576,25 +694,38 @@ I think it is a mistake to think that only “programmers” working for compani
 </section>
 <section id="bonus-data-management" class="slide level1">
 <h1>Bonus: Data Management</h1>
-<ul>
-<li>Put different projects in different folders/repositories</li>
-<li>Use relative paths</li>
-<li>Separate the data from the code</li>
-<li>Processed Data should be separated from Raw Data to avoid accidentally changing the data
-<ul>
-<li>want your analysis to be reproducible</li>
-</ul></li>
-<li>Tidy Data:
-<ul>
-<li>Each variable forms a column.</li>
-<li>Each observation forms a row.</li>
-<li>Each type of observational unit forms a table</li>
-<li>flat is better than nested</li>
-</ul></li>
-<li>If original data is not in a good form, convert it to a good form (but don’t overwrite the original data)</li>
-<li>Don’t hand-edit data files.</li>
-<li>All aspects of data cleaning should be in scripts</li>
-</ul>
+</section>
+<section class="slide level1">
+
+<p>Put different projects in different folders/repositories</p>
+</section>
+<section class="slide level1">
+
+<p>Use relative paths</p>
+</section>
+<section class="slide level1">
+
+<p>Separate the data from the code</p>
+</section>
+<section class="slide level1">
+
+<p>Processed Data should be separated from Raw Data to avoid accidentally changing the data</p>
+</section>
+<section class="slide level1">
+
+<p>Tidy Data: * Each variable forms a column. * Each observation forms a row. * Each type of observational unit forms a table * flat is better than nested</p>
+</section>
+<section class="slide level1">
+
+<p>If original data is not in a good form, convert it to a good form (but don’t overwrite the original data)</p>
+</section>
+<section class="slide level1">
+
+<p>Don’t hand-edit data files.</p>
+</section>
+<section class="slide level1">
+
+<p>All aspects of data cleaning should be in scripts</p>
 </section>
     </div>
   </div>
