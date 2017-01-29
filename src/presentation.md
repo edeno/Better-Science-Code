@@ -84,7 +84,18 @@ Biggest mistake I see in scientific code
 
 # Bad
 ```python
-
+def bad_function():
+    import numpy as np
+    X = np.load('/tmp/123.npy', mmap_mode='r')
+    y, x1, x2 = X[:, 0], X[:, 1], X[:, 2]
+    z1 = (x1 - x1.mean()) / x1.std()
+    Q1, R1 = np.linalg.qr(z1, mode='reduced')
+    b1 = np.linalg.solve(R1, np.dot(Q1.T, y1))
+    z2 = (x2 - x2.mean()) / x2.std()
+    Q2, R2 = np.linalg.qr(z1, mode='reduced')
+    b2 = np.linalg.solve(R2, np.dot(Q2.T, y2))
+    b = b1 - b2
+    np.save('ans.npy', b)
 ```
 
 # Better
