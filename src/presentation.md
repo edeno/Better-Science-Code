@@ -105,8 +105,7 @@ Biggest mistake I see in scientific code
 
 * try to keep functions to less than 60 lines (small)
 * try to keep what the function does as simple as possible (well-defined)
-    * functions should be “atomic"
-    * a function should do one "thing"
+    * functions should be "atomic" and "pure"
 * Be ruthless about eliminating duplication of code
     * turn duplicated code into functions
     * that way fixing a bug in your function, fixes it for every time the function is used instead of every separate instance
