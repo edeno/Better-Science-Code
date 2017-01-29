@@ -12,8 +12,10 @@ Repository: [https://github.com/edeno/Better-Science-Code](https://github.com/ed
 
 # 1) Doing good science!
 
+------------------
 We want code that works (**it does what you say it does**) and is reproducible (**you can get to the same result every time using the same data and code**):
 
+------------------
 * don’t want to have to retract papers because the code had bugs
 * Following good coding practices reduce the chance of making mistakes
 * Good code allows you to detect and fix mistakes quicker
@@ -23,6 +25,7 @@ We want code that works (**it does what you say it does**) and is reproducible (
 > As the complexity of a software program increases, the likelihood of undiscovered bugs quickly reaches certainty”
 > -- <cite>Poldrack et al. 2017</cite>
 
+------------------
 **We are writing complex code**
 
 <aside class="notes">
