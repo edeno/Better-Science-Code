@@ -338,11 +338,15 @@ Use the naming conventions of your language of choice (snake_case or camelCase) 
 
 ------------------
 
-Avoid using abbreviations that are not commonly used (`jmi` vs. `joint_mark_intensity`)
+Avoid using abbreviations that are not commonly used
+
+(`jmi` vs. `joint_mark_intensity`)
 
 ------------------
 
-Prefer whole words (`elec_poten` vs. `electric_potential`)
+Prefer whole words
+
+(`elec_poten` vs. `electric_potential`)
 
 # 3) Document your functions
 
@@ -401,7 +405,7 @@ More complicated thing:
 
 ```python
 def linear_regression(design_matrix, response):
-    '''Calculate a linear least-squares regression for two sets of measurements
+    '''Calculate a linear least-squares regression for two  sets of measurements
 
     Parameters
     ----------
