@@ -191,13 +191,18 @@ encapsulate ideas in functions
 
 ```
 
-* People have been taught to use comments in their code
-* Modern practice is to use commenting sparingly within the body of the code
+# 2) Use variable/function names to clarify what things do
+
 * You don’t need comments if the variable or function already tells you what it does (self-documenting)
 * Use the naming conventions of your language of choice (snake_case or camelCase) and be consistent
+<aside class="notes">
+* People have been taught to use comments in their code
+* Modern practice is to use commenting sparingly within the body of the code
 * Use comments to document what the functions does at the beginning of the function (will come back to this)
+* doesn't mean never use comments, but don't use them to restate what the code already says.
 * Makes it easier to read
 * When it is difficult to come up with a meaningful name for the function (It is probably doing too much)
+</aside>
 
 # 3) Document your functions
 
