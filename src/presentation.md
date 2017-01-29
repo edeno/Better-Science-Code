@@ -380,6 +380,14 @@ Little tricky: still need to take time to vet the code to make sure it does what
 * Use version control
 * Always search for well-maintained software libraries that do what you need.
 
+# Conclusion: Writing good code takes work
+
+# We have a scientific obligation to ensure the correctness of our programs.
+
+<aside class="notes">
+I think it is a mistake to think that only "programmers" working for companies need to bother with writing good code. You are a programmer dealing with complex programs.
+</aside>
+
 # Bonus: Data Management
 
 * Put different projects in different folders/repositories
