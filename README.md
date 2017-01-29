@@ -12,6 +12,7 @@ A presentation on best coding/data management practices based on my own experien
 ](http://dx.doi.org/10.1038/s41562-016-0021)
 * [How I learned to stop worrying and love the coming archivability crisis in scientific software - C. Titus Brown](http://ivory.idyll.org/blog/2017-pof-software-archivability.html)
 * [Git Introduction - Chris Markiewicz](https://github.com/bu-cnso/git-introduction)
+* [10 Tips for Writing Cleaner & Better Code ](http://www.makeuseof.com/tag/10-tips-writing-cleaner-better-code/)
 
 # Requirements
 * [pandoc](http://pandoc.org/)
