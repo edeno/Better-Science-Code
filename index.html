@@ -83,7 +83,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <p>We want code that works (<strong>it does what you say it does</strong>) and is reproducible (<strong>you can get to the same result every time using the same data and code</strong>):</p>
 <ul>
 <li>don’t want to have to retract papers because the code had bugs</li>
-<li>Good code reduces the chance of making mistakes</li>
+<li>Following good coding practices reduce the chance of making mistakes</li>
 <li>Good code allows you to detect and fix mistakes quicker</li>
 </ul>
 </section>
@@ -93,18 +93,9 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <p>As the complexity of a software program increases, the likelihood of undiscovered bugs quickly reaches certainty” – <cite>Poldrack et al. 2017</cite></p>
 </blockquote>
 <p><strong>We are writing complex code</strong></p>
-<p>Good code should reduce your anxiety about making mistakes</p>
-<h2 id="recent-examples">Recent Examples</h2>
-<ul>
-<li>recent example: in fMRI, a 15-year-old bug was discovered in the AFNI program 3dClustSim (and the older AlphaSim), which resulted in slightly inflated type I error rates
-<ul>
-<li>small error but it affected many studies</li>
-</ul></li>
-<li>another example: http://retractionwatch.com/2016/09/26/error-in-one-line-of-code-sinks-2016-seer-cancer-study/
-<ul>
-<li>https://www.oreilly.com/ideas/putting-the-science-back-in-data-science</li>
-</ul></li>
-</ul>
+<aside class="notes">
+Good code should reduce your anxiety about making mistakes
+</aside>
 </section>
 <section id="want-to-remember-what-the-code-does-months-later" class="slide level1">
 <h1>2) Want to remember what the code does months later</h1>
@@ -117,45 +108,50 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </section>
 <section id="want-to-be-able-to-share-it-with-other-people" class="slide level1">
 <h1>3) Want to be able to share it with other people</h1>
-<ul>
-<li>particularly important with statistical methods
+<p>Particularly important with statistical methods development</p>
+<aside class="notes">
 <ul>
 <li>what’s the point of coming up with a method if other people can’t easily use it or verify that it works</li>
-</ul></li>
 <li>increase the impact of your paper if other people can use your method</li>
 <li>if neuroscience is increasingly relying on larger teams of people working together, those teams need to be able to share code</li>
 </ul>
-<aside class="notes">
-<p>Example: Michael Shadlen vs. Jonathan Pillow debate about the dynamics neurons during perceptual decision making tasks (Ramping diffusion to bound model vs. stepping model)</p>
-<pre><code>* Pillow lab released several papers arguing for stepping model with code available on Github
-
-* Shadlen lab recently countered with a paper arguing against the stepping model using the Pillow lab code</code></pre>
+Example: Michael Shadlen vs. Jonathan Pillow debate about the dynamics neurons during perceptual decision making tasks (Ramping diffusion to bound model vs. stepping model) * Pillow lab released several papers arguing for stepping model with code available on Github * Shadlen lab recently countered with a paper arguing against the stepping model using the Pillow lab code
 </aside>
 </section>
 <section id="avoid-introducing-new-errors" class="slide level1">
 <h1>4) Avoid introducing new errors</h1>
-<p>Don’t necessarily want to spend time reproducing old code</p>
-<p>Could introduce new or different errors</p>
 </section>
 <section id="can-serve-as-a-resume-for-future-employers" class="slide level1">
 <h1>5) Can serve as a resume for future employers</h1>
 </section>
 <section id="how-do-write-good-code" class="slide level1">
 <h1>How do write good code?</h1>
-<p>Exercise in how to manage complexity: * break problems down into smaller components * eliminate unnecessary dependencies * keep track of what you did (be organized)</p>
+<p>Exercise in how to manage complexity:</p>
+<ul>
+<li>break problems down into smaller components</li>
+<li>eliminate unnecessary dependencies</li>
+<li>keep track of what you did (be organized)</li>
+</ul>
 </section>
-<section id="goals-want-to-form-good-habits" class="slide level1">
-<h1>Goals: Want to form good habits</h1>
+<section id="goal-want-to-form-good-habits" class="slide level1">
+<h1>Goal: Want to form good habits</h1>
 <ul>
 <li>don’t be overwhelmed and not do any of these things</li>
 <li>don’t beat yourself up if you don’t do all these things all the time</li>
+</ul>
+<aside class="notes">
+<ul>
 <li>just try to remember them and incorporate them gradually into your process</li>
 <li>it will slow your coding process initially, but you will gain precision, readability</li>
 <li>some of these will require more inertia (such as version control)</li>
 </ul>
+</aside>
 </section>
 <section id="decompose-programs-into-small-well-defined-functions" class="slide level1">
 <h1>1) Decompose programs into small, well-defined functions</h1>
+<aside class="notes">
+Biggest mistake I see in scientific code
+</aside>
 </section>
 <section id="bad" class="slide level1">
 <h1>Bad</h1>
@@ -169,9 +165,6 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <h1>Side-by-Side</h1>
 <div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"></code></pre></div>
 <div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"></code></pre></div>
-<aside class="notes">
-Biggest mistake I see in other people’s code
-</aside>
 </section>
 <section id="decompose-programs-into-small-well-defined-functions-1" class="slide level1">
 <h1>1) Decompose programs into small, well-defined functions</h1>
@@ -179,25 +172,50 @@ Biggest mistake I see in other people’s code
 <li>try to keep functions to less than 60 lines (small)</li>
 <li>try to keep what the function does as simple as possible (well-defined)
 <ul>
-<li>functions should be “atomic”</li>
-<li>a function should do one “thing”</li>
+<li>functions should be “atomic” and “pure”</li>
 </ul></li>
-<li>Be ruthless about eliminating duplication of code
+<li>Be ruthless about eliminating duplication of code</li>
+</ul>
+<aside class="notes">
+<p>atomic = a function should do one “thing”</p>
+<p>Think about if you came back to the function later, how long would it take you to understand what it does? * should be able to explain what it does in one sentence</p>
+<p>pure = as few implicit contexts and side-effects as possible.</p>
 <ul>
 <li>turn duplicated code into functions</li>
 <li>that way fixing a bug in your function, fixes it for every time the function is used instead of every separate instance</li>
-</ul></li>
 </ul>
-<aside class="notes">
-Think about if you came back to the function later, how long would it take you to understand what it does? * should be able to explain what it does in one sentence
 </aside>
+</section>
+<section id="bad-1" class="slide level1">
+<h1>Bad</h1>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="kw">def</span> bad_function():
+    <span class="im">import</span> numpy <span class="im">as</span> np
+    <span class="im">import</span> json
+
+    x <span class="op">=</span> np.load(<span class="st">&#39;/tmp/123.npy&#39;</span>, mmap_mode<span class="op">=</span><span class="st">&#39;r&#39;</span>)
+    y, x1, x2 <span class="op">=</span> X[:, <span class="dv">0</span>], X[:, <span class="dv">1</span>], X[:, <span class="dv">2</span>]
+
+    z1 <span class="op">=</span> (x1 <span class="op">-</span> x1.mean()) <span class="op">/</span> x1.std()
+    Q1, R1 <span class="op">=</span> np.linalg.qr(z1, mode<span class="op">=</span><span class="st">&#39;reduced&#39;</span>)
+    b1 <span class="op">=</span> np.linalg.solve(R1, np.dot(Q1.T, y1))
+
+    z2 <span class="op">=</span> (x2 <span class="op">-</span> x2.mean()) <span class="op">/</span> x2.std()
+    Q2, R2 <span class="op">=</span> np.linalg.qr(z1, mode<span class="op">=</span><span class="st">&#39;reduced&#39;</span>)
+    b2 <span class="op">=</span> np.linalg.solve(R2, np.dot(Q2.T, y2))
+
+    b <span class="op">=</span> b1 <span class="op">-</span> b2
+    np.save(<span class="st">&#39;ans.npy&#39;</span>, b)</code></pre></div>
+</section>
+<section id="better-1" class="slide level1">
+<h1>Better</h1>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"></code></pre></div>
 </section>
 <section id="small-well-defined-functions-are-more-maintainable" class="slide level1">
 <h1>Small, well-defined functions are more maintainable</h1>
 <ul>
 <li>breaks hard problems down into smaller problems</li>
 <li>limits the scope of your code</li>
-<li>makes it easier to debug</li>
+<li>makes it easier to debug or change</li>
 <li>separation of concerns</li>
 </ul>
 </section>
@@ -205,47 +223,22 @@ Think about if you came back to the function later, how long would it take you t
 <h1>Small, well-defined functions are more composable</h1>
 <ul>
 <li>can reuse function in other programs</li>
-<li>can pass functions to other functions (function composition) and other functional programming techniques</li>
+<li>can pass functions to other functions (function composition)</li>
 <li>makes you more efficient because you don’t have to rewrite code</li>
 <li>makes you more precise because you can focus on fixing bugs for one function, not many similar functions</li>
 </ul>
 </section>
-<section id="small-well-defined-functions-are-more-readable" class="slide level1">
-<h1>Small, well-defined functions are more readable</h1>
-<ul>
-<li>encapsulate ideas in functions</li>
-</ul>
+<section id="small-well-defined-functions-are-more-readable-if-you-give-them-good-names" class="slide level1">
+<h1>Small, well-defined functions are more readable (if you give them good names)</h1>
 <blockquote>
 <p>“Programs are meant to be read by humans and only incidentally for computers to execute” – <cite>Donald Knuth</cite></p>
 </blockquote>
+<aside class="notes">
+encapsulate ideas in functions
+</aside>
 </section>
 <section id="use-good-variablefunction-names-to-clarify-what-things-do" class="slide level1">
 <h1>2) Use good variable/function names to clarify what things do</h1>
-</section>
-<section id="bad-1" class="slide level1">
-<h1>Bad</h1>
-<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"></code></pre></div>
-</section>
-<section id="better-1" class="slide level1">
-<h1>Better</h1>
-<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"></code></pre></div>
-</section>
-<section id="side-by-side-1" class="slide level1">
-<h1>Side-by-Side</h1>
-<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"></code></pre></div>
-<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"></code></pre></div>
-<ul>
-<li>People have been taught to use comments in their code</li>
-<li>Modern practice is to use commenting sparingly within the body of the code</li>
-<li>You don’t need comments if the variable or function already tells you what it does (self-documenting)</li>
-<li>Use the naming conventions of your language of choice (snake_case or camelCase) and be consistent</li>
-<li>Use comments to document what the functions does at the beginning of the function (will come back to this)</li>
-<li>Makes it easier to read</li>
-<li>When it is difficult to come up with a meaningful name for the function (It is probably doing too much)</li>
-</ul>
-</section>
-<section id="document-your-functions" class="slide level1">
-<h1>3) Document your functions</h1>
 </section>
 <section id="bad-2" class="slide level1">
 <h1>Bad</h1>
@@ -255,15 +248,49 @@ Think about if you came back to the function later, how long would it take you t
 <h1>Better</h1>
 <div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"></code></pre></div>
 </section>
-<section id="side-by-side-2" class="slide level1">
+<section id="side-by-side-1" class="slide level1">
 <h1>Side-by-Side</h1>
 <div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"></code></pre></div>
 <div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"></code></pre></div>
+</section>
+<section id="use-variablefunction-names-to-clarify-what-things-do" class="slide level1">
+<h1>2) Use variable/function names to clarify what things do</h1>
 <ul>
-<li>easy thing: brief sentence describing the function without using the name of the function (this is the most important)
+<li>You don’t need comments if the variable or function already tells you what it does (self-documenting)</li>
+<li>Use the naming conventions of your language of choice (snake_case or camelCase) and be consistent</li>
+<li>Avoid using abbreviations that are not commonly used (<code>jmi</code> vs. <code>joint_mark_intensity</code>)</li>
+<li>Prefer whole words (<code>elec_poten</code> vs. <code>electric_potential</code>)</li>
+</ul>
+<aside class="notes">
 <ul>
-<li>second line of defense in remembering what a function does</li>
-</ul></li>
+<li>People have been taught to use comments in their code</li>
+<li>Modern practice is to use commenting sparingly within the body of the code</li>
+<li>Use comments to document what the functions does at the beginning of the function (will come back to this)</li>
+<li>doesn’t mean never use comments, but don’t use them to restate what the code already says.</li>
+<li>Makes it easier to read</li>
+<li>When it is difficult to come up with a meaningful name for the function (It is probably doing too much)</li>
+</ul>
+</aside>
+</section>
+<section id="document-your-functions" class="slide level1">
+<h1>3) Document your functions</h1>
+</section>
+<section id="bad-3" class="slide level1">
+<h1>Bad</h1>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"></code></pre></div>
+</section>
+<section id="better-3" class="slide level1">
+<h1>Better</h1>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"></code></pre></div>
+</section>
+<section id="best" class="slide level1">
+<h1>Best</h1>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"></code></pre></div>
+</section>
+<section id="document-your-functions-1" class="slide level1">
+<h1>3) Document your functions</h1>
+<ul>
+<li><p>easy thing: brief sentence describing the function without using the name of the function (<strong>this is the most important</strong>)</p></li>
 <li>more complicated thing:
 <ul>
 <li>additional detail about what the function does or method it implements</li>
@@ -271,36 +298,66 @@ Think about if you came back to the function later, how long would it take you t
 <li>description of the outputs (type, shape)</li>
 <li>examples if you can</li>
 </ul></li>
+</ul>
+<aside class="notes">
+<ul>
+<li>second line of defense in remembering what a function does</li>
 <li>The more important the function, the more it should be documented</li>
 <li>if using python, use the numpy format</li>
 <li>if using matlab, use the matlab format</li>
 <li>documentation often longer than the code itself</li>
 </ul>
+</aside>
 </section>
 <section id="test-your-code" class="slide level1">
 <h1>4) Test your code</h1>
 <ul>
 <li>make sure your code works like you think it does</li>
 <li>Think about how your code can fail</li>
-<li>small, well-defined, well-named functions are easy to test!</li>
-<li>unit tests
+<li><strong>small, well-defined, well-named functions are easy to test!</strong></li>
+</ul>
+</section>
+<section id="example" class="slide level1">
+<h1>Example</h1>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"></code></pre></div>
+</section>
+<section id="unit-tests" class="slide level1">
+<h1>Unit tests</h1>
 <ul>
 <li>unit tests test a small component of your code (usually a small function) and makes sure it works like you think it works
 <ul>
 <li>isolate small components of program and make sure they are correct</li>
 <li>doesn’t ensure that combinations of these functions work (integration testing)</li>
 </ul></li>
-<li>unit tests prevent regression of your code
-<ul>
-<li>if you change your code, you want to know what still works and what has broken</li>
-</ul></li>
-<li>use unit tests to define the requirements of your code
+</ul>
+</section>
+<section id="unit-tests-prevent-regression-of-your-code" class="slide level1">
+<h1>Unit tests prevent regression of your code</h1>
+<p>If you change your code, you want to know what still works and what has broken</p>
+</section>
+<section id="example-1" class="slide level1">
+<h1>Example</h1>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"></code></pre></div>
+</section>
+<section id="use-unit-tests-to-define-the-requirements-of-your-code" class="slide level1">
+<h1>Use unit tests to define the requirements of your code</h1>
 <ul>
 <li>ensure that your function is well-defined</li>
-<li>some people even write unit tests before writing a function</li>
+<li>some people even write unit tests before writing a function (test-driven development)</li>
 <li>also a form of documentation: examples for how you think your code should work</li>
-</ul></li>
-<li>you can use programs called “test runners” to run a group of unit tests automatically
+<li><strong>functions should be simple to test</strong></li>
+<li>if you find a bug, write a test</li>
+</ul>
+<aside class="notes">
+<ul>
+<li>if the number of test cases is uncomfortably large, start looking for smaller units to test.</li>
+<li>your function is probably too complex</li>
+<li>After reproducing the bug, and before fixing it, you should write a test case that fails, thus illustrating the bug.</li>
+</ul>
+</aside>
+</section>
+<section id="you-can-use-programs-called-test-runners-to-run-a-group-of-unit-tests-automatically" class="slide level1">
+<h1>You can use programs called “test runners” to run a group of unit tests automatically</h1>
 <ul>
 <li>matlab, python have built- in unit test programs
 <ul>
@@ -309,56 +366,59 @@ Think about if you came back to the function later, how long would it take you t
 <li>if you use python, pytest is a helpful extension: http://doc.pytest.org/en/latest/</li>
 <li>R: testthat package — works well with RStudio IDE</li>
 </ul></li>
-<li>there are also libraries available that will work with your version control system to run these tests everytime you commit a new piece of code (“continuous integration”)</li>
-</ul></li>
-<li>This all seems complicated but in the process of developing code, you should be writing tests to make sure it works. This process just formalizes the writing of tests and allows you to run them at a later time, ensuring peace of mind.</li>
-</ul></li>
-<li>yields more predictable code
+<li>there are also libraries available that will work with your version control system to run these tests every time you commit a new piece of code (“continuous integration”)</li>
+</ul>
+<aside class="notes">
 <ul>
+<li>This all seems complicated but in the process of developing code, you should be writing tests to make sure it works. This process just formalizes the writing of tests and allows you to run them at a later time, ensuring peace of mind.</li>
+<li>yields more predictable code</li>
 <li>in order to write a test, you have to know what the function does</li>
 <li>people can look at your tests to understand your code (form of documentation)</li>
-</ul></li>
-<li>if the number of test cases is uncomfortably large, start looking for smaller units to test.
-<ul>
-<li>your function is probably too complex</li>
-</ul></li>
-<li>After reproducing the bug, and before fixing it, you should write a test case that fails, thus illustrating the bug.</li>
 </ul>
+</aside>
 </section>
 <section id="use-version-control" class="slide level1">
 <h1>Use version control</h1>
-<ul>
-<li>what is version control?
-<ul>
-<li>tracks change in your code over time
+</section>
+<section id="sophisticated-way-to-track-change-in-your-code-over-time" class="slide level1">
+<h1>Sophisticated way to track change in your code over time</h1>
+<aside class="notes">
 <ul>
 <li>dropbox is a form of this (but not very sophisticated)</li>
+<li>microsoft word is also a form of this (but not very sophisticated)</li>
+<li>snapshots of all the files in a folder (repository)</li>
 <li>git is the most popular (some time is needed to learn this, but social/collaborative/popularity make it worth it)</li>
-</ul></li>
-<li>stores the whole history of your project
-<ul>
-<li>git helps you back up your work</li>
-<li>reduces code clutter
+</ul>
+</aside>
+</section>
+<section id="version-control-stores-the-whole-history-of-your-project" class="slide level1">
+<h1>Version control stores the whole history of your project</h1>
+</section>
+<section id="helps-you-back-up-your-work" class="slide level1">
+<h1>Helps you back up your work</h1>
+</section>
+<section id="go-back-to-previous-versions-of-your-code" class="slide level1">
+<h1>Go back to previous versions of your code</h1>
+</section>
+<section id="reduce-code-clutter-and-confusion" class="slide level1">
+<h1>Reduce code clutter and confusion</h1>
 <ul>
 <li>no more code_v1.m, code_v2.m</li>
 <li>which version of code was I using???</li>
 <li>which version of code worked???</li>
-<li>how is this different from other code I wrote???</li>
-</ul></li>
-</ul></li>
-<li>git lets you time travel
-<ul>
-<li>because you have snapshots of your code, you can go back to previous versions of your code</li>
-</ul></li>
-<li>experiment with different versions of code (branches)</li>
-<li>makes it easier to work with others
-<ul>
-<li>standardized way of not unintentionally overwriting each others code</li>
-<li>easy to share code (GitHub, Bitbucket, etc)</li>
-<li>makes it easier to document issues with code or data</li>
-</ul></li>
-</ul></li>
-<li>commit early and often
+<li>how is this different from other code I wrote??? # Experiment with different versions of code (branches) # Makes it easier to work with others</li>
+</ul>
+<aside class="notes">
+<pre><code>* standardized way of not unintentionally overwriting each others code
+* easy to share code (GitHub, Bitbucket, etc)
+* makes it easier to document issues with code or data</code></pre>
+<aside>
+</section>
+<section id="example-from-this-presentation" class="slide level1">
+<h1>Example from this presentation</h1>
+</section>
+<section id="commit-early-and-often" class="slide level1">
+<h1>Commit early and often</h1>
 <ul>
 <li>when you get a piece of code working, commit it (take a snapshot)</li>
 <li>Leave a short informative commit message (document what the commit is)</li>
@@ -366,7 +426,6 @@ Think about if you came back to the function later, how long would it take you t
 <li>reduce your anxiety
 <ul>
 <li>want to be able to get back to code that works</li>
-</ul></li>
 </ul></li>
 <li>I personally use GitHub Desktop
 <ul>
@@ -376,9 +435,14 @@ Think about if you came back to the function later, how long would it take you t
 </section>
 <section id="refactor-your-code" class="slide level1">
 <h1>Refactor your code</h1>
+<blockquote>
+<p>“Whenever I have to think to understand what the code is doing, I ask myself if I can refactor the code to make that understanding more immediately apparent.” – <cite>Martin Fowler, Refactoring: Improving the Design of Existing Code</cite></p>
+</blockquote>
+<aside class="notes">
 <ul>
-<li>your code doesn’t have to be perfect the first time</li>
+<li>your code isn’t going to be perfect the first time</li>
 <li>Just like in writing, your code will get better as you revise it. You wouldn’t expect a first draft to be perfect.</li>
+<li><p>Always leave the code in a better state than when you first found it.</p></li>
 <li>each time you look at your code:
 <ul>
 <li>do my variable/function names make sense?</li>
@@ -386,29 +450,44 @@ Think about if you came back to the function later, how long would it take you t
 <li>can I turn things into functions?</li>
 <li>can I generalize this function?</li>
 </ul></li>
-<li>there is some tradeoff between tinkering with your code and getting things done</li>
+<li><p>there is some tradeoff between tinkering with your code and getting things done</p></li>
 <li>also don’t throw everything out and re-write from scratch unless you can absolutely help it
 <ul>
 <li>“When you throw away code and start from scratch, you are throwing away all that knowledge. All those collected bug fixes.”</li>
-<li>if tempted by this tutorial to do this to your existing codebase, don’t</li>
 </ul></li>
+<li>if tempted by this tutorial to do this to your existing codebase, don’t
+<aside></li>
 </ul>
 </section>
 <section id="always-search-for-well-maintained-software-libraries-that-do-what-you-need." class="slide level1">
 <h1>Always search for well-maintained software libraries that do what you need.</h1>
+<p>Don’t rewrite functions that are already implemented as part of the core language.</p>
+<p>Use other software libraries if they are well-maintained</p>
+<aside class="notes">
+<p>Why: * because more users mean less bugs * better tested</p>
+Little tricky: still need to take time to vet the code to make sure it does what you think it does
+<aside>
 </section>
 <section id="summary" class="slide level1">
 <h1>Summary:</h1>
 <ul>
-<li>Use good function and variable names</li>
 <li>Write small well-defined, well-named functions</li>
+<li>Use good function and variable names</li>
 <li>Document your functions</li>
 <li>Test your code</li>
 <li>Refactor your code</li>
 <li>Use version control</li>
-<li>Use linters to enforce coding standards</li>
 <li>Always search for well-maintained software libraries that do what you need.</li>
 </ul>
+</section>
+<section id="conclusion-writing-good-code-takes-work" class="slide level1">
+<h1>Conclusion: Writing good code takes work</h1>
+</section>
+<section id="we-have-a-scientific-obligation-to-ensure-the-correctness-of-our-programs." class="slide level1">
+<h1>We have a scientific obligation to ensure the correctness of our programs.</h1>
+<aside class="notes">
+I think it is a mistake to think that only “programmers” working for companies need to bother with writing good code. You are a programmer dealing with complex programs.
+</aside>
 </section>
 <section id="bonus-data-management" class="slide level1">
 <h1>Bonus: Data Management</h1>
