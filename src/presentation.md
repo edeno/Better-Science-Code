@@ -32,7 +32,7 @@ Following good coding practices reduces the chance of making mistakes
 
 ------------------
 
-It’s too easy to make mistakes
+IT'S TOO EASY TO MAKE MISTAKES
 
 ------------------
 
