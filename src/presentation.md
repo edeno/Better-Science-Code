@@ -36,7 +36,7 @@ IT'S TOO EASY TO MAKE MISTAKES
 
 ------------------
 
-> As the complexity of a software program increases, the likelihood of undiscovered bugs quickly reaches certainty”
+> "As the complexity of a software program increases, the likelihood of undiscovered bugs quickly reaches certainty"
 > -- <cite>Poldrack et al. 2017</cite>
 
 ------------------
@@ -53,7 +53,7 @@ REASON 2. Want to remember what the code does months later
 
 ------------------
 
-> The single biggest reason you should write nice code is so that your future self can understand it.
+> "The single biggest reason you should write nice code is so that your future self can understand it."
 > -- <cite>Greg Wilson</cite>
 
 > "All code has at least one collaborator and that is future you."
@@ -456,7 +456,7 @@ Think about how your code can fail
 
 ------------------
 
-**Small, well-defined, well-named functions are easy to test!**
+Small, well-defined, well-named functions are easy to test!
 
 ------------------
 
@@ -621,7 +621,7 @@ STEP 6. Refactor your code
 
 ------------------
 
->“Whenever I have to think to understand what the code is doing, I ask myself if I can refactor the code to make that understanding more immediately apparent.”
+>"Whenever I have to think to understand what the code is doing, I ask myself if I can refactor the code to make that understanding more immediately apparent."
 > -- <cite>Martin Fowler, Refactoring: Improving the Design of Existing Code</cite>
 
 ------------------
