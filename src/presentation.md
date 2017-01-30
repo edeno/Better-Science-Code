@@ -529,9 +529,9 @@ You can use programs called "test runners” to run a group of unit tests automa
 
 Matlab, Python have built-in unit test programs
 
-* matlab: https://www.mathworks.com/help/matlab/matlab-unit-test-framework.html
-* python: https://docs.python.org/3.4/library/unittest.html
-* if you use python, pytest is a helpful extension: http://doc.pytest.org/en/latest/
+* Matlab: https://www.mathworks.com/help/matlab/matlab-unit-test-framework.html
+* Python: https://docs.python.org/3.4/library/unittest.html
+* if you use Python, pytest is a helpful extension: http://doc.pytest.org/en/latest/
 * R: testthat package — works well with RStudio IDE
 
 ------------------
