@@ -10,43 +10,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
   <link rel="stylesheet" href="revealjs/css/reveal.css">
   <style type="text/css">code{white-space: pre;}</style>
-  <style type="text/css">
-div.sourceCode { overflow-x: auto; }
-table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
-  margin: 0; padding: 0; vertical-align: baseline; border: none; }
-table.sourceCode { width: 100%; line-height: 100%; }
-td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
-td.sourceCode { padding-left: 5px; }
-code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code > span.dt { color: #902000; } /* DataType */
-code > span.dv { color: #40a070; } /* DecVal */
-code > span.bn { color: #40a070; } /* BaseN */
-code > span.fl { color: #40a070; } /* Float */
-code > span.ch { color: #4070a0; } /* Char */
-code > span.st { color: #4070a0; } /* String */
-code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code > span.ot { color: #007020; } /* Other */
-code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code > span.fu { color: #06287e; } /* Function */
-code > span.er { color: #ff0000; font-weight: bold; } /* Error */
-code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
-code > span.cn { color: #880000; } /* Constant */
-code > span.sc { color: #4070a0; } /* SpecialChar */
-code > span.vs { color: #4070a0; } /* VerbatimString */
-code > span.ss { color: #bb6688; } /* SpecialString */
-code > span.im { } /* Import */
-code > span.va { color: #19177c; } /* Variable */
-code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code > span.op { color: #666666; } /* Operator */
-code > span.bu { } /* BuiltIn */
-code > span.ex { } /* Extension */
-code > span.pp { color: #bc7a00; } /* Preprocessor */
-code > span.at { color: #7d9029; } /* Attribute */
-code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
-  </style>
   <link rel="stylesheet" href="revealjs/css/theme/black.css" id="theme">
   <link rel="stylesheet" href="css/custom.css"/>
   <!-- Printing and PDF exports -->
@@ -84,9 +47,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </section>
 <section class="slide level6">
 
-<ol type="1">
-<li>Doing good science!</li>
-</ol>
+<p>REASON 1. Doing good science!</p>
 </section>
 <section class="slide level6">
 
@@ -119,9 +80,7 @@ Good code should reduce your anxiety about making mistakes
 </section>
 <section class="slide level6">
 
-<ol start="2" type="1">
-<li>Want to remember what the code does months later</li>
-</ol>
+<p>REASON 2. Want to remember what the code does months later</p>
 </section>
 <section class="slide level6">
 
@@ -134,9 +93,7 @@ Good code should reduce your anxiety about making mistakes
 </section>
 <section class="slide level6">
 
-<ol start="3" type="1">
-<li>Want to be able to share it with other people</li>
-</ol>
+<p>REASON 3. Want to be able to share it with other people</p>
 </section>
 <section class="slide level6">
 
@@ -152,15 +109,11 @@ Example: Michael Shadlen vs. Jonathan Pillow debate about the dynamics neurons 
 </section>
 <section class="slide level6">
 
-<ol start="4" type="1">
-<li>Avoid introducing new errors</li>
-</ol>
+<p>REASON 4. Avoid introducing new errors</p>
 </section>
 <section class="slide level6">
 
-<ol start="5" type="1">
-<li>Can serve as a resume for future employers</li>
-</ol>
+<p>REASON 5. Can serve as a resume for future employers</p>
 </section>
 <section class="slide level6">
 
@@ -196,50 +149,49 @@ Example: Michael Shadlen vs. Jonathan Pillow debate about the dynamics neurons 
 </section>
 <section class="slide level6">
 
-<ol type="1">
-<li>Decompose programs into small, well-defined functions</li>
-</ol>
+<p>STEP 1. Decompose programs into small, well-defined functions</p>
 <aside class="notes">
 Biggest mistake I see in scientific code
 </aside>
 </section>
 <section class="slide level6">
 
-<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="im">import</span> numpy <span class="im">as</span> np
+<pre class="python"><code>import numpy as np
 
-<span class="kw">def</span> bad_function():
-    X <span class="op">=</span> np.load(<span class="st">&#39;/tmp/123.npy&#39;</span>, mmap_mode<span class="op">=</span><span class="st">&#39;r&#39;</span>)
-    y, x1, x2 <span class="op">=</span> X[:, <span class="dv">0</span>], X[:, <span class="dv">1</span>], X[:, <span class="dv">2</span>]
-    z1 <span class="op">=</span> (x1 <span class="op">-</span> x1.mean()) <span class="op">/</span> x1.std()
-    Q1, R1 <span class="op">=</span> np.linalg.qr(z1, mode<span class="op">=</span><span class="st">&#39;reduced&#39;</span>)
-    b1 <span class="op">=</span> np.linalg.solve(R1, np.dot(Q1.T, y1))
-    z2 <span class="op">=</span> (x2 <span class="op">-</span> x2.mean()) <span class="op">/</span> x2.std()
-    Q2, R2 <span class="op">=</span> np.linalg.qr(z1, mode<span class="op">=</span><span class="st">&#39;reduced&#39;</span>)
-    b2 <span class="op">=</span> np.linalg.solve(R2, np.dot(Q2.T, y2))
-    b <span class="op">=</span> b1 <span class="op">-</span> b2
-    np.save(<span class="st">&#39;ans.npy&#39;</span>, b)</code></pre></div>
+def bad_function():
+    X = np.load(&#39;/tmp/123.npy&#39;, mmap_mode=&#39;r&#39;)
+    y, x1, x2 = X[:, 0], X[:, 1], X[:, 2]
+    z1 = (x1 - x1.mean()) / x1.std()
+    Q1, R1 = np.linalg.qr(z1, mode=&#39;reduced&#39;)
+    b1 = np.linalg.solve(R1, np.dot(Q1.T, y1))
+    z2 = (x2 - x2.mean()) / x2.std()
+    Q2, R2 = np.linalg.qr(z1, mode=&#39;reduced&#39;)
+    b2 = np.linalg.solve(R2, np.dot(Q2.T, y2))
+    b = b1 - b2
+    np.save(&#39;ans.npy&#39;, b)</code></pre>
 </section>
 <section class="slide level6">
 
-<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="im">import</span> numpy <span class="im">as</span> np
+<pre class="python"><code>import numpy as np
 
-<span class="kw">def</span> better_function():
-    y, x1, x2 <span class="op">=</span> load_data(<span class="st">&#39;/tmp/123.npy&#39;</span>)
-    b1 <span class="op">=</span> linear_regression(zscore(x1), y)
-    b2 <span class="op">=</span> linear_regression(zscore(x2), y)
-    b <span class="op">=</span> b1 <span class="op">-</span> b2
-    np.save(<span class="st">&#39;ans.npy&#39;</span>, b)
+def better_function():
+    y, x1, x2 = load_data(&#39;/tmp/123.npy&#39;)
+    b1 = linear_regression(zscore(x1), y)
+    b2 = linear_regression(zscore(x2), y)
+    b = b1 - b2
+    np.save(&#39;ans.npy&#39;, b)
 
-<span class="kw">def</span> load_data(data_name):
-    X <span class="op">=</span> np.load(data_name, mmap_mode<span class="op">=</span><span class="st">&#39;r&#39;</span>)
-    <span class="cf">return</span> X[:, <span class="dv">0</span>], X[:, <span class="dv">1</span>], X[:, <span class="dv">2</span>]
+def load_data(data_name):
+    X = np.load(data_name, mmap_mode=&#39;r&#39;)
+    return X[:, 0], X[:, 1], X[:, 2]
 
-<span class="kw">def</span> zscore(x):
-    <span class="cf">return</span> (x <span class="op">-</span> x.mean()) <span class="op">/</span> x.std()
+def zscore(x):
+    return (x - x.mean()) / x.std()
 
-<span class="kw">def</span> linear_regression(design_matrix, response):
-    Q, R <span class="op">=</span> np.linalg.qr(design_matrix, mode<span class="op">=</span><span class="st">&#39;reduced&#39;</span>)
-    <span class="cf">return</span> np.linalg.solve(R, np.dot(Q.T, response))</code></pre></div>
+def linear_regression(design_matrix, response):
+    Q, R = np.linalg.qr(design_matrix, mode=&#39;reduced&#39;)
+    return np.linalg.solve(R, np.dot(Q.T, response))
+</code></pre>
 </section>
 <section class="slide level6">
 
@@ -266,41 +218,42 @@ pure = as few implicit contexts and side-effects as possible.
 </section>
 <section class="slide level6">
 
-<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="im">import</span> numpy <span class="im">as</span> np
+<pre class="python"><code>import numpy as np
 
-<span class="kw">def</span> bad_function():
-    X <span class="op">=</span> np.load(<span class="st">&#39;/tmp/123.npy&#39;</span>, mmap_mode<span class="op">=</span><span class="st">&#39;r&#39;</span>)
-    y, x1, x2 <span class="op">=</span> X[:, <span class="dv">0</span>], X[:, <span class="dv">1</span>], X[:, <span class="dv">2</span>]
-    z1 <span class="op">=</span> (x1 <span class="op">-</span> x1.mean()) <span class="op">/</span> x1.std()
-    Q1, R1 <span class="op">=</span> np.linalg.qr(z1, mode<span class="op">=</span><span class="st">&#39;reduced&#39;</span>)
-    b1 <span class="op">=</span> np.linalg.solve(R1, np.dot(Q1.T, y1))
-    z2 <span class="op">=</span> (x2 <span class="op">-</span> x2.mean()) <span class="op">/</span> x2.std()
-    Q2, R2 <span class="op">=</span> np.linalg.qr(z1, mode<span class="op">=</span><span class="st">&#39;reduced&#39;</span>)
-    b2 <span class="op">=</span> np.linalg.solve(R2, np.dot(Q2.T, y2))
-    b <span class="op">=</span> b1 <span class="op">-</span> b2
-    np.save(<span class="st">&#39;ans.npy&#39;</span>, b)</code></pre></div>
+def bad_function():
+    X = np.load(&#39;/tmp/123.npy&#39;, mmap_mode=&#39;r&#39;)
+    y, x1, x2 = X[:, 0], X[:, 1], X[:, 2]
+    z1 = (x1 - x1.mean()) / x1.std()
+    Q1, R1 = np.linalg.qr(z1, mode=&#39;reduced&#39;)
+    b1 = np.linalg.solve(R1, np.dot(Q1.T, y1))
+    z2 = (x2 - x2.mean()) / x2.std()
+    Q2, R2 = np.linalg.qr(z1, mode=&#39;reduced&#39;)
+    b2 = np.linalg.solve(R2, np.dot(Q2.T, y2))
+    b = b1 - b2
+    np.save(&#39;ans.npy&#39;, b)</code></pre>
 </section>
 <section class="slide level6">
 
-<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="im">import</span> numpy <span class="im">as</span> np
+<pre class="python"><code>import numpy as np
 
-<span class="kw">def</span> better_function():
-    y, x1, x2 <span class="op">=</span> load_data(<span class="st">&#39;/tmp/123.npy&#39;</span>)
-    b1 <span class="op">=</span> linear_regression(zscore(x1), y)
-    b2 <span class="op">=</span> linear_regression(zscore(x2), y)
-    b <span class="op">=</span> b1 <span class="op">-</span> b2
-    np.save(<span class="st">&#39;ans.npy&#39;</span>, b)
+def better_function():
+    y, x1, x2 = load_data(&#39;/tmp/123.npy&#39;)
+    b1 = linear_regression(zscore(x1), y)
+    b2 = linear_regression(zscore(x2), y)
+    b = b1 - b2
+    np.save(&#39;ans.npy&#39;, b)
 
-<span class="kw">def</span> load_data(data_name):
-    X <span class="op">=</span> np.load(data_name, mmap_mode<span class="op">=</span><span class="st">&#39;r&#39;</span>)
-    <span class="cf">return</span> X[:, <span class="dv">0</span>], X[:, <span class="dv">1</span>], X[:, <span class="dv">2</span>]
+def load_data(data_name):
+    X = np.load(data_name, mmap_mode=&#39;r&#39;)
+    return X[:, 0], X[:, 1], X[:, 2]
 
-<span class="kw">def</span> zscore(x):
-    <span class="cf">return</span> (x <span class="op">-</span> x.mean()) <span class="op">/</span> x.std()
+def zscore(x):
+    return (x - x.mean()) / x.std()
 
-<span class="kw">def</span> linear_regression(design_matrix, response):
-    Q, R <span class="op">=</span> np.linalg.qr(design_matrix, mode<span class="op">=</span><span class="st">&#39;reduced&#39;</span>)
-    <span class="cf">return</span> np.linalg.solve(R, np.dot(Q.T, response))</code></pre></div>
+def linear_regression(design_matrix, response):
+    Q, R = np.linalg.qr(design_matrix, mode=&#39;reduced&#39;)
+    return np.linalg.solve(R, np.dot(Q.T, response))
+</code></pre>
 </section>
 <section class="slide level6">
 
@@ -333,72 +286,72 @@ pure = as few implicit contexts and side-effects as possible.
 </section>
 <section class="slide level6">
 
-<ol start="2" type="1">
-<li>Use good variable/function names to clarify what things do</li>
-</ol>
+<p>STEP 2. Use good variable/function names to clarify what things do</p>
 </section>
 <section class="slide level6">
 
-<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="im">import</span> numpy <span class="im">as</span> np
+<pre class="python"><code>import numpy as np
 
-<span class="kw">def</span> bad_function():
-    X <span class="op">=</span> np.load(<span class="st">&#39;/tmp/123.npy&#39;</span>, mmap_mode<span class="op">=</span><span class="st">&#39;r&#39;</span>)
-    y, x1, x2 <span class="op">=</span> X[:, <span class="dv">0</span>], X[:, <span class="dv">1</span>], X[:, <span class="dv">2</span>]
-    z1 <span class="op">=</span> (x1 <span class="op">-</span> x1.mean()) <span class="op">/</span> x1.std()
-    Q1, R1 <span class="op">=</span> np.linalg.qr(z1, mode<span class="op">=</span><span class="st">&#39;reduced&#39;</span>)
-    b1 <span class="op">=</span> np.linalg.solve(R1, np.dot(Q1.T, y1))
-    z2 <span class="op">=</span> (x2 <span class="op">-</span> x2.mean()) <span class="op">/</span> x2.std()
-    Q2, R2 <span class="op">=</span> np.linalg.qr(z1, mode<span class="op">=</span><span class="st">&#39;reduced&#39;</span>)
-    b2 <span class="op">=</span> np.linalg.solve(R2, np.dot(Q2.T, y2))
-    b <span class="op">=</span> b1 <span class="op">-</span> b2
-    np.save(<span class="st">&#39;ans.npy&#39;</span>, b)</code></pre></div>
+def bad_function():
+    X = np.load(&#39;/tmp/123.npy&#39;, mmap_mode=&#39;r&#39;)
+    y, x1, x2 = X[:, 0], X[:, 1], X[:, 2]
+    z1 = (x1 - x1.mean()) / x1.std()
+    Q1, R1 = np.linalg.qr(z1, mode=&#39;reduced&#39;)
+    b1 = np.linalg.solve(R1, np.dot(Q1.T, y1))
+    z2 = (x2 - x2.mean()) / x2.std()
+    Q2, R2 = np.linalg.qr(z1, mode=&#39;reduced&#39;)
+    b2 = np.linalg.solve(R2, np.dot(Q2.T, y2))
+    b = b1 - b2
+    np.save(&#39;ans.npy&#39;, b)</code></pre>
 </section>
 <section class="slide level6">
 
-<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="im">import</span> numpy <span class="im">as</span> np
+<pre class="python"><code>import numpy as np
 
-<span class="kw">def</span> better_function():
-    y, x1, x2 <span class="op">=</span> load_data(<span class="st">&#39;/tmp/123.npy&#39;</span>)
-    b1 <span class="op">=</span> linear_regression(zscore(x1), y)
-    b2 <span class="op">=</span> linear_regression(zscore(x2), y)
-    b <span class="op">=</span> b1 <span class="op">-</span> b2
-    np.save(<span class="st">&#39;ans.npy&#39;</span>, b)
+def better_function():
+    y, x1, x2 = load_data(&#39;/tmp/123.npy&#39;)
+    b1 = linear_regression(zscore(x1), y)
+    b2 = linear_regression(zscore(x2), y)
+    b = b1 - b2
+    np.save(&#39;ans.npy&#39;, b)
 
-<span class="kw">def</span> load_data(data_name):
-    X <span class="op">=</span> np.load(data_name, mmap_mode<span class="op">=</span><span class="st">&#39;r&#39;</span>)
-    <span class="cf">return</span> X[:, <span class="dv">0</span>], X[:, <span class="dv">1</span>], X[:, <span class="dv">2</span>]
+def load_data(data_name):
+    X = np.load(data_name, mmap_mode=&#39;r&#39;)
+    return X[:, 0], X[:, 1], X[:, 2]
 
-<span class="kw">def</span> zscore(x):
-    <span class="cf">return</span> (x <span class="op">-</span> x.mean()) <span class="op">/</span> x.std()
+def zscore(x):
+    return (x - x.mean()) / x.std()
 
-<span class="kw">def</span> linear_regression(design_matrix, response):
-    Q, R <span class="op">=</span> np.linalg.qr(design_matrix, mode<span class="op">=</span><span class="st">&#39;reduced&#39;</span>)
-    <span class="cf">return</span> np.linalg.solve(R, np.dot(Q.T, response))</code></pre></div>
+def linear_regression(design_matrix, response):
+    Q, R = np.linalg.qr(design_matrix, mode=&#39;reduced&#39;)
+    return np.linalg.solve(R, np.dot(Q.T, response))
+</code></pre>
 </section>
 <section class="slide level6">
 
-<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="im">import</span> numpy <span class="im">as</span> np
+<pre class="python"><code>import numpy as np
 
-<span class="kw">def</span> better_function():
-    response, design_matrix1, design_matrix2 <span class="op">=</span> load_data(
-        <span class="st">&#39;/tmp/123.npy&#39;</span>)
-    coefficient1 <span class="op">=</span> linear_regression(
+def better_function():
+    response, design_matrix1, design_matrix2 = load_data(
+        &#39;/tmp/123.npy&#39;)
+    coefficient1 = linear_regression(
         zscore(design_matrix1), response)
-    coefficient2 <span class="op">=</span> linear_regression(
+    coefficient2 = linear_regression(
         zscore(design_matrix2), response)
-    coefficient_difference <span class="op">=</span> coefficient1 <span class="op">-</span> coefficient2
-    np.save(<span class="st">&#39;ans.npy&#39;</span>, b)
+    coefficient_difference = coefficient1 - coefficient2
+    np.save(&#39;ans.npy&#39;, b)
 
-<span class="kw">def</span> load_data(data_name):
-    X <span class="op">=</span> np.load(data_name, mmap_mode<span class="op">=</span><span class="st">&#39;r&#39;</span>)
-    <span class="cf">return</span> X[:, <span class="dv">0</span>], X[:, <span class="dv">1</span>], X[:, <span class="dv">2</span>]
+def load_data(data_name):
+    X = np.load(data_name, mmap_mode=&#39;r&#39;)
+    return X[:, 0], X[:, 1], X[:, 2]
 
-<span class="kw">def</span> zscore(x):
-    <span class="cf">return</span> (x <span class="op">-</span> x.mean()) <span class="op">/</span> x.std()
+def zscore(x):
+    return (x - x.mean()) / x.std()
 
-<span class="kw">def</span> linear_regression(design_matrix, response):
-    Q, R <span class="op">=</span> np.linalg.qr(design_matrix, mode<span class="op">=</span><span class="st">&#39;reduced&#39;</span>)
-    <span class="cf">return</span> np.linalg.solve(R, np.dot(Q.T, response))</code></pre></div>
+def linear_regression(design_matrix, response):
+    Q, R = np.linalg.qr(design_matrix, mode=&#39;reduced&#39;)
+    return np.linalg.solve(R, np.dot(Q.T, response))
+</code></pre>
 </section>
 <section class="slide level6">
 
@@ -431,9 +384,7 @@ pure = as few implicit contexts and side-effects as possible.
 </section>
 <section class="slide level6">
 
-<ol start="3" type="1">
-<li>Document your functions</li>
-</ol>
+<p>STEP 3. Document your functions</p>
 </section>
 <section class="slide level6">
 
@@ -451,14 +402,14 @@ pure = as few implicit contexts and side-effects as possible.
 </section>
 <section class="slide level6">
 
-<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="kw">def</span> zscore(x):
-    <span class="co">&#39;&#39;&#39;Number of standard deviations from the mean&#39;&#39;&#39;</span>
-    <span class="cf">return</span> (x <span class="op">-</span> x.mean()) <span class="op">/</span> x.std()
+<pre class="python"><code>def zscore(x):
+    &#39;&#39;&#39;Number of standard deviations from the mean&#39;&#39;&#39;
+    return (x - x.mean()) / x.std()
 
-<span class="kw">def</span> linear_regression(design_matrix, response):
-    <span class="co">&#39;&#39;&#39;Calculate a linear least-squares regression for two sets of measurements&#39;&#39;&#39;</span>
-    Q, R <span class="op">=</span> np.linalg.qr(design_matrix, mode<span class="op">=</span><span class="st">&#39;reduced&#39;</span>)
-    <span class="cf">return</span> np.linalg.solve(R, np.dot(Q.T, response))</code></pre></div>
+def linear_regression(design_matrix, response):
+    &#39;&#39;&#39;Calculate a linear least-squares regression for two sets of measurements&#39;&#39;&#39;
+    Q, R = np.linalg.qr(design_matrix, mode=&#39;reduced&#39;)
+    return np.linalg.solve(R, np.dot(Q.T, response))</code></pre>
 </section>
 <section class="slide level6">
 
@@ -472,36 +423,34 @@ pure = as few implicit contexts and side-effects as possible.
 </section>
 <section class="slide level6">
 
-<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="kw">def</span> linear_regression(design_matrix, response):
-    <span class="co">&#39;&#39;&#39;Calculate a linear least-squares regression for two sets of measurements</span>
+<pre class="python"><code>def linear_regression(design_matrix, response):
+    &#39;&#39;&#39;Calculate a linear least-squares regression for two sets of measurements
 
-<span class="co">    Uses the QR decomposition to avoid numerical instability in taking the inverse.</span>
+    Uses the QR decomposition to avoid numerical instability in taking the inverse.
 
-<span class="co">    Parameters</span>
-<span class="co">    ----------</span>
-<span class="co">    design_matrix, response : array_like</span>
-<span class="co">        Two sets of measurements. Both arrays should have the same length.</span>
+    Parameters
+    ----------
+    design_matrix, response : array_like
+        Two sets of measurements. Both arrays should have the same length.
 
-<span class="co">    Returns</span>
-<span class="co">    -------</span>
-<span class="co">    coefficients : array_like</span>
-<span class="co">        Parameters estimated from the model.</span>
+    Returns
+    -------
+    coefficients : array_like
+        Parameters estimated from the model.
 
-<span class="co">    Examples</span>
-<span class="co">    --------</span>
-<span class="co">    &gt;&gt;&gt; design_matrix = np.random.random(10)</span>
-<span class="co">    &gt;&gt;&gt; response = np.random.random(10)</span>
-<span class="co">    &gt;&gt;&gt; coefficients = linear_regression(design_matrix, response)</span>
+    Examples
+    --------
+    &gt;&gt;&gt; design_matrix = np.random.random(10)
+    &gt;&gt;&gt; response = np.random.random(10)
+    &gt;&gt;&gt; coefficients = linear_regression(design_matrix, response)
 
-<span class="co">    &#39;&#39;&#39;</span>
-    Q, R <span class="op">=</span> np.linalg.qr(design_matrix, mode<span class="op">=</span><span class="st">&#39;reduced&#39;</span>)
-    <span class="cf">return</span> np.linalg.solve(R, np.dot(Q.T, response))</code></pre></div>
+    &#39;&#39;&#39;
+    Q, R = np.linalg.qr(design_matrix, mode=&#39;reduced&#39;)
+    return np.linalg.solve(R, np.dot(Q.T, response))</code></pre>
 </section>
 <section class="slide level6">
 
-<ol start="4" type="1">
-<li>Test your code</li>
-</ol>
+<p>STEP 4. Test your code</p>
 </section>
 <section class="slide level6">
 
@@ -517,17 +466,17 @@ pure = as few implicit contexts and side-effects as possible.
 </section>
 <section class="slide level6">
 
-<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="im">import</span> numpy <span class="im">as</span> np
+<pre class="python"><code>import numpy as np
 
-<span class="kw">def</span> zscore(x):
-    <span class="co">&#39;&#39;&#39;Number of standard deviations from the mean&#39;&#39;&#39;</span>
-    <span class="cf">return</span> (x <span class="op">-</span> x.mean()) <span class="op">/</span> x.std()
+def zscore(x):
+    &#39;&#39;&#39;Number of standard deviations from the mean&#39;&#39;&#39;
+    return (x - x.mean()) / x.std()
 
-<span class="kw">def</span> test_zscore():
-    test_values <span class="op">=</span> np.asarray([<span class="dv">1</span>, <span class="dv">3</span>])
-    expected_values <span class="op">=</span> np.asarray([<span class="op">-</span><span class="dv">1</span>, <span class="dv">1</span>])
+def test_zscore():
+    test_values = np.asarray([1, 3])
+    expected_values = np.asarray([-1, 1])
 
-    <span class="cf">assert</span> np.allclose(zscore(test_values), expected_values)</code></pre></div>
+    assert np.allclose(zscore(test_values), expected_values)</code></pre>
 </section>
 <section class="slide level6">
 
@@ -608,9 +557,7 @@ After reproducing the bug, and before fixing it, you should write a test case th
 </section>
 <section class="slide level6">
 
-<ol start="5" type="1">
-<li>Use version control</li>
-</ol>
+<p>STEP 5. Use version control</p>
 </section>
 <section class="slide level6">
 
@@ -681,9 +628,7 @@ After reproducing the bug, and before fixing it, you should write a test case th
 </section>
 <section class="slide level6">
 
-<ol start="6" type="1">
-<li>Refactor your code</li>
-</ol>
+<p>STEP 6. Refactor your code</p>
 </section>
 <section class="slide level6">
 
@@ -705,9 +650,7 @@ Also don’t throw everything out and re-write from scratch unless you can absol
 </section>
 <section class="slide level6">
 
-<ol start="7" type="1">
-<li>Always search for well-maintained software libraries that do what you need.</li>
-</ol>
+<p>STEP 7. Always search for well-maintained software libraries that do what you need.</p>
 </section>
 <section class="slide level6">
 
