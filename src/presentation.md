@@ -4,7 +4,7 @@
 
 ------------------
 
-Presentation: [http://edeno.github.io/Better-Science-Code](http://edeno.github.io/Better-Science-Code)
+Presentation: [https://edeno.github.io/Better-Science-Code](http://edeno.github.io/Better-Science-Code)
 
 ------------------
 
@@ -30,7 +30,9 @@ Don’t want to have to retract papers because the code had bugs
 
 Following good coding practices reduces the chance of making mistakes
 
-# It’s too easy to make mistakes
+------------------
+
+It’s too easy to make mistakes
 
 ------------------
 
@@ -380,7 +382,9 @@ Prefer whole words
 
 (`elec_poten` vs. `electric_potential`)
 
-# 3) Document your functions
+------------------
+
+3) Document your functions
 
 ------------------
 
@@ -484,7 +488,9 @@ Unit tests test a small component of your code (usually a small function) and ma
 * doesn’t ensure that combinations of these functions work (integration testing)
 </aside>
 
-# Unit tests prevent regression of your code
+------------------
+
+Unit tests prevent regression of your code
 
 ------------------
 

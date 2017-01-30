@@ -72,7 +72,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 
 <section class="slide level6">
 
-<p>Presentation: <a href="http://edeno.github.io/Better-Science-Code" class="uri">http://edeno.github.io/Better-Science-Code</a></p>
+<p>Presentation: <a href="http://edeno.github.io/Better-Science-Code">https://edeno.github.io/Better-Science-Code</a></p>
 </section>
 <section class="slide level6">
 
@@ -100,23 +100,30 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 
 <p>Following good coding practices reduces the chance of making mistakes</p>
 </section>
-<section><section id="its-too-easy-to-make-mistakes" class="titleslide slide level1"><h1>It’s too easy to make mistakes</h1></section><section class="slide level6">
+<section class="slide level6">
+
+<p>It’s too easy to make mistakes</p>
+</section>
+<section class="slide level6">
 
 <blockquote>
 <p>As the complexity of a software program increases, the likelihood of undiscovered bugs quickly reaches certainty” – <cite>Poldrack et al. 2017</cite></p>
 </blockquote>
-</section><section class="slide level6">
+</section>
+<section class="slide level6">
 
 <p><strong>We are writing complex code</strong></p>
 <aside class="notes">
 Good code should reduce your anxiety about making mistakes
 </aside>
-</section><section class="slide level6">
+</section>
+<section class="slide level6">
 
 <ol start="2" type="1">
 <li>Want to remember what the code does months later</li>
 </ol>
-</section><section class="slide level6">
+</section>
+<section class="slide level6">
 
 <blockquote>
 <p>The single biggest reason you should write nice code is so that your future self can understand it. – <cite>Greg Wilson</cite></p>
@@ -124,12 +131,14 @@ Good code should reduce your anxiety about making mistakes
 <blockquote>
 <p>“All code has at least one collaborator and that is future you.” – <cite>Hadley Wickham</cite></p>
 </blockquote>
-</section><section class="slide level6">
+</section>
+<section class="slide level6">
 
 <ol start="3" type="1">
 <li>Want to be able to share it with other people</li>
 </ol>
-</section><section class="slide level6">
+</section>
+<section class="slide level6">
 
 <p>Particularly important with statistical methods development</p>
 <aside class="notes">
@@ -140,20 +149,24 @@ Good code should reduce your anxiety about making mistakes
 </ul>
 Example: Michael Shadlen vs. Jonathan Pillow debate about the dynamics neurons during perceptual decision making tasks (Ramping diffusion to bound model vs. stepping model) * Pillow lab released several papers arguing for stepping model with code available on Github * Shadlen lab recently countered with a paper arguing against the stepping model using the Pillow lab code
 </aside>
-</section><section class="slide level6">
+</section>
+<section class="slide level6">
 
 <ol start="4" type="1">
 <li>Avoid introducing new errors</li>
 </ol>
-</section><section class="slide level6">
+</section>
+<section class="slide level6">
 
 <ol start="5" type="1">
 <li>Can serve as a resume for future employers</li>
 </ol>
-</section><section class="slide level6">
+</section>
+<section class="slide level6">
 
 <p>How to write good code?</p>
-</section><section class="slide level6">
+</section>
+<section class="slide level6">
 
 <p>Exercise in how to manage complexity:</p>
 <ul>
@@ -161,13 +174,16 @@ Example: Michael Shadlen vs. Jonathan Pillow debate about the dynamics neurons 
 <li>eliminate unnecessary dependencies</li>
 <li>keep track of what you did (be organized)</li>
 </ul>
-</section><section class="slide level6">
+</section>
+<section class="slide level6">
 
 <p>Goal: Want to form good habits</p>
-</section><section class="slide level6">
+</section>
+<section class="slide level6">
 
 <p>Don’t be overwhelmed and not do any of these things</p>
-</section><section class="slide level6">
+</section>
+<section class="slide level6">
 
 <p>Don’t beat yourself up if you don’t do all these things all the time</p>
 <aside class="notes">
@@ -177,7 +193,8 @@ Example: Michael Shadlen vs. Jonathan Pillow debate about the dynamics neurons 
 <li>some of these will require more inertia (such as version control)</li>
 </ul>
 </aside>
-</section><section class="slide level6">
+</section>
+<section class="slide level6">
 
 <ol type="1">
 <li>Decompose programs into small, well-defined functions</li>
@@ -185,7 +202,8 @@ Example: Michael Shadlen vs. Jonathan Pillow debate about the dynamics neurons 
 <aside class="notes">
 Biggest mistake I see in scientific code
 </aside>
-</section><section class="slide level6">
+</section>
+<section class="slide level6">
 
 <div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="im">import</span> numpy <span class="im">as</span> np
 
@@ -200,7 +218,8 @@ Biggest mistake I see in scientific code
     b2 <span class="op">=</span> np.linalg.solve(R2, np.dot(Q2.T, y2))
     b <span class="op">=</span> b1 <span class="op">-</span> b2
     np.save(<span class="st">&#39;ans.npy&#39;</span>, b)</code></pre></div>
-</section><section class="slide level6">
+</section>
+<section class="slide level6">
 
 <div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="im">import</span> numpy <span class="im">as</span> np
 
@@ -221,10 +240,12 @@ Biggest mistake I see in scientific code
 <span class="kw">def</span> linear_regression(design_matrix, response):
     Q, R <span class="op">=</span> np.linalg.qr(design_matrix, mode<span class="op">=</span><span class="st">&#39;reduced&#39;</span>)
     <span class="cf">return</span> np.linalg.solve(R, np.dot(Q.T, response))</code></pre></div>
-</section><section class="slide level6">
+</section>
+<section class="slide level6">
 
 <p>Try to keep functions to less than 60 lines (small)</p>
-</section><section class="slide level6">
+</section>
+<section class="slide level6">
 
 <p>Try to keep what the function does as simple as possible (well-defined)</p>
 <aside class="notes">
@@ -232,7 +253,8 @@ Biggest mistake I see in scientific code
 <p>Think about if you came back to the function later, how long would it take you to understand what it does? * should be able to explain what it does in one sentence</p>
 pure = as few implicit contexts and side-effects as possible.
 </aside>
-</section><section class="slide level6">
+</section>
+<section class="slide level6">
 
 <p>Be ruthless about eliminating duplication of code</p>
 <aside class="notes">
@@ -241,7 +263,8 @@ pure = as few implicit contexts and side-effects as possible.
 <li>that way fixing a bug in your function, fixes it for every time the function is used instead of every separate instance</li>
 </ul>
 </aside>
-</section><section class="slide level6">
+</section>
+<section class="slide level6">
 
 <div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="im">import</span> numpy <span class="im">as</span> np
 
@@ -256,7 +279,8 @@ pure = as few implicit contexts and side-effects as possible.
     b2 <span class="op">=</span> np.linalg.solve(R2, np.dot(Q2.T, y2))
     b <span class="op">=</span> b1 <span class="op">-</span> b2
     np.save(<span class="st">&#39;ans.npy&#39;</span>, b)</code></pre></div>
-</section><section class="slide level6">
+</section>
+<section class="slide level6">
 
 <div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="im">import</span> numpy <span class="im">as</span> np
 
@@ -277,7 +301,8 @@ pure = as few implicit contexts and side-effects as possible.
 <span class="kw">def</span> linear_regression(design_matrix, response):
     Q, R <span class="op">=</span> np.linalg.qr(design_matrix, mode<span class="op">=</span><span class="st">&#39;reduced&#39;</span>)
     <span class="cf">return</span> np.linalg.solve(R, np.dot(Q.T, response))</code></pre></div>
-</section><section class="slide level6">
+</section>
+<section class="slide level6">
 
 <p>Small, well-defined functions are more <strong>maintainable</strong></p>
 <aside class="notes">
@@ -288,7 +313,8 @@ pure = as few implicit contexts and side-effects as possible.
 <li>separation of concerns</li>
 </ul>
 </aside>
-</section><section class="slide level6">
+</section>
+<section class="slide level6">
 
 <p>Small, well-defined functions are more <strong>composable</strong></p>
 <aside class="notes">
@@ -299,11 +325,13 @@ pure = as few implicit contexts and side-effects as possible.
 <li>makes you more precise because you can focus on fixing bugs for one function, not many similar functions</li>
 </ul>
 </aside>
-</section><section class="slide level6">
+</section>
+<section class="slide level6">
 
 <p>Small, well-defined functions are more <strong>readable</strong></p>
 <p>* if you give them good names</p>
-</section><section class="slide level6">
+</section>
+<section class="slide level6">
 
 <blockquote>
 <p>“Programs are meant to be read by humans and only incidentally for computers to execute” – <cite>Donald Knuth</cite></p>
@@ -311,12 +339,14 @@ pure = as few implicit contexts and side-effects as possible.
 <aside class="notes">
 encapsulate ideas in functions
 </aside>
-</section><section class="slide level6">
+</section>
+<section class="slide level6">
 
 <ol start="2" type="1">
 <li>Use good variable/function names to clarify what things do</li>
 </ol>
-</section><section class="slide level6">
+</section>
+<section class="slide level6">
 
 <div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="im">import</span> numpy <span class="im">as</span> np
 
@@ -331,7 +361,8 @@ encapsulate ideas in functions
     b2 <span class="op">=</span> np.linalg.solve(R2, np.dot(Q2.T, y2))
     b <span class="op">=</span> b1 <span class="op">-</span> b2
     np.save(<span class="st">&#39;ans.npy&#39;</span>, b)</code></pre></div>
-</section><section class="slide level6">
+</section>
+<section class="slide level6">
 
 <div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="im">import</span> numpy <span class="im">as</span> np
 
@@ -352,7 +383,8 @@ encapsulate ideas in functions
 <span class="kw">def</span> linear_regression(design_matrix, response):
     Q, R <span class="op">=</span> np.linalg.qr(design_matrix, mode<span class="op">=</span><span class="st">&#39;reduced&#39;</span>)
     <span class="cf">return</span> np.linalg.solve(R, np.dot(Q.T, response))</code></pre></div>
-</section><section class="slide level6">
+</section>
+<section class="slide level6">
 
 <div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="im">import</span> numpy <span class="im">as</span> np
 
@@ -376,7 +408,8 @@ encapsulate ideas in functions
 <span class="kw">def</span> linear_regression(design_matrix, response):
     Q, R <span class="op">=</span> np.linalg.qr(design_matrix, mode<span class="op">=</span><span class="st">&#39;reduced&#39;</span>)
     <span class="cf">return</span> np.linalg.solve(R, np.dot(Q.T, response))</code></pre></div>
-</section><section class="slide level6">
+</section>
+<section class="slide level6">
 
 <p>You don’t need comments if the variable or function already tells you what it does (self-documenting)</p>
 <aside class="notes">
@@ -389,19 +422,28 @@ encapsulate ideas in functions
 <li>When it is difficult to come up with a meaningful name for the function (It is probably doing too much)</li>
 </ul>
 </aside>
-</section><section class="slide level6">
+</section>
+<section class="slide level6">
 
 <p>Use the naming conventions of your language of choice (snake_case or camelCase) and be consistent</p>
-</section><section class="slide level6">
+</section>
+<section class="slide level6">
 
 <p>Avoid using abbreviations that are not commonly used</p>
 <p>(<code>jmi</code> vs. <code>joint_mark_intensity</code>)</p>
-</section><section class="slide level6">
+</section>
+<section class="slide level6">
 
 <p>Prefer whole words</p>
 <p>(<code>elec_poten</code> vs. <code>electric_potential</code>)</p>
-</section></section>
-<section><section id="document-your-functions" class="titleslide slide level1"><h1>3) Document your functions</h1></section><section class="slide level6">
+</section>
+<section class="slide level6">
+
+<ol start="3" type="1">
+<li>Document your functions</li>
+</ol>
+</section>
+<section class="slide level6">
 
 <p>Easy thing: brief sentence describing the function without using the name of the function</p>
 <p>*(<strong>this is the most important</strong>)</p>
@@ -414,7 +456,8 @@ encapsulate ideas in functions
 <li>documentation often longer than the code itself</li>
 </ul>
 </aside>
-</section><section class="slide level6">
+</section>
+<section class="slide level6">
 
 <div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="kw">def</span> zscore(x):
     <span class="co">&#39;&#39;&#39;Number of standard deviations from the mean&#39;&#39;&#39;</span>
@@ -424,7 +467,8 @@ encapsulate ideas in functions
     <span class="co">&#39;&#39;&#39;Calculate a linear least-squares regression for two sets of measurements&#39;&#39;&#39;</span>
     Q, R <span class="op">=</span> np.linalg.qr(design_matrix, mode<span class="op">=</span><span class="st">&#39;reduced&#39;</span>)
     <span class="cf">return</span> np.linalg.solve(R, np.dot(Q.T, response))</code></pre></div>
-</section><section class="slide level6">
+</section>
+<section class="slide level6">
 
 <p>More complicated thing:</p>
 <ul>
@@ -433,7 +477,8 @@ encapsulate ideas in functions
 <li>description of the outputs (type, shape)</li>
 <li>examples if you can</li>
 </ul>
-</section><section class="slide level6">
+</section>
+<section class="slide level6">
 
 <div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="kw">def</span> linear_regression(design_matrix, response):
     <span class="co">&#39;&#39;&#39;Calculate a linear least-squares regression for two sets of measurements</span>
@@ -450,21 +495,26 @@ encapsulate ideas in functions
 <span class="co">    &#39;&#39;&#39;</span>
     Q, R <span class="op">=</span> np.linalg.qr(design_matrix, mode<span class="op">=</span><span class="st">&#39;reduced&#39;</span>)
     <span class="cf">return</span> np.linalg.solve(R, np.dot(Q.T, response))</code></pre></div>
-</section><section class="slide level6">
+</section>
+<section class="slide level6">
 
 <ol start="4" type="1">
 <li>Test your code</li>
 </ol>
-</section><section class="slide level6">
+</section>
+<section class="slide level6">
 
 <p>Make sure your code works like you think it does</p>
-</section><section class="slide level6">
+</section>
+<section class="slide level6">
 
 <p>Think about how your code can fail</p>
-</section><section class="slide level6">
+</section>
+<section class="slide level6">
 
 <p><strong>Small, well-defined, well-named functions are easy to test!</strong></p>
-</section><section class="slide level6">
+</section>
+<section class="slide level6">
 
 <div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="im">import</span> numpy <span class="im">as</span> np
 
@@ -477,10 +527,12 @@ encapsulate ideas in functions
     expected_values <span class="op">=</span> np.asarray([<span class="op">-</span><span class="dv">1</span>, <span class="dv">1</span>])
 
     <span class="cf">assert</span> np.allclose(zscore(test_values), expected_values)</code></pre></div>
-</section><section class="slide level6">
+</section>
+<section class="slide level6">
 
 <p>Unit tests</p>
-</section><section class="slide level6">
+</section>
+<section class="slide level6">
 
 <p>Unit tests test a small component of your code (usually a small function) and makes sure it works like you think it works</p>
 <aside class="notes">
@@ -489,11 +541,16 @@ encapsulate ideas in functions
 <li>doesn’t ensure that combinations of these functions work (integration testing)</li>
 </ul>
 </aside>
-</section></section>
-<section><section id="unit-tests-prevent-regression-of-your-code" class="titleslide slide level1"><h1>Unit tests prevent regression of your code</h1></section><section class="slide level6">
+</section>
+<section class="slide level6">
+
+<p>Unit tests prevent regression of your code</p>
+</section>
+<section class="slide level6">
 
 <p>If you change your code, you want to know what still works and what has broken</p>
-</section><section class="slide level6">
+</section>
+<section class="slide level6">
 
 <p><strong>Functions should be simple to test</strong></p>
 <aside class="notes">
@@ -503,13 +560,15 @@ encapsulate ideas in functions
 <li>After reproducing the bug, and before fixing it, you should write a test case that fails, thus illustrating the bug.</li>
 </ul>
 </aside>
-</section><section class="slide level6">
+</section>
+<section class="slide level6">
 
 <p>If you find a bug, write a test.</p>
 <aside class="notes">
 After reproducing the bug, and before fixing it, you should write a test case that fails, thus illustrating the bug.
 </aside>
-</section><section class="slide level6">
+</section>
+<section class="slide level6">
 
 <p>Use unit tests to define the requirements of your code</p>
 <aside class="notes">
@@ -519,10 +578,12 @@ After reproducing the bug, and before fixing it, you should write a test case th
 <li>also a form of documentation: examples for how you think your code should work</li>
 </ul>
 </aside>
-</section><section class="slide level6">
+</section>
+<section class="slide level6">
 
 <p>You can use programs called “test runners” to run a group of unit tests automatically</p>
-</section><section class="slide level6">
+</section>
+<section class="slide level6">
 
 <p>Matlab, Python have built-in unit test programs</p>
 <ul>
@@ -531,7 +592,8 @@ After reproducing the bug, and before fixing it, you should write a test case th
 <li>if you use Python, pytest is a helpful extension: http://doc.pytest.org/en/latest/</li>
 <li>R: testthat package — works well with RStudio IDE</li>
 </ul>
-</section><section class="slide level6">
+</section>
+<section class="slide level6">
 
 <p>There are also libraries available that will work with your version control system to run these tests every time you commit a new piece of code (<code>continuous integration</code>)</p>
 <aside class="notes">
@@ -542,10 +604,12 @@ After reproducing the bug, and before fixing it, you should write a test case th
 <li>people can look at your tests to understand your code (form of documentation)</li>
 </ul>
 </aside>
-</section><section class="slide level6">
+</section>
+<section class="slide level6">
 
 <p>Use version control</p>
-</section><section class="slide level6">
+</section>
+<section class="slide level6">
 
 <p>Sophisticated way to track change in your code over time</p>
 <aside class="notes">
@@ -556,16 +620,20 @@ After reproducing the bug, and before fixing it, you should write a test case th
 <li>git is the most popular (some time is needed to learn this, but social/collaborative/popularity make it worth it)</li>
 </ul>
 </aside>
-</section><section class="slide level6">
+</section>
+<section class="slide level6">
 
 <p>Version control stores the whole history of your project</p>
-</section><section class="slide level6">
+</section>
+<section class="slide level6">
 
 <p>Helps you back up your work</p>
-</section><section class="slide level6">
+</section>
+<section class="slide level6">
 
 <p>Go back to previous versions of your code</p>
-</section><section class="slide level6">
+</section>
+<section class="slide level6">
 
 <p>Reduce code clutter and confusion</p>
 <aside class="notes">
@@ -576,10 +644,12 @@ After reproducing the bug, and before fixing it, you should write a test case th
 <li>how is this different from other code I wrote???</li>
 </ul>
 </aside>
-</section><section class="slide level6">
+</section>
+<section class="slide level6">
 
 <p>Experiment with different versions of code (branches)</p>
-</section><section class="slide level6">
+</section>
+<section class="slide level6">
 
 <p>Makes it easier to work with others</p>
 <aside class="notes">
@@ -590,7 +660,8 @@ After reproducing the bug, and before fixing it, you should write a test case th
 <li>Use example from this presentation
 <aside></li>
 </ul>
-</section><section class="slide level6">
+</section>
+<section class="slide level6">
 
 <p>Commit early and often</p>
 <aside class="notes">
@@ -604,15 +675,18 @@ After reproducing the bug, and before fixing it, you should write a test case th
 <aside></li>
 </ul></li>
 </ul>
-</section><section class="slide level6">
+</section>
+<section class="slide level6">
 
 <p>Refactor your code</p>
-</section><section class="slide level6">
+</section>
+<section class="slide level6">
 
 <blockquote>
 <p>“Whenever I have to think to understand what the code is doing, I ask myself if I can refactor the code to make that understanding more immediately apparent.” – <cite>Martin Fowler, Refactoring: Improving the Design of Existing Code</cite></p>
 </blockquote>
-</section><section class="slide level6">
+</section>
+<section class="slide level6">
 
 <p>Always leave the code in a better state than when you first found it.</p>
 <aside class="notes">
@@ -623,20 +697,24 @@ After reproducing the bug, and before fixing it, you should write a test case th
 <p>There is some tradeoff between tinkering with your code and getting things done</p>
 Also don’t throw everything out and re-write from scratch unless you can absolutely help it * “When you throw away code and start from scratch, you are throwing away all that knowledge. All those collected bug fixes.” If tempted by this tutorial to do this to your existing codebase, don’t
 <aside>
-</section><section class="slide level6">
+</section>
+<section class="slide level6">
 
 <p>Always search for well-maintained software libraries that do what you need.</p>
-</section><section class="slide level6">
+</section>
+<section class="slide level6">
 
 <p>Don’t rewrite functions that are already implemented as part of the core language.</p>
-</section><section class="slide level6">
+</section>
+<section class="slide level6">
 
 <p>Use other software libraries if they are well-maintained</p>
 <aside class="notes">
 <p>Why: * because more users mean less bugs * better tested</p>
 Little tricky: still need to take time to vet the code to make sure it does what you think it does
 <aside>
-</section><section class="slide level6">
+</section>
+<section class="slide level6">
 
 <p>Summary:</p>
 <ul>
@@ -648,31 +726,39 @@ Little tricky: still need to take time to vet the code to make sure it does what
 <li>Use version control</li>
 <li>Always search for well-maintained software libraries that do what you need.</li>
 </ul>
-</section><section class="slide level6">
+</section>
+<section class="slide level6">
 
 <p>Conclusion: Writing good code takes work</p>
-</section><section class="slide level6">
+</section>
+<section class="slide level6">
 
 <p>We have a scientific obligation to ensure the correctness of our programs.</p>
 <aside class="notes">
 I think it is a mistake to think that only “programmers” working for companies need to bother with writing good code. You are a programmer dealing with complex programs.
 </aside>
-</section><section class="slide level6">
+</section>
+<section class="slide level6">
 
 <p>Bonus: Data Management</p>
-</section><section class="slide level6">
+</section>
+<section class="slide level6">
 
 <p>Put different projects in different folders/repositories</p>
-</section><section class="slide level6">
+</section>
+<section class="slide level6">
 
 <p>Use relative paths</p>
-</section><section class="slide level6">
+</section>
+<section class="slide level6">
 
 <p>Separate the data from the code</p>
-</section><section class="slide level6">
+</section>
+<section class="slide level6">
 
 <p>Processed Data should be separated from Raw Data to avoid accidentally changing the data</p>
-</section><section class="slide level6">
+</section>
+<section class="slide level6">
 
 <p>Tidy Data:</p>
 <ul>
@@ -681,16 +767,19 @@ I think it is a mistake to think that only “programmers” working for compani
 <li>Each type of observational unit forms a table</li>
 <li>flat is better than nested</li>
 </ul>
-</section><section class="slide level6">
+</section>
+<section class="slide level6">
 
 <p>If original data is not in a good form, convert it to a good form (but don’t overwrite the original data)</p>
-</section><section class="slide level6">
+</section>
+<section class="slide level6">
 
 <p>Don’t hand-edit data files.</p>
-</section><section class="slide level6">
+</section>
+<section class="slide level6">
 
 <p>All aspects of data cleaning should be in scripts</p>
-</section></section>
+</section>
     </div>
   </div>
 
