@@ -384,7 +384,7 @@ More complicated thing:
 
 ```python
 def linear_regression(design_matrix, response):
-    '''Calculate a linear least-squares regression for two  sets of measurements
+    '''Calculate a linear least-squares regression for two sets of measurements
 
     Parameters
     ----------
