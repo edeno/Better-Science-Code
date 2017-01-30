@@ -493,7 +493,7 @@ If you change your code, you want to know what still works and what has broken
 
 ------------------
 
-**Functions should be simple to test**
+Functions should be simple to test
 
 <aside class="notes">
 * if the number of test cases is uncomfortably large, start looking for smaller units to test.
