@@ -474,6 +474,8 @@ pure = as few implicit contexts and side-effects as possible.
 <div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="kw">def</span> linear_regression(design_matrix, response):
     <span class="co">&#39;&#39;&#39;Calculate a linear least-squares regression for two sets of measurements</span>
 
+<span class="co">    Uses the QR decomposition to avoid numerical instability in taking the inverse.</span>
+
 <span class="co">    Parameters</span>
 <span class="co">    ----------</span>
 <span class="co">    design_matrix, response : array_like</span>
@@ -482,6 +484,13 @@ pure = as few implicit contexts and side-effects as possible.
 <span class="co">    Returns</span>
 <span class="co">    -------</span>
 <span class="co">    coefficients : array_like</span>
+<span class="co">        Parameters estimated from the model.</span>
+
+<span class="co">    Examples</span>
+<span class="co">    --------</span>
+<span class="co">    &gt;&gt;&gt; design_matrix = np.random.random(10)</span>
+<span class="co">    &gt;&gt;&gt; response = np.random.random(10)</span>
+<span class="co">    &gt;&gt;&gt; coefficients = linear_regression(design_matrix, response)</span>
 
 <span class="co">    &#39;&#39;&#39;</span>
     Q, R <span class="op">=</span> np.linalg.qr(design_matrix, mode<span class="op">=</span><span class="st">&#39;reduced&#39;</span>)

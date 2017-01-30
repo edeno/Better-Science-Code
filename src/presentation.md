@@ -418,6 +418,8 @@ More complicated thing:
 def linear_regression(design_matrix, response):
     '''Calculate a linear least-squares regression for two sets of measurements
 
+    Uses the QR decomposition to avoid numerical instability in taking the inverse.
+
     Parameters
     ----------
     design_matrix, response : array_like
@@ -426,6 +428,13 @@ def linear_regression(design_matrix, response):
     Returns
     -------
     coefficients : array_like
+        Parameters estimated from the model.
+
+    Examples
+    --------
+    >>> design_matrix = np.random.random(10)
+    >>> response = np.random.random(10)
+    >>> coefficients = linear_regression(design_matrix, response)
 
     '''
     Q, R = np.linalg.qr(design_matrix, mode='reduced')
