@@ -562,7 +562,15 @@ Sophisticated way to track change in your code over time
 
 ------------------
 
+![Commit History](img/commit-history.png)
+
+------------------
+
 Version control stores the whole history of your project
+
+------------------
+
+![Commit History](img/commit-history.png)
 
 ------------------
 
