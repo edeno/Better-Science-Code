@@ -16,7 +16,7 @@ Why should you care about producing good code
 
 ------------------
 
-1) Doing good science!
+1. Doing good science!
 
 ------------------
 
@@ -49,7 +49,7 @@ Good code should reduce your anxiety about making mistakes
 
 ------------------
 
-2) Want to remember what the code does months later
+2. Want to remember what the code does months later
 
 ------------------
 
@@ -61,7 +61,7 @@ Good code should reduce your anxiety about making mistakes
 
 ------------------
 
-3) Want to be able to share it with other people
+3. Want to be able to share it with other people
 
 ------------------
 
@@ -80,11 +80,11 @@ Example: Michael Shadlen vs. Jonathan Pillow debate about the dynamics neurons d
 
 ------------------
 
-4) Avoid introducing new errors
+4. Avoid introducing new errors
 
 ------------------
 
-5) Can serve as a resume for future employers
+5. Can serve as a resume for future employers
 
 
 ------------------
@@ -120,7 +120,7 @@ Don’t beat yourself up if you don’t do all these things all the time
 
 ------------------
 
-1) Decompose programs into small, well-defined functions
+1. Decompose programs into small, well-defined functions
 
 <aside class="notes">
 Biggest mistake I see in scientific code
@@ -280,7 +280,7 @@ encapsulate ideas in functions
 
 ------------------
 
-2) Use good variable/function names to clarify what things do
+2. Use good variable/function names to clarify what things do
 
 ------------------
 
@@ -384,7 +384,7 @@ Prefer whole words
 
 ------------------
 
-3) Document your functions
+3. Document your functions
 
 ------------------
 
@@ -444,7 +444,7 @@ def linear_regression(design_matrix, response):
 
 ------------------
 
-4) Test your code
+4. Test your code
 
 ------------------
 
@@ -552,7 +552,7 @@ There are also libraries available that will work with your version control syst
 
 ------------------
 
-Use version control
+5. Use version control
 
 ------------------
 
@@ -617,7 +617,7 @@ Commit early and often
 
 ------------------
 
-Refactor your code
+6. Refactor your code
 
 ------------------
 
@@ -650,7 +650,7 @@ If tempted by this tutorial to do this to your existing codebase, don't
 
 ------------------
 
-Always search for well-maintained software libraries that do what you need.
+7. Always search for well-maintained software libraries that do what you need.
 
 ------------------
 
@@ -672,13 +672,13 @@ Little tricky: still need to take time to vet the code to make sure it does what
 
 Summary:
 
-* Write small well-defined, well-named functions
-* Use good function and variable names
-* Document your functions
-* Test your code
-* Refactor your code
-* Use version control
-* Always search for well-maintained software libraries that do what you need.
+1. Write small well-defined, well-named functions
+2. Use good function and variable names
+3. Document your functions
+4. Test your code
+5. Refactor your code
+6. Use version control
+7. Always search for well-maintained software libraries that do what you need.
 
 ------------------
 
