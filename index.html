@@ -216,9 +216,6 @@ Biggest mistake I see in scientific code
     Q, R <span class="op">=</span> np.linalg.qr(design_matrix, mode<span class="op">=</span><span class="st">&#39;reduced&#39;</span>)
     <span class="cf">return</span> np.linalg.solve(R, np.dot(Q.T, response))</code></pre></div>
 </section>
-<section id="decompose-programs-into-small-well-defined-functions-1" class="slide level1">
-<h1>1) Decompose programs into small, well-defined functions</h1>
-</section>
 <section class="slide level1">
 
 <p>Try to keep functions to less than 60 lines (small)</p>
@@ -448,7 +445,7 @@ encapsulate ideas in functions
 <section class="slide level1">
 
 <div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="kw">def</span> linear_regression(design_matrix, response):
-    <span class="co">&#39;&#39;&#39;Calculate a linear least-squares regression for two  sets of measurements</span>
+    <span class="co">&#39;&#39;&#39;Calculate a linear least-squares regression for two sets of measurements</span>
 
 <span class="co">    Parameters</span>
 <span class="co">    ----------</span>
@@ -642,11 +639,14 @@ After reproducing the bug, and before fixing it, you should write a test case th
 <blockquote>
 <p>“Whenever I have to think to understand what the code is doing, I ask myself if I can refactor the code to make that understanding more immediately apparent.” – <cite>Martin Fowler, Refactoring: Improving the Design of Existing Code</cite></p>
 </blockquote>
+</section>
+<section class="slide level1">
+
+<p>Always leave the code in a better state than when you first found it.</p>
 <aside class="notes">
 <p>Your code isn’t going to be perfect the first time</p>
 <p>Just like in writing, your code will get better as you revise it.</p>
 <p>You wouldn’t expect a first draft to be perfect.</p>
-<p>Always leave the code in a better state than when you first found it.</p>
 <p>each time you look at your code: * do my variable/function names make sense? * do I know what this function is doing? * can I turn things into functions? * can I generalize this function?</p>
 <p>There is some tradeoff between tinkering with your code and getting things done</p>
 Also don’t throw everything out and re-write from scratch unless you can absolutely help it * “When you throw away code and start from scratch, you are throwing away all that knowledge. All those collected bug fixes.” If tempted by this tutorial to do this to your existing codebase, don’t
