@@ -4,11 +4,11 @@
 
 ------------------
 
-Presentation: [https://edeno.github.io/Better-Science-Code](http://edeno.github.io/Better-Science-Code)
+Presentation:  [https://edeno.github.io/Better-Science-Code](http://edeno.github.io/Better-Science-Code)
 
 ------------------
 
-Repository: [https://github.com/edeno/Better-Science-Code](https://github.com/edeno/Better-Science-Code)
+Repository:  [https://github.com/edeno/Better-Science-Code](https://github.com/edeno/Better-Science-Code)
 
 ------------------
 
@@ -368,7 +368,7 @@ You don’t need comments if the variable or function already tells you what it 
 
 ------------------
 
-Use the naming conventions of your language of choice (snake_case or camelCase) and be consistent
+Use the naming conventions of your language of choice (`snake_case` or `camelCase`) and be consistent
 
 ------------------
 
@@ -390,7 +390,7 @@ Prefer whole words
 
 Easy thing: brief sentence describing the function without using the name of the function
 
-\*(**this is the most important**)
+\***this is the most important**
 
 <aside class="notes">
 * second line of defense in remembering what a function does
@@ -528,8 +528,7 @@ Use unit tests to define the requirements of your code
 
 ------------------
 
-You can use programs called "test runners” to run a group of unit tests automatically
-
+You can use programs called "test runners” to run a group of unit tests automatically.
 
 ------------------
 
@@ -550,7 +549,6 @@ There are also libraries available that will work with your version control syst
 * in order to write a test, you have to know what the function does
 * people can look at your tests to understand your code (form of documentation)
 </aside>
-
 
 ------------------
 
