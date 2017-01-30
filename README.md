@@ -28,5 +28,8 @@ A presentation on best coding/data management practices based on my own experien
 
 [10 Tips for Writing Cleaner & Better Code ](http://www.makeuseof.com/tag/10-tips-writing-cleaner-better-code/)
 
+[The Practice of Reproducible Research](https://www.practicereproducibleresearch.org/)
+* Case studies of reproducible research workflows
+
 # Requirements
 * [pandoc](http://pandoc.org/)
