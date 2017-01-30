@@ -147,8 +147,6 @@ def linear_regression(design_matrix, response):
 
 ```
 
-# 1) Decompose programs into small, well-defined functions
-
 ------------------
 
 Try to keep functions to less than 60 lines (small)
