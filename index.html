@@ -89,7 +89,7 @@ code > span.in { color: #7f9f7f; font-weight: bold; } /* Information */
 </section>
 <section class="slide level6">
 
-<p>We want code that works (<strong>it does what you say it does</strong>) and is reproducible (<strong>you can get to the same result every time using the same data and code</strong>):</p>
+<p>We want code that <span class="highlight">works</span> (it does what you say it does) and is <span class="highlight">reproducible</span> (you can get to the same result every time using the same data and code):</p>
 </section>
 <section class="slide level6">
 
@@ -101,17 +101,17 @@ code > span.in { color: #7f9f7f; font-weight: bold; } /* Information */
 </section>
 <section class="slide level6">
 
-<p>It’s too easy to make mistakes</p>
+<p>IT’S TOO EASY TO MAKE MISTAKES</p>
 </section>
 <section class="slide level6">
 
 <blockquote>
-<p>As the complexity of a software program increases, the likelihood of undiscovered bugs quickly reaches certainty” – <cite>Poldrack et al. 2017</cite></p>
+<p>“As the complexity of a software program increases, the likelihood of undiscovered bugs quickly reaches certainty” – <cite>Poldrack et al. 2017</cite></p>
 </blockquote>
 </section>
 <section class="slide level6">
 
-<p><strong>We are writing complex code</strong></p>
+<p>We are writing <em>complex code</em></p>
 <aside class="notes">
 Good code should reduce your anxiety about making mistakes
 </aside>
@@ -123,7 +123,7 @@ Good code should reduce your anxiety about making mistakes
 <section class="slide level6">
 
 <blockquote>
-<p>The single biggest reason you should write nice code is so that your future self can understand it. – <cite>Greg Wilson</cite></p>
+<p>“The single biggest reason you should write nice code is so that your future self can understand it.” – <cite>Greg Wilson</cite></p>
 </blockquote>
 <blockquote>
 <p>“All code has at least one collaborator and that is future you.” – <cite>Hadley Wickham</cite></p>
@@ -155,11 +155,11 @@ Example: Michael Shadlen vs. Jonathan Pillow debate about the dynamics neurons 
 </section>
 <section class="slide level6">
 
-<p>How to write good code?</p>
+<p>How to write good code???</p>
 </section>
 <section class="slide level6">
 
-<p>Exercise in how to manage complexity:</p>
+<p>Exercise in managing complexity:</p>
 <ul>
 <li>break problems down into smaller components</li>
 <li>eliminate unnecessary dependencies</li>
@@ -172,11 +172,11 @@ Example: Michael Shadlen vs. Jonathan Pillow debate about the dynamics neurons 
 </section>
 <section class="slide level6">
 
-<p>Don’t be overwhelmed and not do any of these things</p>
+<p>Don’t be overwhelmed <em>and not do any of these things</em></p>
 </section>
 <section class="slide level6">
 
-<p>Don’t beat yourself up if you don’t do all these things all the time</p>
+<p>Don’t beat yourself up <em>if you don’t do all these things all the time</em></p>
 <aside class="notes">
 <ul>
 <li>just try to remember them and incorporate them gradually into your process</li>
@@ -293,7 +293,7 @@ pure = as few implicit contexts and side-effects as possible.
 </section>
 <section class="slide level6">
 
-<p>Small, well-defined functions are more <strong>maintainable</strong></p>
+<p>Small, well-defined functions are more <em>maintainable</em></p>
 <aside class="notes">
 <ul>
 <li>breaks hard problems down into smaller problems</li>
@@ -305,7 +305,7 @@ pure = as few implicit contexts and side-effects as possible.
 </section>
 <section class="slide level6">
 
-<p>Small, well-defined functions are more <strong>composable</strong></p>
+<p>Small, well-defined functions are more <em>composable</em></p>
 <aside class="notes">
 <ul>
 <li>can reuse function in other programs</li>
@@ -317,7 +317,7 @@ pure = as few implicit contexts and side-effects as possible.
 </section>
 <section class="slide level6">
 
-<p>Small, well-defined functions are more <strong>readable</strong></p>
+<p>Small, well-defined functions are more <em>readable</em></p>
 <p>* if you give them good names</p>
 </section>
 <section class="slide level6">
@@ -422,8 +422,8 @@ pure = as few implicit contexts and side-effects as possible.
 </section>
 <section class="slide level6">
 
-<p>Easy thing: brief sentence describing the function without using the name of the function</p>
-<p>*<strong>this is the most important</strong></p>
+<p>Easy thing: brief sentence describing the function without using the name of the function*</p>
+<p>*<em>this is the most important</em></p>
 <aside class="notes">
 <ul>
 <li>second line of defense in remembering what a function does</li>
@@ -496,7 +496,7 @@ pure = as few implicit contexts and side-effects as possible.
 </section>
 <section class="slide level6">
 
-<p><strong>Small, well-defined, well-named functions are easy to test!</strong></p>
+<p>Small, well-defined, well-named functions are easy to test!</p>
 </section>
 <section class="slide level6">
 
@@ -514,11 +514,7 @@ pure = as few implicit contexts and side-effects as possible.
 </section>
 <section class="slide level6">
 
-<p>Unit tests</p>
-</section>
-<section class="slide level6">
-
-<p>Unit tests test a small component of your code (usually a small function) and makes sure it works like you think it works</p>
+<p><span class="highlight">Unit tests</span> test a small component of your code (usually a small function) and makes sure it works like you think it works</p>
 <aside class="notes">
 <ul>
 <li>Isolate small components of program and make sure they are correct</li>
@@ -528,7 +524,7 @@ pure = as few implicit contexts and side-effects as possible.
 </section>
 <section class="slide level6">
 
-<p>Unit tests prevent regression of your code</p>
+<p><span class="highlight">Unit tests</span> prevent regression of your code</p>
 </section>
 <section class="slide level6">
 
@@ -536,7 +532,7 @@ pure = as few implicit contexts and side-effects as possible.
 </section>
 <section class="slide level6">
 
-<p><strong>Functions should be simple to test</strong></p>
+<p>Functions should be simple to test</p>
 <aside class="notes">
 <ul>
 <li>if the number of test cases is uncomfortably large, start looking for smaller units to test.</li>
@@ -565,11 +561,11 @@ After reproducing the bug, and before fixing it, you should write a test case th
 </section>
 <section class="slide level6">
 
-<p>You can use programs called “test runners” to run a group of unit tests automatically.</p>
+<p>You can use programs called <span class="highlight">test runners</span> to run a group of unit tests automatically.</p>
 </section>
 <section class="slide level6">
 
-<p>Matlab, Python have built-in unit test programs</p>
+<p>Matlab, Python, R have unit test packages</p>
 <ul>
 <li><a href="https://www.mathworks.com/help/matlab/matlab-unit-test-framework.html">Matlab unit test framework</a></li>
 <li><a href="https://docs.python.org/3.4/library/unittest.html">Python unit test</a></li>
@@ -579,7 +575,7 @@ After reproducing the bug, and before fixing it, you should write a test case th
 </section>
 <section class="slide level6">
 
-<p>There are also libraries available that will work with your version control system to run these tests every time you commit a new piece of code (<code>continuous integration</code>)</p>
+<p>There are also libraries available that will work with your version control system to run these tests every time you commit a new piece of code (<span class='highlight'>continuous integration<span>)</p>
 <aside class="notes">
 <ul>
 <li>This all seems complicated but in the process of developing code, you should be writing tests to make sure it works. This process just formalizes the writing of tests and allows you to run them at a later time, ensuring peace of mind.</li>
@@ -607,7 +603,19 @@ After reproducing the bug, and before fixing it, you should write a test case th
 </section>
 <section class="slide level6">
 
+<figure>
+<img src="img/commit-history.png" alt="Commit History" /><figcaption>Commit History</figcaption>
+</figure>
+</section>
+<section class="slide level6">
+
 <p>Version control stores the whole history of your project</p>
+</section>
+<section class="slide level6">
+
+<figure>
+<img src="img/commit-history.png" alt="Commit History" /><figcaption>Commit History</figcaption>
+</figure>
 </section>
 <section class="slide level6">
 
