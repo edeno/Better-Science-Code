@@ -12,6 +12,7 @@ A presentation on best coding/data management practices based on my own experien
 * Great introduction to the basics of `git` without getting too "into the weeds". Clearly explains the usefulness of commits and branching.
 
 [An onboarding guide to research in my lab - trying to articulate clear standards for new projects - Michael C. Frank](http://babieslearninglanguage.blogspot.com/2017/01/onboarding.html)
+* Open-science checklist for projects
 
 [Poldrack, R.A., Baker, C.I., Durnez, J., Gorgolewski, K.J., Matthews, P.M., Munafò, M.R., Nichols, T.E., Poline, J.-B., Vul, E., and Yarkoni, T. (2017). Scanning the horizon: towards transparent and reproducible neuroimaging research. Nature Reviews Neuroscience 18, 115–126.](http://dx.doi.org/10.1038/nrn.2016.167)
 * Targeted towards neuroimaging, but gives applicable advice for all of neuroscience.
