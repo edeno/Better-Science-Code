@@ -6,11 +6,17 @@
 
 Presentation: [http://edeno.github.io/Better-Science-Code](http://edeno.github.io/Better-Science-Code)
 
+------------------
+
 Repository: [https://github.com/edeno/Better-Science-Code](https://github.com/edeno/Better-Science-Code)
 
-# Why should you care about producing good code
+------------------
 
-# 1) Doing good science!
+Why should you care about producing good code
+
+------------------
+
+1) Doing good science!
 
 ------------------
 
@@ -39,8 +45,9 @@ Following good coding practices reduces the chance of making mistakes
 Good code should reduce your anxiety about making mistakes
 </aside>
 
+------------------
 
-# 2) Want to remember what the code does months later
+2) Want to remember what the code does months later
 
 ------------------
 
@@ -50,8 +57,9 @@ Good code should reduce your anxiety about making mistakes
 > "All code has at least one collaborator and that is future you."
 > -- <cite>Hadley Wickham</cite>
 
+------------------
 
-# 3) Want to be able to share it with other people
+3) Want to be able to share it with other people
 
 ------------------
 
@@ -68,11 +76,18 @@ Example: Michael Shadlen vs. Jonathan Pillow debate about the dynamics neurons d
 * Shadlen lab recently countered with a paper arguing against the stepping model using the Pillow lab code
 </aside>
 
-# 4) Avoid introducing new errors
+------------------
 
-# 5) Can serve as a resume for future employers
+4) Avoid introducing new errors
 
-# How to write good code?
+------------------
+
+5) Can serve as a resume for future employers
+
+
+------------------
+
+How to write good code?
 
 ------------------
 
@@ -82,7 +97,9 @@ Exercise in how to manage complexity:
 * eliminate unnecessary dependencies
 * keep track of what you did (be organized)
 
-# Goal: Want to form good habits
+------------------
+
+Goal: Want to form good habits
 
 ------------------
 
@@ -98,7 +115,10 @@ Don’t beat yourself up if you don’t do all these things all the time
 * some of these will require more inertia (such as version control)
 </aside>
 
-# 1) Decompose programs into small, well-defined functions
+
+------------------
+
+1) Decompose programs into small, well-defined functions
 
 <aside class="notes">
 Biggest mistake I see in scientific code
@@ -154,6 +174,7 @@ Try to keep functions to less than 60 lines (small)
 ------------------
 
 Try to keep what the function does as simple as possible (well-defined)
+
 <aside class="notes">
 atomic = a function should do one "thing"
 
@@ -215,7 +236,11 @@ def linear_regression(design_matrix, response):
 
 ```
 
-# Small, well-defined functions are more maintainable
+
+------------------
+
+Small, well-defined functions are more **maintainable**
+
 <aside class="notes">
 * breaks hard problems down into smaller problems
 * limits the scope of your code
@@ -223,7 +248,10 @@ def linear_regression(design_matrix, response):
 * separation of concerns
 </aside>
 
-# Small, well-defined functions are more composable
+------------------
+
+Small, well-defined functions are more **composable**
+
 <aside class="notes">
 * can reuse function in other programs
 * can pass functions to other functions (function composition)
@@ -231,7 +259,12 @@ def linear_regression(design_matrix, response):
 * makes you more precise because you can focus on fixing bugs for one function, not many similar functions
 </aside>
 
-# Small, well-defined functions are more readable (if you give them good names)
+
+------------------
+
+Small, well-defined functions are more **readable**
+
+\* if you give them good names
 
 ------------------
 
@@ -242,7 +275,10 @@ def linear_regression(design_matrix, response):
 encapsulate ideas in functions
 </aside>
 
-# 2) Use good variable/function names to clarify what things do
+
+------------------
+
+2) Use good variable/function names to clarify what things do
 
 ------------------
 
@@ -348,7 +384,9 @@ Prefer whole words
 
 ------------------
 
-Easy thing: brief sentence describing the function without using the name of the function (**this is the most important**)
+Easy thing: brief sentence describing the function without using the name of the function
+
+\*(**this is the most important**)
 
 <aside class="notes">
 * second line of defense in remembering what a function does
@@ -400,7 +438,9 @@ def linear_regression(design_matrix, response):
     return np.linalg.solve(R, np.dot(Q.T, response))
 ```
 
-# 4) Test your code
+------------------
+
+4) Test your code
 
 ------------------
 
@@ -430,7 +470,10 @@ def test_zscore():
     assert np.allclose(zscore(test_values), expected_values)
 ```
 
-# Unit tests
+
+------------------
+
+Unit tests
 
 ------------------
 
@@ -460,11 +503,15 @@ If you change your code, you want to know what still works and what has broken
 ------------------
 
 If you find a bug, write a test.
+
 <aside class="notes">
 After reproducing the bug, and before fixing it, you should write a test case that fails, thus illustrating the bug.
 </aside>
 
-# Use unit tests to define the requirements of your code
+
+------------------
+
+Use unit tests to define the requirements of your code
 
 <aside class="notes">
 * ensure that your function is well-defined
@@ -472,9 +519,15 @@ After reproducing the bug, and before fixing it, you should write a test case th
 * also a form of documentation: examples for how you think your code should work
 </aside>
 
-# You can use programs called "test runners” to run a group of unit tests automatically
 
-# matlab, python have built- in unit test programs
+------------------
+
+You can use programs called "test runners” to run a group of unit tests automatically
+
+
+------------------
+
+Matlab, Python have built-in unit test programs
 
 * matlab: https://www.mathworks.com/help/matlab/matlab-unit-test-framework.html
 * python: https://docs.python.org/3.4/library/unittest.html
@@ -492,7 +545,10 @@ There are also libraries available that will work with your version control syst
 * people can look at your tests to understand your code (form of documentation)
 </aside>
 
-# Use version control
+
+------------------
+
+Use version control
 
 ------------------
 
@@ -555,7 +611,9 @@ Commit early and often
     * easy to use user interface
 <aside>
 
-# Refactor your code
+------------------
+
+Refactor your code
 
 ------------------
 
@@ -586,8 +644,9 @@ Also don’t throw everything out and re-write from scratch unless you can absol
 If tempted by this tutorial to do this to your existing codebase, don't
 <aside>
 
+------------------
 
-# Always search for well-maintained software libraries that do what you need.
+Always search for well-maintained software libraries that do what you need.
 
 ------------------
 
@@ -605,8 +664,10 @@ Why:
 Little tricky: still need to take time to vet the code to make sure it does what you think it does
 <aside>
 
+------------------
 
-# Summary
+Summary:
+
 * Write small well-defined, well-named functions
 * Use good function and variable names
 * Document your functions
@@ -615,15 +676,23 @@ Little tricky: still need to take time to vet the code to make sure it does what
 * Use version control
 * Always search for well-maintained software libraries that do what you need.
 
-# Conclusion: Writing good code takes work
+------------------
 
-# We have a scientific obligation to ensure the correctness of our programs.
+Conclusion: Writing good code takes work
+
+
+------------------
+
+We have a scientific obligation to ensure the correctness of our programs.
 
 <aside class="notes">
 I think it is a mistake to think that only "programmers" working for companies need to bother with writing good code. You are a programmer dealing with complex programs.
 </aside>
 
-# Bonus: Data Management
+
+------------------
+
+Bonus: Data Management
 
 ------------------
 
