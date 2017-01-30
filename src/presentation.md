@@ -20,7 +20,7 @@ REASON 1. Doing good science!
 
 ------------------
 
-We want code that works (**it does what you say it does**) and is reproducible (**you can get to the same result every time using the same data and code**):
+We want code that <span class='highlight'>works</span> (it does what you say it does) and is <span class='highlight'>reproducible</span> (you can get to the same result every time using the same data and code):
 
 ------------------
 
@@ -41,7 +41,7 @@ It’s too easy to make mistakes
 
 ------------------
 
-**We are writing complex code**
+We are writing *complex code*
 
 <aside class="notes">
 Good code should reduce your anxiety about making mistakes
@@ -89,7 +89,7 @@ REASON 5. Can serve as a resume for future employers
 
 ------------------
 
-How to write good code?
+How to write good code???
 
 ------------------
 
@@ -105,11 +105,11 @@ Goal: Want to form good habits
 
 ------------------
 
-Don’t be overwhelmed and not do any of these things
+Don’t be overwhelmed *and not do any of these things*
 
 ------------------
 
-Don’t beat yourself up if you don’t do all these things all the time
+Don’t beat yourself up *if you don’t do all these things all the time*
 
 <aside class="notes">
 * just try to remember them and incorporate them gradually into your process
@@ -241,7 +241,7 @@ def linear_regression(design_matrix, response):
 
 ------------------
 
-Small, well-defined functions are more **maintainable**
+Small, well-defined functions are more *maintainable*
 
 <aside class="notes">
 * breaks hard problems down into smaller problems
@@ -252,7 +252,7 @@ Small, well-defined functions are more **maintainable**
 
 ------------------
 
-Small, well-defined functions are more **composable**
+Small, well-defined functions are more *composable*
 
 <aside class="notes">
 * can reuse function in other programs
@@ -264,7 +264,7 @@ Small, well-defined functions are more **composable**
 
 ------------------
 
-Small, well-defined functions are more **readable**
+Small, well-defined functions are more *readable*
 
 \* if you give them good names
 
@@ -481,7 +481,7 @@ Unit tests
 
 ------------------
 
-Unit tests test a small component of your code (usually a small function) and makes sure it works like you think it works
+<span class='highlight'>Unit tests</span> test a small component of your code (usually a small function) and makes sure it works like you think it works
 
 <aside class="notes">
 * Isolate small components of program and make sure they are correct
@@ -490,7 +490,7 @@ Unit tests test a small component of your code (usually a small function) and ma
 
 ------------------
 
-Unit tests prevent regression of your code
+<span class='highlight'>Unit tests</span> prevent regression of your code
 
 ------------------
 
@@ -528,7 +528,7 @@ Use unit tests to define the requirements of your code
 
 ------------------
 
-You can use programs called "test runners” to run a group of unit tests automatically.
+You can use programs called <span class='highlight'>test runners</span> to run a group of unit tests automatically.
 
 ------------------
 
@@ -541,7 +541,7 @@ Matlab, Python have built-in unit test programs
 
 ------------------
 
-There are also libraries available that will work with your version control system to run these tests every time you commit a new piece of code (`continuous integration`)
+There are also libraries available that will work with your version control system to run these tests every time you commit a new piece of code (<span class='highlight'>continuous integration<span>)
 
 <aside class="notes">
 * This all seems complicated but in the process of developing code, you should be writing tests to make sure it works. This process just formalizes the writing of tests and allows you to run them at a later time, ensuring peace of mind.
