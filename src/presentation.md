@@ -562,14 +562,16 @@ Commit early and often
 >“Whenever I have to think to understand what the code is doing, I ask myself if I can refactor the code to make that understanding more immediately apparent.”
 > -- <cite>Martin Fowler, Refactoring: Improving the Design of Existing Code</cite>
 
+------------------
+
+Always leave the code in a better state than when you first found it.
+
 <aside class="notes">
 Your code isn't going to be perfect the first time
 
 Just like in writing, your code will get better as you revise it.
 
 You wouldn’t expect a first draft to be perfect.
-
-Always leave the code in a better state than when you first found it.
 
 each time you look at your code:
 * do my variable/function names make sense?
