@@ -535,10 +535,10 @@ You can use programs called "test runners” to run a group of unit tests automa
 
 Matlab, Python have built-in unit test programs
 
-* Matlab: https://www.mathworks.com/help/matlab/matlab-unit-test-framework.html
-* Python: https://docs.python.org/3.4/library/unittest.html
-* if you use Python, pytest is a helpful extension: http://doc.pytest.org/en/latest/
-* R: testthat package — works well with RStudio IDE
+* [Matlab unit test framework](https://www.mathworks.com/help/matlab/matlab-unit-test-framework.html)
+* [Python unit test](https://docs.python.org/3.4/library/unittest.html)
+* [Pytest](http://doc.pytest.org/en/latest/)
+* [R: testthat](https://github.com/hadley/testthat)
 
 ------------------
 
