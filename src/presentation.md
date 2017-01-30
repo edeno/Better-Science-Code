@@ -474,11 +474,6 @@ def test_zscore():
     assert np.allclose(zscore(test_values), expected_values)
 ```
 
-
-------------------
-
-Unit tests
-
 ------------------
 
 <span class='highlight'>Unit tests</span> test a small component of your code (usually a small function) and makes sure it works like you think it works
