@@ -93,7 +93,7 @@ How to write good code???
 
 ------------------
 
-Exercise in how to manage complexity:
+Exercise in managing complexity:
 
 * break problems down into smaller components
 * eliminate unnecessary dependencies
@@ -379,9 +379,9 @@ STEP 3. Document your functions
 
 ------------------
 
-Easy thing: brief sentence describing the function without using the name of the function
+Easy thing: brief sentence describing the function without using the name of the function\*
 
-\***this is the most important**
+\**this is the most important*
 
 <aside class="notes">
 * second line of defense in remembering what a function does
@@ -532,7 +532,7 @@ You can use programs called <span class='highlight'>test runners</span> to run a
 
 ------------------
 
-Matlab, Python have built-in unit test programs
+Matlab, Python, R have unit test packages
 
 * [Matlab unit test framework](https://www.mathworks.com/help/matlab/matlab-unit-test-framework.html)
 * [Python unit test](https://docs.python.org/3.4/library/unittest.html)
