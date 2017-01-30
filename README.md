@@ -32,5 +32,8 @@ A presentation on best coding/data management practices based on my own experien
 [Kitzes, J., Turek, D., & Deniz, F. (Eds.). (2017). The Practice of Reproducible Research: Case Studies and Lessons from the Data-Intensive Sciences. Oakland, CA: University of California Press.](https://www.practicereproducibleresearch.org/)
 * Case studies of reproducible workflows used for science research
 
+[Millman, K.J., and Pérez, F. (2014). Developing open-source scientific practice. Implementing Reproducible Research 149.
+](https://osf.io/h9gsd/)
+
 # Requirements
 * [pandoc](http://pandoc.org/)
