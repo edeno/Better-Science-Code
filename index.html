@@ -374,7 +374,7 @@ pure = as few implicit contexts and side-effects as possible.
     coefficient2 <span class="op">=</span> linear_regression(
         zscore(design_matrix2), response)
     coefficient_difference <span class="op">=</span> coefficient1 <span class="op">-</span> coefficient2
-    np.save(<span class="st">&#39;ans.npy&#39;</span>, b)
+    np.save(<span class="st">&#39;ans.npy&#39;</span>, coefficient_difference)
 
 <span class="kw">def</span> load_data(data_name):
     X <span class="op">=</span> np.load(data_name, mmap_mode<span class="op">=</span><span class="st">&#39;r&#39;</span>)

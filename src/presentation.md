@@ -328,7 +328,7 @@ def better_function():
     coefficient2 = linear_regression(
         zscore(design_matrix2), response)
     coefficient_difference = coefficient1 - coefficient2
-    np.save('ans.npy', b)
+    np.save('ans.npy', coefficient_difference)
 
 def load_data(data_name):
     X = np.load(data_name, mmap_mode='r')
