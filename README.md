@@ -35,5 +35,7 @@ A presentation on best coding/data management practices based on my own experien
 [Millman, K.J., and Pérez, F. (2014). Developing open-source scientific practice. Implementing Reproducible Research 149.
 ](https://osf.io/h9gsd/)
 
+[Best practices for file naming](http://library.stanford.edu/research/data-management-services/data-best-practices/best-practices-file-naming)
+
 # Requirements
 * [pandoc](http://pandoc.org/)
