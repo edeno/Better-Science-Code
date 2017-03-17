@@ -172,6 +172,9 @@ def linear_regression(design_matrix, response):
 
 Try to keep functions to less than 60 lines (small)
 
+<aside class='notes'>Seeing a whole function on screen helps
+you keep it in your working memory.</aside>
+
 ------------------
 
 Try to keep what the function does as simple as possible (well-defined)
