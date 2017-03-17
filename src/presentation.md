@@ -359,7 +359,7 @@ Use the naming conventions of your language of choice (`snake_case` or `camelCas
 
 Avoid using abbreviations that are not commonly used
 
-(`jmi` vs. `joint_mark_intensity`)
+(`sw` vs. `spike_width`)
 
 ------------------
 
