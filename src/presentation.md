@@ -18,6 +18,9 @@ Why should you care about producing good code
 
 REASON 1. Doing good science!
 
+<aside class='notes'>All modern science depends on computing (data-collection, analysis, computational modeling).
+We spend a lot of time designing and performing experiments. Why waste that effort by writing code with errors?<aside
+
 ------------------
 
 We want code that <span class='highlight'>works</span> (it does what you say it does) and is <span class='highlight'>reproducible</span> (you can get to the same result every time using the same data and code):
