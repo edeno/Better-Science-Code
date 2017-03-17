@@ -5,6 +5,9 @@
   color: rgba(220, 163, 163, 0.8);
   font-size: 0.75em;
 }
+.dim {
+    opacity: 0.2;
+}
 .reveal p {
   color: #ddd;
 }
