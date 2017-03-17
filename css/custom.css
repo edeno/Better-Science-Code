@@ -1,6 +1,10 @@
 .reveal blockquote {
   width: 85%;
 }
+.deemphasized-title {
+  color: rgba(220, 163, 163, 0.8);
+  font-size: 0.75em;
+}
 .reveal a {
   color: orange;
 }
