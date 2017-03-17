@@ -70,6 +70,7 @@ REASON 3. Want to be able to share it with other people
 
 
 
+<aside class='notes'>We'll talk about how writing good code (in particular testing your code) helps you avoid introducing new errors into your code</aside>
 
 ------------------
 
