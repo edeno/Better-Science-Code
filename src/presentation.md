@@ -351,7 +351,7 @@ You don’t need comments if the variable or function already tells you what it 
 
 ------------------
 
-Use the naming conventions of your language of choice (`snake_case` or `camelCase`) and be consistent
+Use the naming conventions of your language of choice (`snake_case` or `camelCase`) and <span class='highlight'>be consistent</span>
 
 ------------------
 
