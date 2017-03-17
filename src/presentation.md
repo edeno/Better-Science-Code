@@ -524,7 +524,7 @@ def test_zscore():
 
 ------------------
 
-If you change your code, you want to know what still works and what has broken
+If you change your code, you want to know what still works and what has broken (Regression)
 
 ------------------
 
