@@ -233,7 +233,6 @@ def linear_regression(design_matrix, response):
 
 ```
 
-
 ------------------
 
 Small, well-defined functions are more *maintainable*
@@ -394,7 +393,8 @@ def zscore(x):
     return (x - x.mean()) / x.std()
 
 def linear_regression(design_matrix, response):
-    '''Calculate a linear least-squares regression for two sets of measurements'''
+    '''Calculate a linear least-squares regression for
+    two sets of measurements'''
     Q, R = np.linalg.qr(design_matrix, mode='reduced')
     return np.linalg.solve(R, np.dot(Q.T, response))
 ```
@@ -412,14 +412,17 @@ More complicated thing:
 
 ```python
 def linear_regression(design_matrix, response):
-    '''Calculate a linear least-squares regression for two sets of measurements
+    '''Calculate a linear least-squares regression for
+    two sets of measurements
 
-    Uses the QR decomposition to avoid numerical instability in taking the inverse.
+    Uses the QR decomposition to avoid numerical instability
+    in taking the inverse.
 
     Parameters
     ----------
     design_matrix, response : array_like
-        Two sets of measurements. Both arrays should have the same length.
+        Two sets of measurements. Both arrays should have
+        the same length.
 
     Returns
     -------
@@ -514,7 +517,6 @@ Use unit tests to define the requirements of your code
 * some people even write unit tests before writing a function (test-driven development)
 * also a form of documentation: examples for how you think your code should work
 </aside>
-
 
 ------------------
 
@@ -690,7 +692,6 @@ We have a scientific obligation to ensure the correctness of our programs.
 <aside class="notes">
 I think it is a mistake to think that only "programmers" working for companies need to bother with writing good code. You are a programmer dealing with complex programs.
 </aside>
-
 
 ------------------
 
