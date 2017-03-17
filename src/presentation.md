@@ -395,6 +395,35 @@ Easy thing: brief sentence describing the function without using the name of the
 
 ------------------
 
+<span class='deemphasized-title'>Document your functions</span>
+
+```python
+def zscore(x):
+    return (x - x.mean()) / x.std()
+
+def linear_regression(design_matrix, response):
+    Q, R = np.linalg.qr(design_matrix, mode='reduced')
+    return np.linalg.solve(R, np.dot(Q.T, response))
+```
+
+------------------
+
+<span class='deemphasized-title'>Document your functions</span>
+
+```python
+def zscore(x):
+    '''Number of standard deviations from the mean'''
+    return (x - x.mean()) / x.std()
+
+def linear_regression(design_matrix, response):
+    Q, R = np.linalg.qr(design_matrix, mode='reduced')
+    return np.linalg.solve(R, np.dot(Q.T, response))
+```
+
+------------------
+
+<span class='deemphasized-title'>Document your functions</span>
+
 ```python
 def zscore(x):
     '''Number of standard deviations from the mean'''
