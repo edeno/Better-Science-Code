@@ -734,3 +734,9 @@ Don’t hand-edit data files.
 
 All aspects of data cleaning should be in scripts
 
+------------------
+
+File naming:
+
++  Don't use spaces in file names
++  Use leading zeros (001 vs. 1)
