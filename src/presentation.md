@@ -16,12 +16,16 @@ Why should you care about producing good code
 
 ------------------
 
+<span class='deemphasized-title'>Why should you care about producing good code</span>
+
 REASON 1. Doing good science!
 
 <aside class='notes'>All modern science depends on computing (data-collection, analysis, computational modeling).
 We spend a lot of time designing and performing experiments. Why waste that effort by writing code with errors?<aside
 
 ------------------
+
+<span class='deemphasized-title'>Why should you care about producing good code</span>
 
 We want code that <span class='highlight'>works</span> (it does what you say it does) and is <span class='highlight'>reproducible</span> (you can get to the same result every time using the same data and code):
 
@@ -31,7 +35,9 @@ Don’t want to have to retract papers because the code had bugs
 
 ------------------
 
-Following good coding practices reduces the chance of making mistakes
+<span class='deemphasized-title'>Why should you care about producing good code</span>
+
+Following good coding practices reduces the chance of making mistakes.
 
 ------------------
 
@@ -52,6 +58,8 @@ Good code should reduce your anxiety about making mistakes
 
 ------------------
 
+<span class='deemphasized-title'>Why should you care about producing good code</span>
+
 REASON 2. Want to remember what the code does months later
 
 ------------------
@@ -64,19 +72,21 @@ REASON 2. Want to remember what the code does months later
 
 ------------------
 
+<span class='deemphasized-title'>Why should you care about producing good code</span>
+
 REASON 3. Want to be able to share it with other people
 
 ------------------
 
+<span class='deemphasized-title'>Why should you care about producing good code </span>
 
+REASON 4. Avoid introducing new errors
 
 <aside class='notes'>We'll talk about how writing good code (in particular testing your code) helps you avoid introducing new errors into your code</aside>
 
 ------------------
 
-REASON 4. Avoid introducing new errors
-
-------------------
+<span class='deemphasized-title'>Why should you care about producing good code </span>
 
 REASON 5. Can serve as a resume for future employers
 
@@ -113,6 +123,8 @@ Don’t beat yourself up *if you don’t do all these things all the time*
 
 
 ------------------
+
+<span class='deemphasized-title'>How to write good code???</span>
 
 STEP 1. Decompose programs into small, well-defined functions
 
@@ -171,12 +183,16 @@ def linear_regression(design_matrix, response):
 
 ------------------
 
+<span class='deemphasized-title'>How to write good code???</span>
+
 Try to keep functions to less than 60 lines (small)
 
 <aside class='notes'>Seeing a whole function on screen helps
 you keep it in your working memory.</aside>
 
 ------------------
+
+<span class='deemphasized-title'>How to write good code???</span>
 
 Try to keep what the function does as simple as possible (well-defined)
 
@@ -191,7 +207,9 @@ pure = as few implicit contexts and side-effects as possible.
 
 ------------------
 
-Be ruthless about eliminating duplication of code
+<span class='deemphasized-title'>How to write good code???</span>
+
+Be ruthless about eliminating duplication of code.
 
 <aside class="notes">
 * turn duplicated code into functions
@@ -199,6 +217,8 @@ Be ruthless about eliminating duplication of code
 </aside>
 
 ------------------
+
+<span class='deemphasized-title'>Small, well-defined, without duplicates</span>
 
 ```python
 import numpy as np
@@ -217,6 +237,8 @@ def bad_function():
 ```
 
 ------------------
+
+<span class='deemphasized-title'>Small, well-defined, without duplicates</span>
 
 ```python
 import numpy as np
@@ -276,6 +298,8 @@ STEP 2. Use good variable/function names to clarify what things do
 
 ------------------
 
+<span class='deemphasized-title'>Use good variable/function names</span>
+
 ```python
 import numpy as np
 
@@ -293,6 +317,8 @@ def bad_function():
 ```
 
 ------------------
+
+<span class='deemphasized-title'>Use good variable/function names</span>
 
 ```python
 import numpy as np
@@ -318,6 +344,8 @@ def linear_regression(design_matrix, response):
 ```
 
 ------------------
+
+<span class='deemphasized-title'>Use good variable/function names</span>
 
 ```python
 import numpy as np
@@ -381,6 +409,8 @@ STEP 3. Document your functions
 
 ------------------
 
+<span class='deemphasized-title'>Document your functions</span>
+
 Easy thing: brief sentence describing the function without using the name of the function\*
 
 \**this is the most important*
@@ -438,7 +468,7 @@ def linear_regression(design_matrix, response):
 
 ------------------
 
-More complicated thing:
+<span class='deemphasized-title'>Document your functions</span>
 
 * additional detail about what the function does or method it implements
 * description of the parameters
@@ -446,6 +476,8 @@ More complicated thing:
 * examples if you can
 
 ------------------
+
+<span class='deemphasized-title'>Document your functions</span>
 
 ```python
 def linear_regression(design_matrix, response):
@@ -483,9 +515,13 @@ STEP 4. Test your code
 
 ------------------
 
+<span class='deemphasized-title'>Test your code</span>
+
 Make sure your code works like you think it does
 
 ------------------
+
+<span class='deemphasized-title'>Test your code</span>
 
 Think about how your code can fail
 
@@ -508,6 +544,10 @@ def test_zscore():
     pass
 ```
 
+------------------
+
+<span class='deemphasized-title'>Test your code</span>
+
 ```python
 import numpy as np
 
@@ -523,6 +563,8 @@ def test_zscore():
 ```
 
 ------------------
+
+<span class='deemphasized-title'>Test your code</span>
 
 <span class='highlight'>Unit tests</span> test a small component of your code (usually a small function) and makes sure it works like you think it works
 
@@ -583,6 +625,8 @@ Matlab, Python, R have unit test packages
 
 ------------------
 
+<span class='deemphasized-title'>Test your code</span>
+
 There are also libraries available that will work with your version control system to run these tests every time you commit a new piece of code (<span class='highlight'>continuous integration<span>)
 
 <aside class="notes">
@@ -598,6 +642,8 @@ STEP 5. Use version control
 
 ------------------
 
+<span class='deemphasized-title'>Use version control</span>
+
 Sophisticated way to track change in your code over time
 
 <aside class="notes">
@@ -609,7 +655,9 @@ Sophisticated way to track change in your code over time
 
 ------------------
 
-![Commit History](img/commit-history.png)
+<span class='deemphasized-title'>Use version control</span>
+
+![Github Desktop](img/github-desktop.png)
 
 ------------------
 
@@ -617,17 +665,27 @@ Version control stores the whole history of your project
 
 ------------------
 
-![Commit History](img/commit-history.png)
+![](img/commit-history.png)
 
 ------------------
+
+<span class='deemphasized-title'>Use version control</span>
 
 Helps you back up your work
 
 ------------------
 
+<span class='deemphasized-title'>Use version control</span>
+
 Go back to previous versions of your code
 
 ------------------
+
+![](img/commit-history.png)
+
+------------------
+
+<span class='deemphasized-title'>Use version control</span>
 
 Reduce code clutter and confusion
 
@@ -640,9 +698,13 @@ Reduce code clutter and confusion
 
 ------------------
 
+<span class='deemphasized-title'>Use version control</span>
+
 Experiment with different versions of code (branches)
 
 ------------------
+
+<span class='deemphasized-title'>Use version control</span>
 
 Makes it easier to work with others
 
@@ -654,6 +716,8 @@ Makes it easier to work with others
 <aside>
 
 ------------------
+
+<span class='deemphasized-title'>Use version control</span>
 
 Commit early and often
 
@@ -675,6 +739,8 @@ STEP 6. Refactor your code
 > -- <cite>Martin Fowler, Refactoring: Improving the Design of Existing Code</cite>
 
 ------------------
+
+<span class='deemphasized-title'>Refactor your code</span>
 
 Always leave the code in a better state than when you first found it.
 
