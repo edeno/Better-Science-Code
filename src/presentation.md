@@ -113,7 +113,9 @@ Don’t beat yourself up *if you don’t do all these things all the time*
 STEP 1. Decompose programs into small, well-defined functions
 
 <aside class="notes">
-Biggest mistake I see in scientific code
+Biggest mistakes I see in scientific code.
+  1. Not writing functions at all.
+  2. Not writing small enough functions
 </aside>
 
 ------------------
