@@ -689,7 +689,7 @@ Conclusion: Writing good code takes work
 
 We have a scientific obligation to ensure the correctness of our programs.
 
-<aside class="notes">
+<aside class='notes'>
 I think it is a mistake to think that only "programmers" working for companies need to bother with writing good code. You are a programmer dealing with complex programs.
 </aside>
 
@@ -731,4 +731,6 @@ If original data is not in a good form, convert it to a good form (but don’t o
 Don’t hand-edit data files.
 
 ------------------
+
 All aspects of data cleaning should be in scripts
+
