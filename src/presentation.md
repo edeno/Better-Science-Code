@@ -720,6 +720,16 @@ Little tricky: still need to take time to vet the code to make sure it does what
 
 ------------------
 
+<span class='deemphasized-title'>How to write good code???</span>
+
+Exercise in managing complexity:
+
+* break problems down into smaller components
+* eliminate unnecessary dependencies
+* keep track of what you did (be organized)
+
+------------------
+
 Summary:
 
 1. Write small well-defined, well-named functions
@@ -732,8 +742,31 @@ Summary:
 
 ------------------
 
-Conclusion: Writing good code takes work
+<span class='deemphasized-title'>break problems down into smaller components</span>
 
+1. Write small well-defined, well-named functions
+2. <span class='dim'>Use good function and variable names</span>
+3. <span class='dim'>Document your functions</span>
+4. <span class='dim'>Test your code</span>
+5. Refactor your code
+6. <span class='dim'>Use version control</span>
+7. Always search for well-maintained software libraries that do what you need.
+
+------------------
+
+<span class='deemphasized-title'>keep track of what you did (be organized)</span>
+
+1. <span class='dim'>Write small well-defined, well-named functions</span>
+2. Use good function and variable names
+3. Document your functions
+4. Test your code
+5. <span class='dim'>Refactor your code</span>
+6. Use version control
+7. <span class='dim'>Always search for well-maintained software libraries that do what you need.</span>
+
+------------------
+
+Conclusion: Writing good code takes work
 
 ------------------
 
