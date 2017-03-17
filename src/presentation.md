@@ -139,6 +139,10 @@ def bad_function():
     np.save('ans.npy', b)
 ```
 
+<aside class='notes'>
+-  `Def`: defines a function in python
+</aside>
+
 ------------------
 
 ```python
