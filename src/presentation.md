@@ -495,6 +495,19 @@ Small, well-defined, well-named functions are easy to test!
 
 ------------------
 
+<span class='deemphasized-title'>Test your code</span>
+
+```python
+import numpy as np
+
+def zscore(x):
+    '''Number of standard deviations from the mean'''
+    return (x - x.mean()) / x.std()
+
+def test_zscore():
+    pass
+```
+
 ```python
 import numpy as np
 
