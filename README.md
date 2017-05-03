@@ -10,9 +10,10 @@ A presentation on best coding/data management practices based on my own experien
 * Solid practical advice for writing good code and managing data.
 
 [Initial steps toward reproducible research - Karl Broman ](http://kbroman.org/steps2rr/)
-
+* Another good guide for writing code and managing data. More focused on R.
 
 [10 Tips for Writing Cleaner & Better Code ](http://www.makeuseof.com/tag/10-tips-writing-cleaner-better-code/)
+* A short list of tips for those that don't have much time.
 
 ## Version control
 
