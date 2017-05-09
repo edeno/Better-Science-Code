@@ -725,7 +725,7 @@ Makes it easier to work with others
 
 <span class='deemphasized-title'>Use version control</span>
 
-Commit early and often
+Commit early and often (take a lot of snapshots of your code)
 
 <aside class="notes">
 * when you get a piece of code working, commit it (take a snapshot)
