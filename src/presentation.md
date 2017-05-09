@@ -845,7 +845,11 @@ Conclusion: Writing good code takes work
 We have a scientific obligation to ensure the correctness of our programs.
 
 <aside class='notes'>
-I think it is a mistake to think that only "programmers" working for companies need to bother with writing good code. You are a programmer dealing with complex programs.
+I think it is a mistake to think that only "programmers" working for companies need to bother with writing good code.
+
+You are a programmer dealing with complex programs.
+
+Need to put the same amount of effort as performing the experiment or writing the paper.
 </aside>
 
 ------------------
