@@ -12,6 +12,12 @@ Repository:  [https://github.com/edeno/Better-Science-Code](https://github.com/e
 
 ------------------
 
+Google Doc for Group Note Taking / Discussion:
+
+[https://docs.google.com/document/d/1LDR8eF6rggOST7IuyM0qcXJhoLI6UwHaiwcwS1-RpPw/edit?usp=sharing](https://docs.google.com/document/d/1LDR8eF6rggOST7IuyM0qcXJhoLI6UwHaiwcwS1-RpPw/edit?usp=sharing)
+
+------------------
+
 Why should you care about producing good code
 
 ------------------
