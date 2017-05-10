@@ -857,7 +857,9 @@ Exercises
 
 Go to: [https://github.com/edeno/Better-Science-Code](https://github.com/edeno/Better-Science-Code)
 
-and download either [exercises.py](), [exercises.m]()
+and copy either:
+-  [exercises.py](https://raw.githubusercontent.com/edeno/Better-Science-Code/master/exercises/exercises.py)
+-  [exercises.m](https://raw.githubusercontent.com/edeno/Better-Science-Code/master/exercises/exercises.m)
 
 Work on for 30 minutes (either solo or in groups)
 Code Review: We will discuss what people came up with
