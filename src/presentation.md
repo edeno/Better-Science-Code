@@ -853,15 +853,15 @@ Need to put the same amount of effort as performing the experiment or writing th
 </aside>
 
 ------------------
+
 Exercises
 
 Go to: [https://github.com/edeno/Better-Science-Code](https://github.com/edeno/Better-Science-Code)
 
-and copy either:
--  [exercises.py](https://raw.githubusercontent.com/edeno/Better-Science-Code/master/exercises/exercises.py)
--  [exercises.m](https://raw.githubusercontent.com/edeno/Better-Science-Code/master/exercises/exercises.m)
+and copy either [exercises.py](https://raw.githubusercontent.com/edeno/Better-Science-Code/master/exercises/exercises.py) or  [exercises.m](https://raw.githubusercontent.com/edeno/Better-Science-Code/master/exercises/exercises.m)
 
-Work on for 30 minutes (either solo or in groups)
+Work on for 30 minutes (either solo or in groups).
+
 Code Review: We will discuss what people came up with
 
 ------------------
