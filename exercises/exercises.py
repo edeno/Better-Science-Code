@@ -52,7 +52,6 @@ time = np.arange(1, 7)
 # trend from the signal depending on the detrend type
 detrendType = 'linear'
 
-
 if detrendType == 'constant':
     s1_detrended = s1 - np.mean(s1)  # subtract the mean from the signal
     s2_detrended = s2 - np.mean(s2)  # subtract the mean from the signal
@@ -66,22 +65,22 @@ elif detrendType == 'linear':
     s1_detrended = s1 - lT  # detrended signal
 
     dM = np.stack((np.ones(time.shape), time)).T  # design matrix
-    c, _, _, _ = np.linalg.lstsq(time, s2)  # linear coefficients
+    c, _, _, _ = np.linalg.lstsq(dM, s2)  # linear coefficients
     lT = np.dot(dM, c)  # the linear trend
     s2_detrended = s2 - lT  # detrended signal
 
     dM = np.stack((np.ones(time.shape), time)).T  # design matrix
-    c, _, _, _ = np.linalg.lstsq(time, s3)  # linear coefficients
+    c, _, _, _ = np.linalg.lstsq(dM, s3)  # linear coefficients
     lT = np.dot(dM, c)  # the linear trend
     s3_detrended = s3 - lT  # detrended signal
 
     dM = np.stack((np.ones(time.shape), time)).T  # design matrix
-    c, _, _, _ = np.linalg.lstsq(time, s4)  # linear coefficients
+    c, _, _, _ = np.linalg.lstsq(dM, s4)  # linear coefficients
     lT = np.dot(dM, c)  # the linear trend
     s4_detrended = s4 - lT  # detrended signal
 
     dM = np.stack((np.ones(time.shape), time)).T  # design matrix
-    c, _, _, _ = np.linalg.lstsq(time, s5)  # linear coefficients
+    c, _, _, _ = np.linalg.lstsq(dM, s5)  # linear coefficients
     lT = np.dot(dM, c)  # the linear trend
     s5_detrended = s5 - lT  # detrended signal
 
@@ -113,22 +112,22 @@ elif detrendType == 'linear':
     s1_detrended = s1 - lT  # detrended signal
 
     dM = np.stack((np.ones(time.shape), time)).T  # design matrix
-    c, _, _, _ = np.linalg.lstsq(time, s2)  # linear coefficients
+    c, _, _, _ = np.linalg.lstsq(dM, s2)  # linear coefficients
     lT = np.dot(dM, c)  # the linear trend
     s2_detrended = s2 - lT  # detrended signal
 
     dM = np.stack((np.ones(time.shape), time)).T  # design matrix
-    c, _, _, _ = np.linalg.lstsq(time, s3)  # linear coefficients
+    c, _, _, _ = np.linalg.lstsq(dM, s3)  # linear coefficients
     lT = np.dot(dM, c)  # the linear trend
     s3_detrended = s3 - lT  # detrended signal
 
     dM = np.stack((np.ones(time.shape), time)).T  # design matrix
-    c, _, _, _ = np.linalg.lstsq(time, s4)  # linear coefficients
+    c, _, _, _ = np.linalg.lstsq(dM, s4)  # linear coefficients
     lT = np.dot(dM, c)  # the linear trend
     s4_detrended = s4 - lT  # detrended signal
 
     dM = np.stack((np.ones(time.shape), time)).T  # design matrix
-    c, _, _, _ = np.linalg.lstsq(time, s5)  # linear coefficients
+    c, _, _, _ = np.linalg.lstsq(dM, s5)  # linear coefficients
     lT = np.dot(dM, c)  # the linear trend
     s5_detrended = s5 - lT  # detrended signal
 
