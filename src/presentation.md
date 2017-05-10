@@ -877,9 +877,6 @@ Refactor this code by:
     * Returns — Explanation of the returned values and their types
     * Example — how to use the function (optional, only if time)
 4. Write at least one test function for each of your small well-defined, well-named functions (should return true/false depending on whether the condition has been met)
-    * some helpful functions
-        * numpy allclose: https://docs.scipy.org/doc/numpy/reference/generated/numpy.allclose.html
-        * matlab: all( abs(a(:)-b(:)) <= atol+rtol*abs(b(:)) ), rtol=1e-05, atol=1e-08,
 5. If you know how to use version control, create a repository and practice writing short commit messages each time you get something working
 
 ------------------
