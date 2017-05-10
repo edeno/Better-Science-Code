@@ -35,10 +35,10 @@ HINT: Start with trying to write a `detrend` function, including
 import numpy as np
 
 # Signals (s1-s5)
-s1 = np.array([1, 1, 1, 1, 1, 1])
+s1 = np.array([1, 1.5, 2.5, 3, 7, 8])
 s2 = np.array([-1, 1, -1, 1, -1, 1])
-s3 = np.array([1, 2, 3, 4, 5, 6])
-s4 = np.array([-1, -1, -1, -1, -1, -1])
+s3 = np.array([1, 2, 3, 4, 3, 2])
+s4 = np.array([-1, 0, -1.5, 2.1, -1.5, -1])
 s5 = np.array([1, 1, 1, 0, 0, 0])
 
 # signal types
