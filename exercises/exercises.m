@@ -145,8 +145,10 @@ cod5 = 1 - res_ss5 ./ total_ss5; % coefficient of determination for signal 5
 %% Get average coefficient of determination by signal type
 cod = [cod1; cod2; cod3; cod4; cod5];
 
-mean_cod.A = mean(cod(ismember(sT, 'A'))); % average coefficient of determination for signals of Type A
-mean_cod.B = mean(cod(ismember(sT, 'B'))); % average coefficient of determination for signals of Type B
+% average coefficient of determination for signals of Type A
+mean_cod.A = mean(cod(ismember(sT, 'A')));
+% average coefficient of determination for signals of Type B
+mean_cod.B = mean(cod(ismember(sT, 'B')));
 
 %% Get the adjusted coefficient of determination for each signal
 % https://en.wikipedia.org/wiki/Coefficient_of_determination#Adjusted_R2
@@ -174,13 +176,8 @@ adjustedCOD_5 = cod5 - (1 - cod5) * p / (n - p - 1); % adjusted R^2 for signal 5
 %% Get the average adjusted R^2 by signal type
 adjustedCOD = [adjustedCOD_1; adjustedCOD_2; adjustedCOD_3; adjustedCOD_4; adjustedCOD_5];
 
-mean_adjustedCOD.A = mean(adjustedCOD(ismember(sT, 'A'))); % average adjusted R^2 for signals of Type A
-mean_adjustedCOD.B = mean(adjustedCOD(ismember(sT, 'B'))); % average adjusted R^2 for signals of Type B
+% average adjusted coefficient of determination for signals of Type A
+mean_adjustedCOD.A = mean(adjustedCOD(ismember(sT, 'A')));
 
-
-
-
-
-
-
-
+% average adjusted coefficient of determination for signals of Type B
+mean_adjustedCOD.B = mean(adjustedCOD(ismember(sT, 'B')));
