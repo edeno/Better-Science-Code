@@ -856,19 +856,20 @@ Need to put the same amount of effort as performing the experiment or writing th
 
 Exercises
 
-Go to: [https://github.com/edeno/Better-Science-Code](https://github.com/edeno/Better-Science-Code)
++  Go to [https://github.com/edeno/Better-Science-Code](https://github.com/edeno/Better-Science-Code)
 
-and copy either [exercises.py](https://raw.githubusercontent.com/edeno/Better-Science-Code/master/exercises/exercises.py) or  [exercises.m](https://raw.githubusercontent.com/edeno/Better-Science-Code/master/exercises/exercises.m)
++  copy either [exercises.py](https://raw.githubusercontent.com/edeno/Better-Science-Code/master/exercises/exercises.py) or  [exercises.m](https://raw.githubusercontent.com/edeno/Better-Science-Code/master/exercises/exercises.m)
 
-Work on for 30 minutes (either solo or in groups).
++  Work on for 30 minutes (either solo or in groups).
 
-Code Review: We will discuss what people came up with
++  Code Review: We will discuss what people came up with
 
 ------------------
 
 Exercise Objectives
 
 Refactor this code by:
+
 1. Turning some of the code into small well-defined, well-named functions (Remember comments can often replaced by good function/variable names, duplicate code should be turned into functions)
 2. Using good function and variable names
 3. Documenting your functions using the numpy/scipy format: https://github.com/numpy/numpy/blob/master/doc/example.py, https://github.com/numpy/numpy/blob/master/doc/HOWTO_DOCUMENT.rst.txt . This description should include:
