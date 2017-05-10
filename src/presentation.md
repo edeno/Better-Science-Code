@@ -865,6 +865,7 @@ Work on for 30 minutes (either solo or in groups).
 Code Review: We will discuss what people came up with
 
 ------------------
+
 Exercise Objectives
 
 Refactor this code by:
