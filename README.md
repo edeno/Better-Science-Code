@@ -47,6 +47,9 @@ A presentation on best coding/data management practices based on my own experien
 
 ## Open science
 
+[Toward standard practices for sharing computer code and programs in neuroscience](http://dx.doi.org/10.1038/nn.4550)
+* Recommendations on what to share for open science.
+
 [How I learned to stop worrying and love the coming archivability crisis in scientific software - C. Titus Brown](http://ivory.idyll.org/blog/2017-pof-software-archivability.html)
 * Critical thinking about the limits of our ability to reproduce results years later.
 
