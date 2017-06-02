@@ -29,6 +29,8 @@ A presentation on best coding/data management practices based on my own experien
 [Introduction to Git & the Command Line](https://sklise.com/2012/09/22/introduction-to-git/)
 * A step-by-step guide to `git` and the command line
 
+
+
 [Software Carpentry's Guide to Git](http://swcarpentry.github.io/git-novice/)
 * Another command line tutorial to using `git`
 
@@ -69,6 +71,10 @@ A presentation on best coding/data management practices based on my own experien
 [Millman, K.J., and Pérez, F. (2014). Developing open-source scientific practice. Implementing Reproducible Research 149.
 ](https://osf.io/h9gsd/)
 * The introduction makes a strong case for reproducible research. Mostly focused on Python tools.
+
+## Examples of well-written code
+
+[ELFI - Engine for Likelihood-Free Inference](https://github.com/elfi-dev/elfi)
 
 # Requirements
 * [pandoc](http://pandoc.org/)
